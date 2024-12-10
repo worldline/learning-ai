@@ -57,10 +57,76 @@ Github CLI is not supported yet with our Worldline account, so you need to use t
 
 ## 🧪 Exercise
 
-::: warning TODO
-#### Install Github Copilot on VSCode and generate tests for the following project repository
-#### Use Copilot to refactor the following project repository
-:::
+### Install Github Copilot on VSCode
+
+1. Install the [Github Copilot extension](https://marketplace.visualstudio.com/items?itemName=github.copilot) on your VSCode
+2. Sign in with your Github account, if not already done
+3. Create a new file and start typing a function or a class, to see the suggestions provided by Copilot
+
+### Generating unit tests
+
+We"re going to use Github Copilot to generate unit tests for a simple JavaScript project repository.
+
+To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/download/) installed on your machine.
+
+1. Clone the following repository: [github.com/worldline/learning-ai-workspace-js](https://github.com/worldline/learning-ai-workspace-js)
+2. Open the project in your VSCode
+3. Open Github Copilot Chat by clicking on the Copilot icon in the bottom right corner of your VSCode
+4. Ask Copilot to generate unit tests for the `index.js` file . You can also try the `/setupTests` command
+5. Copilot may make several suggestions: choosing a testing framework, adding a `test` command to package.json, install new dependencies. Accept all its suggestions.
+6. Try to run the generated tests. In case of trouble, use Copilot Chat to ask for help.
+
+
+<details>
+<summary>Solution</summary>
+
+<p>Here we decided to go with supertest framework</p>
+<img src="./images/setupTestsCommand.png" height="400" />
+<img src="./images/setupTests3.png" height="400" />
+<img src="./images/setupTests.png" height="400" />
+<img src="./images/setupTests2.png" height="400" />
+
+<p>Here is an example of how Copilot can help you fix a failing test:</p>
+<img src="./images/fixTest.png" height="300" />
+<img src="./images/fixTest2.png" height="300" />
+
+</details>
+
+### Refactoring
+
+Now we are going to use Copilot to refactor a piece of code in the same project. 
+
+1. Open the `index.js` file in the project
+2. Ask Copilot to add a feature in the GET /movies endpoint that allows filtering movies by director, based on a `director` query parameter.
+3. Copilot will generate the code for you. Try to understand the changes it made and run the project to test the new feature.
+4. Ask Copilot to complete the unit test in `index.test.js` to test getting movies filtered by director. It should generate more unit tests that check against one of the directors in the example data.
+5. Now we're going to refactor the code to extract the filtering logic into a separate function. Select the parts of the code with the `.find()` and `.filter()` function calls and ask Copilot to extract them into a new function. Let Copilot suggest a name for these functions
+6. Under the previous generated function, type `function filterMoviesByYear(`. Wait for Copilot to suggest you the rest of the function signature and function body. Accept the suggestion using the `Tab` key.
+7. Ask Copilot again to allow filtering movies by a `year` query parameter. Copilot should use the `filterMoviesByYear` function you just created to implement this feature.
+8. Open `index.test.js`. In the `GET /movies` test block, add a new assertion block by typing `it('should return movies filtered by year',`. Wait for Copilot to suggest you the rest of the tests. Review code to make sure it uses the ?year query parameter and checks correctly a date from the example data.
+9. Run the tests to make sure everything is working as expected. Use Copilot to ask for help if needed.
+
+<details>
+<summary>Solution</summary>
+
+<p>Adding the new feature</p>
+<img src="./images/addFeature.png" />
+
+<p>Complete the test</p>
+<img src="./images/completeTest.png" />
+
+<p>Refactor the code to extract logic</p>
+<img src="./images/refactor.png" />
+
+<p>Get code suggestion from a function name</p>
+<img src="./images/codeSuggestion.png" />
+
+<p>Refactor with Copilot Chat the API logic</p>
+<img src="./images/refactor2.png" />
+
+<p>Get code suggestion from test description</p>
+<img src="./images/testSuggestion.png" />
+</details>
 
 ## Gihub Spark
 
