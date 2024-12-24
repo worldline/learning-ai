@@ -432,9 +432,9 @@ Guido van Rossum created Python in 1991.
 [Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
 :::
 
-## CloudAI with GCP
+## CloudAI with Google Cloud
 
-GCP is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.
+Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.
 
 ### Large Consumer-Facing
 
