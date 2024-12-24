@@ -223,7 +223,7 @@ prompt = PromptTemplate(
 
 ### Chain
 
-[`Chain`](https://python.langchain.com/v0.1/docs/modules/chains/) Chains refer to sequences of calls - whether to an LLM, a tool, or a data preprocessing step. It is a sequence of calls that are executed in order, with the output of one call being the input for the next call.It enables you to create complex workflows by combining the output of one LLM call with the input of another. This is useful for tasks that require multiple steps or interactions with external systems.
+[`Chain`](https://python.langchain.com/v0.1/docs/modules/chains/) Chains refer to sequences of calls - whether to an LLM, a tool, or a data pre-processing step. It is a sequence of calls that are executed in order, with the output of one call being the input for the next call.It enables you to create complex workflows by combining the output of one LLM call with the input of another. This is useful for tasks that require multiple steps or interactions with external systems.
 
 ```python
 from langchain.chains import LLMChain
@@ -241,7 +241,7 @@ Multiple prompt can be chained together to create complex workflows.
 
 #### AIMessage
 
-[`AIMessage`](https://api.python.langchain.com/en/latest/messages/langchain_core.messages.ai.AIMessage.html) is returned from a chat model as a response to a prompt. It contains the message type, content, and any additional parameters.
+[AIMessage](https://api.python.langchain.com/en/latest/messages/langchain_core.messages.ai.AIMessage.html) is returned from a chat model as a response to a prompt. It contains the message type, content, and any additional parameters.
 
 ### 🧪 Exercise
 
@@ -267,11 +267,11 @@ Author: Unknown
 Create a function `get_developer_motivation(name, language, project_description)` that:
 
 - Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
-- Uses langchain to send a request to the LLM to generate a humorous motivational quote.
+- Uses LangChain to send a request to the LLM to generate a humorous motivational quote.
 - Returns a structured response containing the quote, the developer's name, the programming language, and the project description.
 
 ::: details Solution
-[Google Collab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+[Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
 :::
 
 ### Tool/Function calling
@@ -508,12 +508,12 @@ MLflow provides tools for managing experiments, tracking model versions, deployi
 
 ::: warning TODO
 
-#### create a model registry in GCP instance
+#### create a model registry in Google Cloud instance
 
 :::
 
-1. Create a model registry in GCP instance
+1. Create a model registry in Google Cloud instance
 2. Create a model in the registry
-3. Deploy the model to GCP instance
+3. Deploy the model to Google Cloud instance
 
 ## 📖 Further readings
