@@ -1,35 +1,38 @@
 # Develop with AI
 
-## Github Copilot
+## GitHub Copilot
 
 ::: tip Update
-Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions 
+Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions
 :::
 
-Github Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality.
+GitHub Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality.
 
 ::: tip Alternative code assistance
 There is also other producs indegrated to IDEs such as :
-* [Gitlab Duo](https://about.gitlab.com/fr-fr/gitlab-duo/),
-* [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview?hl=fr), 
-* [SuperMaven](https://supermaven.com/), 
-* [AWS CodeWhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/what-is-cwspr.html), and more.
-:::
+
+- [Gitlab Duo](https://about.gitlab.com/fr-fr/gitlab-duo/),
+- [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview?hl=fr),
+- [SuperMaven](https://supermaven.com/),
+- [AWS CodeWhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/what-is-cwspr.html), and more.
+  :::
 
 ### Copilot Chat
 
 Copilot Chat is a chat interface that allows you to ask questions and get suggestions for code improvements.
 
-it's available on : 
+it's available on :
+
 - [JetBrains IDEs](https://plugins.jetbrains.com/plugin/17718-github-copilot)
 - [Visual Studio](https://visualstudio.microsoft.com/fr/github-copilot/)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
-- In [Github mobile App](https://github.com/mobile)
+- In [GitHub mobile App](https://github.com/mobile)
 - Web version in [github.com (Preview)](https://docs.github.com/fr/enterprise-cloud@latest/copilot/using-github-copilot/asking-github-copilot-questions-in-github)
 
 It is a similar approach to chat GPT prompting optimised for the developper experience.
 
 ### CLI
+
 CLI helps you using you command line interpreter
 You can use it in the terminal with the following command:
 
@@ -38,32 +41,37 @@ gh auth login
 gh extension install github.copilot
 gh copilot explain "traceroute github.com"
 ```
+
 ::: warning
-Github CLI is not supported yet with our Worldline account, so you need to use the web version with the link here
+GitHub CLI is not supported yet with our Worldline account, so you need to use the web version with the link here
 :::
 
 ### IDEs integration (VSCode)
 
 #### Completion
+
 ![copilot-assistance](../assets/images/copilot_completion.gif)
 
 #### Generation & Refactoring
+
 ![copilot-completion](../assets/images/copilot_generation.gif)
 
 #### Assistance
+
 ![copilot-assistance](../assets/images/copilot_assistance.gif)
 ![copilot-assistance2](../assets/images/copilot_assistance2.gif)
 
 #### Test generation
-![copilot-test](../assets/images/copilot_testing.gif)
 
+![copilot-test](../assets/images/copilot_testing.gif)
 
 ::: tip Sortcut usage of Copilot chat
 
 You can also use the chat interface to ask questions with shortcuts :
+
 - `/ask`
--  `/explain`
-- `/generate` 
+- `/explain`
+- `/generate`
 - `/refactor`
 - `/test`
 - `/setupTest`
@@ -74,16 +82,13 @@ You can also use the chat interface to ask questions with shortcuts :
 
 #### Documentation
 
-
 #### Architecture diagram
 
 [Mermaid diagrams](https://mermaid.live/) is a great tool to create diagrams in markdown files online. With copilot you can generate a diagram based on the code you write or chat with copilot to generate the diagram.
 
-``` text
+```text
 Generate a mermaid architecture diagram for a simple retail app with product catalog, product details , buying tunnel , loyalty. Be detailed. I want to make this app with express node JS Rest API server, please provide the diagram for the server side. Suggest technical stack on the diagram , name the component variables. Parentheses are not supported by mermaid.
 ```
-
-
 
 ![copilot-diagram](../assets/images/copilot_diagram.png)
 
@@ -96,22 +101,22 @@ graph TD;
     B -->|Process Orders| F[Order Controller - orderController]
     B -->|Manage User Accounts| G[User Controller - userController]
     B -->|Handle Loyalty Program| H[Loyalty Controller - loyaltyController]
-    
+
     subgraph Database
         I[MongoDB - mongoose]
     end
-    
+
     subgraph Middleware
         J[Authentication Middleware - passport]
         K[Error Handling Middleware - errorHandler]
         L[Logging Middleware - morgan]
     end
-    
+
     B -->|Connects to| I
     B -->|Uses| J
     B -->|Uses| K
     B -->|Uses| L
-    
+
     C -->|CRUD Operations| I
     D -->|CRUD Operations| I
     E -->|CRUD Operations| I
@@ -122,31 +127,31 @@ graph TD;
 
 ## 🧪 Exercise
 
-### Install Github Copilot on VSCode
+### Install GitHub Copilot on VSCode
 
-1. Install the [Github Copilot extension](https://marketplace.visualstudio.com/items?itemName=github.copilot) on your VSCode
-2. Sign in with your Github account, if not already done
+1. Install the [GitHub Copilot extension](https://marketplace.visualstudio.com/items?itemName=github.copilot) on your VSCode
+2. Sign in with your GitHub account, if not already done
 3. Create a new file and start typing a function or a class, to see the suggestions provided by Copilot
 
 ### Generating unit tests
 
-We"re going to use Github Copilot to generate unit tests for a simple JavaScript project repository.
+We"re going to use GitHub Copilot to generate unit tests for a simple JavaScript project repository.
 
 To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/download/) installed on your machine.
 
 1. Clone the following repository: [github.com/worldline/learning-ai-workspace-js](https://github.com/worldline/learning-ai-workspace-js)
 2. Open the project in your VSCode
-3. Open Github Copilot Chat by clicking on the Copilot icon in the bottom right corner of your VSCode
+3. Open GitHub Copilot Chat by clicking on the Copilot icon in the bottom right corner of your VSCode
 4. Ask Copilot to generate unit tests for the `index.js` file . You can also try the `/setupTests` command
 5. Copilot may make several suggestions: choosing a testing framework, adding a `test` command to package.json, install new dependencies. Accept all its suggestions.
 6. Try to run the generated tests. In case of trouble, use Copilot Chat to ask for help.
-
 
 <details>
 <summary>Solution</summary>
 
 <p>Here we decided to go with supertest framework</p>
-<img src="./images/setupTestsCommand.png" height="400" />
+
+![setupTestsCommand](./images/setupTestsCommand.png =x400)
 <img src="./images/setupTests3.png" height="400" />
 <img src="./images/setupTests.png" height="400" />
 <img src="./images/setupTests2.png" height="400" />
@@ -159,7 +164,7 @@ To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/
 
 ### Refactoring
 
-Now we are going to use Copilot to refactor a piece of code in the same project. 
+Now we are going to use Copilot to refactor a piece of code in the same project.
 
 1. Open the `index.js` file in the project
 2. Ask Copilot to add a feature in the GET /movies endpoint that allows filtering movies by director, based on a `director` query parameter.
@@ -199,20 +204,24 @@ Now we are going to use Copilot to refactor a piece of code in the same project.
 
 And it enables this through a combination of three tightly-integrated components:
 
-* An NL-based editor, which allows easily describing your ideas, and then refining them over time
-* A managed runtime environment, which hosts your sparks, and provides them access to data storage, theming, and LLMs
-* A PWA-enabled dashboard, which lets you manage and launch your sparks from anywhere
+- An NL-based editor, which allows easily describing your ideas, and then refining them over time
+- A managed runtime environment, which hosts your sparks, and provides them access to data storage, theming, and LLMs
+- A PWA-enabled dashboard, which lets you manage and launch your sparks from anywhere
 
+## 🧪 Exercises
 
-## 🧪 Exercise
+### Create a web app with V0 and blot
 
-::: warning TODO
-#### Use vercel V0 or github spark to create an application that ... 
-:::
+- Open [V0.dev](https://v0.dev/) and enter a prompt to create a todo list web app with common features: add, delete, mark as done, tag, filter and sort.
+  - Download the code and run it on your local machine. Try to understand the code generated by V0.
+- Try again this time with [bolt.new](https://bolt.new/).
+  - What are the differences between the two tools?
+
+### Create a GitHub Spark (on waitlist as of December 2024)
 
 ## 📖 Further readings
-* [Worldline AI coding assistant](https://confluence.worldline-solutions.com/display/AICA/AI+Coding+Assistants+Home)
-* [Worldline Data platform](https://confluence.worldline-solutions.com/display/DPTECHNO/Data+Platform)
-* [Copilot trust Center](https://resources.github.com/copilot-trust-center/)
-* [Chat with your IDE](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide)
 
+- [Worldline AI coding assistant](https://confluence.worldline-solutions.com/display/AICA/AI+Coding+Assistants+Home)
+- [Worldline Data platform](https://confluence.worldline-solutions.com/display/DPTECHNO/Data+Platform)
+- [Copilot trust Center](https://resources.github.com/copilot-trust-center/)
+- [Chat with your IDE](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide)
