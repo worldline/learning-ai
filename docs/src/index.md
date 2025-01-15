@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: ./logo.png
-heroText: Hands-on Lab - AI for Devs
-tagline: Discover AI in practice.
+heroText: Hands-on Lab - genAI for Devs
+tagline: Discover genAI in practice.
 actions:
   - text: Start the Hands-on Lab →
     link: /overview/
@@ -10,15 +10,15 @@ actions:
 features:
   - title: Let's start
     details: Prerequisites - Definitions - A bit of History - The market
-  - title: Prompt with AI
+  - title: Prompt with genAI
     details: Prompt with AI, Prompt engineering, Definition, Chain of Thought,  ReAct Prompting, promt for developers, code explanation...
   - title: Online with Librechat
     details: History, Favorites, Presets, Preformatted prompts, AI providers, Plugins & mixing, RAG...
   - title: Offline with LM Studio
     details: Installation, Model configuration, enable APIs...
-  - title: Develop with AI
+  - title: Develop with genAI
     details: GitHub Copilot
-  - title: AI for services
+  - title: genAI for services
     details: Cloud LLMs - Advanced RAG
 footer: Worldline © 2024 | tech at Worldline
 ---
