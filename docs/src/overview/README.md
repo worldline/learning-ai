@@ -226,6 +226,8 @@ During the turing test, the human questioner asks a series of questions to both 
 :::
 
  ## 📖 Further readings
- * [Generative AI Taskforce email](mailto:GenAITaskforce@worldline.com)
+ * [Generative AI Taskforce mailing-list](mailto:GenAITaskforce@worldline.com)
+  * [GRS mailing-list](mailto:dl-wl-cto-grs-ai@worldline.com)
  * [Top 100 GenAI](https://a16z.com/100-gen-ai-apps/)
+
 

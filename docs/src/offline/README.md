@@ -28,9 +28,8 @@ You can configure the model you want to use in the settings tab. You can select 
 
 `Evaluation batch size`: This option allows you to specify the batch size for evaluation. This is important for evaluating the performance of the model and can affect the speed and accuracy of the generation process.
 
-`RoPE Frequency base`: This option allows you to specify the frequency base for RoPE (Range-based Output Embedding). This is important for controlling the output length of the model and can affect the quality of the generated responses.
-
-`RoPE Frequency scale`: This option allows you to specify the frequency scale for RoPE (Range-based Output Embedding). This is important for controlling the output length of the model and can affect the quality of the generated responses.
+[`RoPE Frequency base`]( 
+https://www.hopsworks.ai/dictionary/rope-scaling): The Rotary Position Embeddings is a technique used to improve the performance of transformer-based models. This is important for controlling the output length of the model and can affect the quality of the generated responses.
 
 `Keep model in memory`: This option allows you to keep the model in memory after the generation process is complete. This can be useful for generating multiple responses or for using the model for offline prompting.
 
