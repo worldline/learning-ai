@@ -1,8 +1,6 @@
 # AI for services
 
-## Definitions
-
-### Google Colab
+### Quick start with Google Colab
 
 You can use [Google Colab](https://colab.research.google.com/) for a simple to use notebook environment for machine learning and data science. It will provide a container with all the necessary libraries and tools to run your code and live editing interface through a browser.
 
@@ -29,11 +27,7 @@ api_key=userdata.get('API_KEY')
 
 :::
 
-### LangChain
-
-LangChain is a framework for building applications powered by language models (LLMs) like OpenAI's GPT-3. It provides a set of tools and utilities for working with LLMs, including prompt engineering, chain of thought, and memory management. LangChain is designed to be modular and extensible, allowing developers to easily integrate with different LLMs and other AI services.
-
-## Use APIs (Mistral)
+## Dialog with LLMs APIs (Mistral)
 
 ::: tip configuration
 **To set Up Your Environment**
@@ -188,7 +182,12 @@ Author: Unknown
 [Google Collab notebook](https://colab.research.google.com/drive/1CHb_WX3kZaCKShHdCI-4zut1Ro0HqgPd?usp=sharing)
 :::
 
-## Use LangChain (Mistral)
+
+## Context aware frameworks (LangChain)
+
+LangChain is a framework for building applications powered by language models (LLMs) like OpenAI's GPT-3. It provides a set of tools and utilities for working with LLMs, including prompt engineering, chain of thought, and memory management. LangChain is designed to be modular and extensible, allowing developers to easily integrate with different LLMs and other AI services.
+Finally it enables to build agents and complex workflows on top of LLMs.
+
 
 ### Support
 
@@ -242,6 +241,15 @@ Multiple prompt can be chained together to create complex workflows.
 #### AIMessage
 
 [AIMessage](https://api.python.langchain.com/en/latest/messages/langchain_core.messages.ai.AIMessage.html) is returned from a chat model as a response to a prompt. It contains the message type, content, and any additional parameters.
+
+### Agents
+Langchain Agents are a powerful tool for building complex workflows on top of LLMs. They enable you to define a set of actions and rules that the LLM can follow to achieve a specific goal. Agents can be used to automate tasks, manage workflows, and provide personalized assistance to users.
+
+Agents are composed of three main components:
+
+- Actions: These are the actions that the agent can take. They are defined as functions that take a set of parameters and return a response.
+- Tools: These are the tools that the agent can use to accomplish its tasks. They are defined as functions that take a set of parameters and return a response.
+- Agent: This is the main component of the agent. It is responsible for executing the actions and tools based on the rules defined by the agent.
 
 ### 🧪 Exercise
 
@@ -508,7 +516,7 @@ MLflow provides tools for managing experiments, tracking model versions, deployi
 
 ::: warning TODO
 
-#### create a model registry in Google Cloud instance
+#### Create a model registry in Google Cloud instance
 
 :::
 
@@ -517,3 +525,5 @@ MLflow provides tools for managing experiments, tracking model versions, deployi
 3. Deploy the model to Google Cloud instance
 
 ## 📖 Further readings
+
+* [MCP framework](https://modelcontextprotocol.io/introduction)
