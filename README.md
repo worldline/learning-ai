@@ -30,7 +30,7 @@ Module 2: Prompting Frameworks and Application Lifecycle
 - Tips for ideation and architecture design
 - Refactoring and generating tests using AI
 
-Module 3: AI Tools and Software Usage
+Module 3: genAI Tools and Software Usage
 
 - Overview of main plugins and their functionalities
 - Mixing plugins and using presets
@@ -42,7 +42,7 @@ Module 4: Code Assistants in IDEs
 - Generating code snippets and tests
 - Creating a website from prompts
 
-Module 5: AI for Services
+Module 5: genAI for Services
 
 - Managing LLM API calls in JSON mode and handling structured outputs
 - Use context-aware frameworks with techniques for prompt templating and chaining
@@ -55,6 +55,7 @@ Module 6: Cloud Provider Tools
 - Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.)
 - Best practices for deploying AI solutions in the cloud
 
+Module 7: Agentic AI with MCP framework (soon)
 
 # AI for devs | Tech at Worldline
 ## Who we are ?
