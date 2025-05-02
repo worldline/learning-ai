@@ -70,10 +70,23 @@ Module 7: Agentic AI with MCP framework (soon)
 
 ### Follow trainers of this codelab
 
-![avatar](docs/src/assets/images/avatar.png)  
-**Gharbi Ibrahim**  
-[🔗 @__brah​](https://twitter.com/__brah)  
-[🔗 cv.gharbi.org](http://blog.worldline.tech)
+Contributors 
+* Ibrahim Gharbi
+* Sylvain Pollet Villard
+* Yassine Benabbas
+* Raphaël Semeteys
+
+Sponsors
+* Yacine Kessaci
+* Liyun He Guelton
+* Fanilo Andrianasolo
+* Vijayanand Premnath
+* Vincent Caquelard
+* Mat Goodger
+* Effan Mutembo
+* Cyril Cauchois
+* Martin Boulanger
+
 
 ### Follow our Tech team
 
