@@ -86,6 +86,7 @@ Sponsors
 * Effan Mutembo
 * Cyril Cauchois
 * Martin Boulanger
+* Julien Carme
 
 
 ### Follow our Tech team
