@@ -440,9 +440,52 @@ Guido van Rossum created Python in 1991.
 [Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
 :::
 
+
+## Vector databases with Chroma
+
+Chroma is a vector database that allows you to store and query vectors of data. Lanchain provides a simple and efficient way to integrate [Chroma](https://www.trychroma.com/) into your applications, allowing you to store and query vectors of data using LLMs.
+
+Please refer to the [Langchain vector  documentation](https://python.langchain.com/v0.1/docs/modules/data_connection/vectorstores/) for more information on how to use Chroma.
+
+
+
+
+## Agents with [Kotlin Koogu](https://github.com/JetBrains/koog)
+
+Agents  are a powerful tool for building complex workflows on top of LLMs. They enable you to define a set of actions and rules that the LLM can follow to achieve a specific goal. Agents can be used to automate tasks, manage workflows, and provide personalized assistance to users.
+
+
+### 🧪 Exercises
+
+Use koog to request 2 LLMs , one for generating a prompt for a spécific image and the other to generate the image based on the prompt.
+
+
+
+## Model Context Protocol (MCP)
+
+The Model Context Protocol (MCP) is a framework for managing and deploying AI models. It standardizes like a swagger for AI models, providing a common interface for interacting with models across different platforms and environments. MCP allows developers to define the context in which a model operates, including its inputs, outputs, and metadata. It also enable multiple AI to interact with each other, allowing for more complex and collaborative AI applications.
+
+More information can be found on the [MCP website](https://modelcontextprotocol.io/introduction).
+
+MCP stores are available on the [MCP store](https://mcpstore.co/).
+
+
+### Create an MCP server with [Kotlin MCP SDK](https://github.com/modelcontextprotocol/kotlin-sdk)
+
+
+### Connect it to Claude Desktop
+
+
+### 🧪 Exercises
+
+Download Claude Desktop application and connect github mcp server to it then try to create a git project with your prompt
+
+
 ## CloudAI with Google Cloud
 
 Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.
+
+Globally Vertex products are supported by the developper branch of Google, and Gemini is supported by ML teams of Google.
 
 ### Large Consumer-Facing
 
