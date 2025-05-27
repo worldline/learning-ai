@@ -1,6 +1,7 @@
-#  Prompt with AI
+# Prompt with AI
 
 ## Prompt engineering
+
 Prompt engineering involves the design and creation of prompts that are used to elicit specific responses or actions from AI models or interactive systems. These prompts are carefully crafted to guide the behavior or generate particular outputs from the AI, such as generating natural language responses, providing recommendations, or completing specific tasks.
 
 ### Definition
@@ -15,9 +16,10 @@ There are four main areas to consider when writing an effective prompt. You don�
 - `Format`: What is the desired output of the task?
 
 **Example Prompt:**
-* [`Persona`] You are a Google Cloud program manager. 
+
+* [`Persona`] You are a Google Cloud program manager.
 * [`Task`] Draft an executive summary email
-* [`Context`] to [person description] based on [details about relevant program docs]. 
+* [`Context`] to [person description] based on [details about relevant program docs].
 * [`Format`] Limit to bullet points.
 
 By using "act as," you are establishing a specific context for the language model and guiding it to understand the type of task or request you are making. This helps to set the right expectations and provides the language model with the necessary context to generate a response tailored to the defined role.
@@ -45,8 +47,8 @@ Generating reasoning traces allow the model to induce, track, and update action 
 The ReAct framework can allow LLMs to interact with external tools to retrieve additional information that leads to more reliable and factual responses.
 [Prompting Guide with CoT](https://www.promptingguide.ai/techniques/react.en)
 
-
 ### Summarize
+
 Summary is a prompt engineering technique that involves providing a summary of a given document or text. It can helps for summarizing changelogs, articles, or other technical documents.
 
 ```
@@ -66,14 +68,16 @@ Create a guide that explains how to use ….
 Write step by step instructions
 ```
 
-##  For Developers
+## For Developers
 
 ### Code explanation
+
 Code explanation is a prompt engineering technique that involves providing a detailed explanation of a code snippet or function. This technique is useful for developers who want to understand the inner workings of a codebase or for those who want to document their code.
 
 cf. Preformatted prompts for an example of code explanation
 
 ### Generation
+
 ```
 Act as a code generator. Generate a Python function that takes a list of 
 numbers as input and returns the sum of all the numbers.
@@ -81,12 +85,13 @@ numbers as input and returns the sum of all the numbers.
 
 ### 🧪 Exercises
 
-####  Basic Function Creation
+#### Basic Function Creation
 
 - Create a function that calculates the factorial of a number.
 - Handle both positive integers and zero, with error handling for negative inputs.
 
 **Expected Output (python)**
+
 ```python
 def factorial(n):
     if n < 0:
@@ -99,14 +104,16 @@ def factorial(n):
     return result
 ```
 
+<!--
 ::: details Solutions
 
-**Persona:** Python Developer  
-**Task:** Create a function  
-**Context:** You need to calculate the factorial of a number.  
+**Persona:** Python Developer
+**Task:** Create a function
+**Context:** You need to calculate the factorial of a number.
 
 As a Python Developer, create a function named `factorial` that takes a single integer input and returns its factorial. The function should handle both positive integers and zero. Include error handling for negative inputs.
 :::
+-->
 
 #### API Request Handling
 
@@ -114,6 +121,7 @@ As a Python Developer, create a function named `factorial` that takes a single i
 - Return the JSON response and handle any potential errors.
 
 **Expected Output (javascript)**
+
 ```javascript
 async function fetchData(url) {
     try {
@@ -129,15 +137,17 @@ async function fetchData(url) {
 }
 ```
 
+<!--
 ::: details Solutions
 
-
-**Persona:** JavaScript Developer  
-**Task:** Write a function to handle API requests  
-**Context:** You need to fetch data from a given URL.  
+**Persona:** JavaScript Developer
+**Task:** Write a function to handle API requests
+**Context:** You need to fetch data from a given URL.
 
 As a JavaScript Developer, write a function named `fetchData` that takes a URL as an argument and fetches data from that URL using the Fetch API. The function should return the JSON response and handle any errors that may occur during the fetch operation.
 :::
+
+-->
 
 #### Class Definition
 
@@ -145,6 +155,7 @@ As a JavaScript Developer, write a function named `fetchData` that takes a URL a
 - Include a method to display the book's details.
 
 **Expected Output (C#)**
+
 ```csharp
 public class Book
 {
@@ -159,15 +170,17 @@ public class Book
 }
 ```
 
+<!--
 ::: details Solutions
 
-**Persona:** C# Developer  
-**Task:** Define a class  
-**Context:** You are creating a representation of a book.  
+**Persona:** C# Developer
+**Task:** Define a class
+**Context:** You are creating a representation of a book.
 
 As a C# Developer, create a class named `Book` that has properties for `Title`, `Author`, and `PublicationYear`. Include a method named `DisplayDetails` that prints the book's details in a formatted string.
 
 :::
+--> 
 
 #### Simple Web Server
 
@@ -175,6 +188,7 @@ As a C# Developer, create a class named `Book` that has properties for `Title`, 
 - Respond with a simple message when accessed.
 
 **Expected Output (Javascript)**
+
 ```javascript
 const http = require('http');
 
@@ -189,22 +203,29 @@ server.listen(3000, () => {
 });
 ```
 
+<!--
 ::: details Solutions
 
-**Persona:** JavaScript Developer  
-**Task:** Set up a web server  
-**Context:** You need to create a simple server that responds to requests.  
+**Persona:** JavaScript Developer
+**Task:** Set up a web server
+**Context:** You need to create a simple server that responds to requests.
 
 As a JavaScript Developer, set up a simple web server using the `http` module that listens on port 3000 and responds with "Hello, World!" when accessed.
 :::
 
+-->
+
+
+
 #### Data Validation
 
 **Details:**
+
 - Write a method to validate if a given string is a valid email address.
 - Use a regular expression for the validation.
 
 **Expected Output (Ruby)**
+
 ```ruby
 def valid_email?(email)
     regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -212,26 +233,34 @@ def valid_email?(email)
 end
 ```
 
+
+<!--
 ::: details Solutions
 
-**Persona:** Ruby Developer  
-**Task:** Write a validation method  
-**Context:** You need to validate email addresses.  
+**Persona:** Ruby Developer
+**Task:** Write a validation method
+**Context:** You need to validate email addresses.
 
 As a Ruby Developer, write a method named `valid_email?` that takes a string as input and returns true if it is a valid email address, and false otherwise. Use a regular expression for validation.
 
 :::
 
+-->
+
 ### Completion
+
 Code completion is a prompt engineering technique that involves providing a list of possible completions for a given code snippet or function. This technique is useful for developers who want to suggest possible code changes or improvements based on their existing code.
 
-###  Conversion
+### Conversion
+
 Code conversion is a prompt engineering technique that involves providing a conversion of a code snippet or function from one programming language to another. This technique is useful for developers who want to migrate their code from one language to another or for those who want to use a different programming language for their projects.
 
 ### Review
+
 Code review is a prompt engineering technique that involves providing a code review of a given code snippet or function. This technique is useful for developers who want to review their code for potential issues,bugs, or for those who want to provide feedback on their code.
 
 ### Fixing
+
 Code fixing is a prompt engineering technique that involves providing a code fix for a given code snippet or function. This technique is useful for developers who want to fix bugs or issues in their code or for those who want to improve the quality of their code.
 
 ```
@@ -242,10 +271,13 @@ in [programming language]
 How do I fix the following programming language code 
 [program language] code which explain the functioning [Insert code snippet]
 ```
+
 ### Refactoring
+
 Code refactor is a prompt engineering technique that involves providing a code refactoring of a given code snippet or function within a specific scope. This technique is useful for developers who want to refactor their code within a specific context or for those who want to improve the readability and maintainability of their code.
 
-### Data mocking  
+### Data mocking
+
 Mock data generation is a prompt engineering technique that involves providing a mock data set for a given code snippet or function. This technique is useful for developers who want to test their code with mock data or for those who want to generate test data for their projects. It avoid creating manually fake data for testing.
 
 ## 🧪 Exercises
@@ -255,6 +287,7 @@ Mock data generation is a prompt engineering technique that involves providing a
 Create prompts that can generate mock user profiles. The language used is JavaScript.
 
 The profile should include:
+
 * Name
 * Age
 * Email
@@ -262,6 +295,7 @@ The profile should include:
 * Phone Number
 
 
+<!--
 ::: details Solutions
 
 Mock Data Generation
@@ -294,9 +328,10 @@ function generateUserProfile() {
 // Example usage
 console.log(generateUserProfile());
 ```
+
 :::
 
-
+-->
 
 ## Go further
 
@@ -320,7 +355,7 @@ Commit message generation is a prompt engineering technique that involves provid
 
 Vulnerability checking is a prompt engineering technique that involves providing a vulnerability check for a given code snippet or function. This technique is useful for developers who want to check for vulnerabilities in their code or for those who want to ensure that their code is secure.
 
-::: warning 
+::: warning
 This prompt is not recommended for production use. It is intended for testing and debugging purposes only and is not a proof of security or safety of your app.
 :::
 
@@ -336,9 +371,3 @@ You can understand complex regular expressions and generate ones that match spec
 Explain this regular expression in JavaScript: const regex = 
 /^[A-Za-z0–9._%+-]+@[A-Za-z0–9.-]+\\.[A-Za-z]{2,}$/;
 ```
-
-
-
-
-
-
