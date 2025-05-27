@@ -178,9 +178,12 @@ Author: Unknown
 - [API Model list](https://docs.mistral.ai/api/#tag/models/operation/list_models_v1_models_get)
 - [Chat completions](https://docs.mistral.ai/api/#tag/chat/operation/chat_completion_v1_chat_completions_post)
 
+
+<!---
 ::: details Solution
 [Google Collab notebook](https://colab.research.google.com/drive/1CHb_WX3kZaCKShHdCI-4zut1Ro0HqgPd?usp=sharing)
 :::
+-->
 
 
 ## Context aware frameworks (LangChain)
@@ -278,9 +281,11 @@ Create a function `get_developer_motivation(name, language, project_description)
 - Uses LangChain to send a request to the LLM to generate a humorous motivational quote.
 - Returns a structured response containing the quote, the developer's name, the programming language, and the project description.
 
+<!---
 ::: details Solution
 [Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
 :::
+--->
 
 ### Tool/Function calling
 
@@ -340,9 +345,11 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 - Prompt the user to enter a city name.
 - Call the `handle_user_input` function with the provided city name and display the result.
 
+<!---
 ::: details Solution
 [Google Collab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
 :::
+-->
 
 ## RAG for services (llama-index)
 
@@ -399,9 +406,11 @@ User uploaded file "customer_reviews (4).txt" with length 338 bytes
 The customers' experiences with the company and its products vary. Some have had positive experiences, such as excellent service and high-quality products, while others have encountered issues with faulty products and unhelpful customer support.
 ```
 
+<!---
 ::: details Solution
 [Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
 :::
+--->
 
 #### Querying SQL Databases with Natural Language
 
@@ -436,9 +445,11 @@ The LLM should be able to understand the context and retrieve the relevant infor
 Guido van Rossum created Python in 1991.
 ```
 
+<!---
 :::tip Solution
 [Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
 :::
+-->
 
 
 ## Vector databases with Chroma
