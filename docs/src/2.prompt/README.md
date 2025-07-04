@@ -1,4 +1,4 @@
-# Prompt with AI
+# Prompting Frameworks
 
 ## Prompt engineering
 

@@ -1,4 +1,4 @@
-# Let's start
+# Introduction
 
 ::: warning
  LLMs and MMLLMs are constantly evolving, and new applications for developer training are emerging all the time.

@@ -1,4 +1,4 @@
-# Develop with AI
+# Code Assistants in IDEs
 
 ## GitHub Copilot
 

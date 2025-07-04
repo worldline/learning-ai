@@ -20,12 +20,14 @@ export default defineUserConfig({
 
     sidebar: [
       { text: "Home", link: "/" },
-      "/overview/",
-      "/use/",
-      "/llm/",
-      "/offline/",
-      "/develop/",
-      "/servicesai/",
+      "/1.intro/",
+      "/2.prompt/",
+      "/3.client/",
+      "/4.assistant/",
+      "/5.services/",
+      "/6.mcp/",
+      "/7.node/",
+      "/8.cloud/",
     ],
   }),
 
