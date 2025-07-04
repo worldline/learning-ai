@@ -7,23 +7,6 @@ actions:
   - text: Start the course →
     link: /1.intro/
     type: primary
-features:
-  - title: Introduction
-    details: Prerequisites - Key concepts and terminology - A bit of History - The market
-  - title: Prompting usage in apps lifecycle
-    details: Understanding prompting techniques, developper usage of LLMs for coding, and the application lifecycle
-  - title: Online/Offline LLMs clients (Librechat & LM Studio)
-    details: History, Favorites, Presets, Preformatted prompts, AI providers, Agent, Plugins & mixing, RAG,  Installation, Model configuration, enable APIs...
-  - title:  Code Assistants in IDEs (Copilot)
-    details: GitHub Copilot, and project generation with Bolt, v0
-  - title: GenAI for services (langchain, llama-index)
-    details: LLM API calls, Developpement with LangChain, Python notebooks, Context aware frameworks, RAG, Vector databases, Agents, Model Context Protocol
-  - title: Agentic AI with MCP (kotlin-mcp-sdk)
-    details: Understanding the Model Context Protocol, Building agentic AI applications, Integrating MCP with existing tools and workflows
-  - title: GenAI with UI node-based tools (ComfyUI)
-    details: Creating and customizing AI workflows with ComfyUI, Integrating LLMs with ComfyUI, Building complex workflows with various AI models and techniques
-  - title: GenAI in the Cloud (vertex AI)
-    details: Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.), Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.), deploying AI solutions in the cloud
 
 footer: Worldline © 2024 | tech at Worldline
 ---
@@ -31,9 +14,34 @@ footer: Worldline © 2024 | tech at Worldline
 LLMs and MMLLMs are constantly evolving, and new applications for developer training are emerging all the time.
 :::
 
-# AI for devs | Tech at Worldline
 
-## Who we are
+# Summary
+
+## 1. Introduction
+Prerequisites - Key concepts and terminology - A bit of History - The market
+
+## 2. Prompting usage in apps lifecycle
+Understanding prompting techniques, developper usage of LLMs for coding, and the application lifecycle
+
+## 3. Online/Offline LLMs clients (Librechat & LM Studio)
+History, Favorites, Presets, Preformatted prompts, AI providers, Agent, Plugins & mixing, RAG,  Installation, Model configuration, enable APIs...
+
+## 4. Code Assistants in IDEs (Copilot)
+GitHub Copilot, and project generation with Bolt, v0
+
+## 5. GenAI for services (langchain, llama-index)
+LLM API calls, Developpement with LangChain, Python notebooks, Context aware frameworks, RAG, Vector databases, Agents, Model Context Protocol
+  
+## 6. Agentic AI with MCP (kotlin-mcp-sdk)
+Understanding the Model Context Protocol, Building agentic AI applications, Integrating MCP with existing tools and workflows
+
+## 7. GenAI with UI node-based tools (ComfyUI)
+Creating and customizing AI workflows with ComfyUI, Integrating LLMs with ComfyUI, Building complex workflows with various AI models and techniques
+ 
+ ## 8. GenAI in the Cloud (vertex AI)
+Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.), Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.), deploying AI solutions in the cloud
+
+## About
 
 ![avatar](./assets/images/logo_worldline.png)
 

@@ -436,7 +436,11 @@ console.log(generateUserProfile());
 :::
 
 
-## Apps lifecycle techniques
+## Software development lifecycle
+
+You can also use prompt engineering techniques to assist with various stages of the software development lifecycle. here is an overview of it :
+
+![Software development lifecycle](../assets/images/software_lifecycle.png)
 
 ### Testing
 
