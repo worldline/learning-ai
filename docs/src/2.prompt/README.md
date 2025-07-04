@@ -28,24 +28,137 @@ By using "act as," you are establishing a specific context for the language mode
 "Act as a creative writing assistant and generate a short story based 
 on a prompt about a futuristic world where robots have become sentient."
 ```
+## Frameworks
 
 ### Framework : Chain of Thought
 
-![Chain of Thought](../assets/images/cot.png)
+**Chain-of-Thought (CoT)** encourages models to show their reasoning steps instead of jumping directly to answers.
 
 Introduced in Wei et al. (2022), chain-of-thought (CoT) prompting enables complex reasoning capabilities through intermediate reasoning steps. You can combine it with few-shot prompting to get better results on more complex tasks that require reasoning before responding.
 [Prompting Guide with CoT](https://www.promptingguide.ai/techniques/cot)
 
-### Framework : ReAct Prompting
 
-![react](../assets/images/react.png)
+#### ❌ Standard Prompting
+```
+Q: This Python code has a bug. What's wrong?
+```python
+def calculate_average(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total / len(numbers)
+
+result = calculate_average([])
+```
+
+**Output:** 
+```
+`ZeroDivisionError`
+```
+
+####  ✅ Chain-of-Thought Prompting
+```
+Q: This Python code has a bug. What's wrong?
+[same code]
+
+A: Let me trace through this step by step:
+1. Function receives empty list []
+2. Loop doesn't execute (no numbers)
+3. total remains 0
+4. Division: 0 / len([]) = 0 / 0 → ZeroDivisionError
+
+Fix: Add empty list check before division.
+```
+
+**Output:** 
+```
+Let me analyze this systematically:
+1. **Input**: Empty list []
+2. **Loop execution**: No iterations, total = 0  
+3. **Division step**: total / len([]) = 0 / 0
+4. **Error**: Division by zero
+
+**Solution**: Check if list is empty:
+```python
+def calculate_average(numbers):
+    if not numbers:
+        return 0  # or raise ValueError
+    total = sum(numbers)
+    return total / len(numbers)
+```
+
+#### Key Benefits
+
+| Standard | Chain-of-Thought |
+|----------|------------------|
+| Direct answer | Shows reasoning steps |
+| Hard to debug | Easy to spot errors |
+| Less accurate | More reliable |
+
+**Simple trigger**: Add "Let's think step by step" or "Analyze this systematically" to your prompts.
+
+
+
+### ReAct ( Reason + Act ) 
+
+**ReAct** combines reasoning (thinking) with acting (tool use) in iterative cycles to solve complex problems step-by-step.
 
 Yao et al., 2022 introduced a framework named ReAct where LLMs are used to generate both reasoning traces and task-specific actions in an interleaved manner.
 
 Generating reasoning traces allow the model to induce, track, and update action plans, and even handle exceptions. The action step allows to interface with and gather information from external sources such as knowledge bases or environments.
 
 The ReAct framework can allow LLMs to interact with external tools to retrieve additional information that leads to more reliable and factual responses.
+
 [Prompting Guide with CoT](https://www.promptingguide.ai/techniques/react.en)
+
+
+#### ❌ Standard Approach
+```
+Q: What programming language was TikTok's recommendation algorithm originally written in?
+
+A: TikTok's algorithm was written in Python and C++.
+```
+*May be inaccurate, no verification*
+
+#### ✅ ReAct Approach
+```
+Q: What programming language was TikTok's recommendation algorithm originally written in?
+
+Thought 1: I need to search for information about TikTok's algorithm implementation.
+Act 1: Search[TikTok recommendation algorithm programming language]
+Obs 1: TikTok uses machine learning models... but details about specific languages are limited in public sources.
+
+Thought 2: Let me search more specifically for TikTok's technical stack.
+Act 2: Search[TikTok backend technology stack programming languages]
+Obs 2: TikTok's backend primarily uses Go and Python. ByteDance engineering posts mention Go for microservices.
+
+Thought 3: I should look for official ByteDance engineering information.
+Act 3: Search[ByteDance TikTok algorithm Go Python engineering blog]
+Obs 3: ByteDance engineering blog confirms Go for backend services, Python for ML pipelines, with some C++ for performance-critical components.
+
+Thought 4: Based on multiple sources, I can provide a comprehensive answer.
+Act 4: Finish[TikTok's recommendation system uses primarily Go for backend services, Python for machine learning pipelines, and C++ for performance-critical components] ✓
+```
+
+#### Key Components
+
+| Component | Purpose | Example |
+|-----------|---------|---------|
+| **Thought** | Reasoning step | "I need to verify this information" |
+| **Act** | Tool usage | Search, Calculate, API call |
+| **Observation** | Tool output | Search results, data response |
+
+#### Benefits
+
+- **Verifiable**: Each step can be traced
+- **Accurate**: Information is fact-checked
+- **Transparent**: Shows the research process
+- **Iterative**: Can refine approach based on findings
+
+**Simple pattern**: Think → Act → Observe → Repeat until solution found.
+
+
+## Prompting techniques (basics)
 
 ### Summarize
 
@@ -68,8 +181,6 @@ Create a guide that explains how to use ….
 Write step by step instructions
 ```
 
-## For Developers
-
 ### Code explanation
 
 Code explanation is a prompt engineering technique that involves providing a detailed explanation of a code snippet or function. This technique is useful for developers who want to understand the inner workings of a codebase or for those who want to document their code.
@@ -83,7 +194,7 @@ Act as a code generator. Generate a Python function that takes a list of
 numbers as input and returns the sum of all the numbers.
 ```
 
-### 🧪 Exercises
+## 🧪 Exercises
 
 #### Basic Function Creation
 
@@ -104,7 +215,7 @@ def factorial(n):
     return result
 ```
 
-<!--
+
 ::: details Solutions
 
 **Persona:** Python Developer
@@ -113,7 +224,9 @@ def factorial(n):
 
 As a Python Developer, create a function named `factorial` that takes a single integer input and returns its factorial. The function should handle both positive integers and zero. Include error handling for negative inputs.
 :::
--->
+
+
+## Devs techniques
 
 #### API Request Handling
 
@@ -137,7 +250,6 @@ async function fetchData(url) {
 }
 ```
 
-<!--
 ::: details Solutions
 
 **Persona:** JavaScript Developer
@@ -147,7 +259,7 @@ async function fetchData(url) {
 As a JavaScript Developer, write a function named `fetchData` that takes a URL as an argument and fetches data from that URL using the Fetch API. The function should return the JSON response and handle any errors that may occur during the fetch operation.
 :::
 
--->
+
 
 #### Class Definition
 
@@ -170,7 +282,6 @@ public class Book
 }
 ```
 
-<!--
 ::: details Solutions
 
 **Persona:** C# Developer
@@ -180,7 +291,6 @@ public class Book
 As a C# Developer, create a class named `Book` that has properties for `Title`, `Author`, and `PublicationYear`. Include a method named `DisplayDetails` that prints the book's details in a formatted string.
 
 :::
--->
 
 #### Simple Web Server
 
@@ -203,7 +313,6 @@ server.listen(3000, () => {
 });
 ```
 
-<!--
 ::: details Solutions
 
 **Persona:** JavaScript Developer
@@ -213,7 +322,7 @@ server.listen(3000, () => {
 As a JavaScript Developer, set up a simple web server using the `http` module that listens on port 3000 and responds with "Hello, World!" when accessed.
 :::
 
--->
+
 
 #### Data Validation
 
@@ -231,7 +340,7 @@ def valid_email?(email)
 end
 ```
 
-<!--
+
 ::: details Solutions
 
 **Persona:** Ruby Developer
@@ -242,7 +351,6 @@ As a Ruby Developer, write a method named `valid_email?` that takes a string as 
 
 :::
 
--->
 
 ### Completion
 
@@ -291,7 +399,7 @@ The profile should include:
 * Address (Street, City, State, Zip Code)
 * Phone Number
 
-<!--
+
 ::: details Solutions
 
 Mock Data Generation
@@ -327,9 +435,8 @@ console.log(generateUserProfile());
 
 :::
 
--->
 
-## Go further
+## Apps lifecycle techniques
 
 ### Testing
 

@@ -1,4 +1,4 @@
-# GenAI in the Cloud 
+# (GenAI in the Cloud)
 
 Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.
 
@@ -52,7 +52,6 @@ Beyond the core platform and APIs, Google offers several specialized AI products
 
 - ...
 
-
 ## Collaborative (Hugging Face)
 
 The platform where the machine learning community collaborates on models, datasets, and applications.
@@ -61,7 +60,6 @@ Hugging Face is a platform for researchers and developers to share, explore, and
 
 - Creating/deploy/customize a model
 - Pre-trained model, use behind the APIs, also a ML part, training model generation for use
-
 
 ## Manage models (ML Flow)
 

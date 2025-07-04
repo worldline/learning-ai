@@ -1,7 +1,6 @@
-# UI Node-based genAI
+# (Node-based genAI)
 
-
-##  Discover ComfyUI
+## Discover ComfyUI GUI
 
 ComfyUI is a powerful and flexible tool for creating and customizing AI workflows. It provides a user-friendly interface for designing and running workflows, making it easy to experiment with different models, parameters, and configurations. With ComfyUI, you can create complex workflows that combine various AI models and techniques to achieve your desired results. The LLM can be offline or online, and you can use it to generate images, text, audio, and other media.
 
@@ -16,9 +15,8 @@ To get started with ComfyUI, you can follow these steps:
 
 ### 🧪 Exercises
 
-
-
 ## 📖 Further readings
+
 * [The Yoga of Image Generation – Part 1](https://blog.worldline.tech/2025/02/11/sd-comfyui-part1.html)
 * [The Yoga of Image Generation – Part 2](https://blog.worldline.tech/2025/04/14/sd-comfyui-part2.html)
 * [The Yoga of Image Generation – Part 3](https://blog.worldline.tech/2025/06/24/sd-comfyui-part3.html)

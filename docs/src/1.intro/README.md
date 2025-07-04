@@ -24,27 +24,13 @@ Additionnaly, **Request Worldline librechat access:** send a mail at  [Generativ
 There is a dedicated sharepoint for basic general assistant quick start at Worldline : [LibreChat Worldline guides](https://worldline365.sharepoint.com/:u:/r/sites/GenerativeAIQA/SitePages/LibreChat-guides.aspx?csf=1&web=1&e=evKJpU)
 :::
 
-## Definitions
+## Generative AI ?
 
-### Large Language Model (LLM)
-
-Large Language Model is a powerful type of AI model trained on massive datasets of text and code. LLMs can understand, generate, and manipulate language.
-Ex : ChatGPT, Bard, Codex
-
-*What are Large Language Models (LLMs)? by Google for developpers*
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iR2O2GPbB0E" title="What are Large Language Models (LLMs)? by Google for developpers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### Multi-Modal LLM (MMLLM)
-
-Multi-Modal Large Language Model is an advanced LLM that can process and generate both text and other data formats like images, audio, or video.
-Ex:  DALL-E 2, Stable Diffusion (for image generation)
-
-### Machine Learning (ML)
+#### Machine Learning (ML)
 
 Machine Learning is a subset of AI that focuses on training algorithms to learn from data and make predictions or decisions without explicit programming. ML powers many AI applications, including image recognition, natural language processing, and predictive analytics.
 
-### Deep Learning (DL)
+#### Deep Learning (DL)
 
 Deep Learning is a type of ML that uses artificial neural networks with multiple layers to learn complex patterns from data.DL has revolutionized fields like computer vision, speech recognition, and machine translation.
 
@@ -64,22 +50,37 @@ Natural Language Processing is a branch of Artificial Intelligence (AI) that foc
 - Translation
 - Speech Recognition: Powers voice assistants and speech-to-text technologies
 
-#### **Prompt:**
+#### Large Language Model (LLM)
 
-A specific set of instructions or questions given to an LLM to guide its response. Well-crafted prompts are crucial for getting accurate and relevant output from LLMs.
-Ex :  "Write a Python function to check if a string is a palindrome."
+Large Language Models are a powerful type of AI model trained on massive datasets of text and code. LLMs can understand, generate, and manipulate language.
+Example : ChatGPT, Bard, Claude, Gemini, Llama 2, Mistral, etc.
 
-#### **Token:**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iR2O2GPbB0E" title="What are Large Language Models (LLMs)? by Google for developpers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+*What are Large Language Models (LLMs)? by Google for developpers*
 
-The smallest unit of meaning processed by an LLM.  Tokens can be words, parts of words, punctuation marks, or special characters. LLMs process text by analyzing sequences of tokens, making it important to understand how they are broken down.
-Ex : The sentence "I love programming" would be split into the following tokens: "I", "love", "programming".
+#### Multi-Modal LLM (MMLLM)
 
-#### **Temperature:**
+Multi-Modal Large Language Model is an advanced LLM that can process and generate both text and other data formats like images, audio, or video.
+Ex:  DALL-E 2, Stable Diffusion (for image generation)
 
-A parameter in some LLMs that controls the randomness or creativity of the generated text. Adjust temperature based on the desired level of creativity or accuracy in the LLM's output.
+## Key Concepts
 
-* A higher temperature generate more randomness and unpredictability in the output.
-* A lower temperature generate more predictable and coherent output.
+#### Transformers
+
+Transformers are a type of neural network architecture that have revolutionized the field of NLP. They are based on the idea of self-attention, which allows the model to focus on different parts of the input sequence when making predictions. This makes them particularly effective for tasks like machine translation and text summarization.
+
+You can have a look to a visual model of a transformer [here](https://jalammar.github.io/illustrated-transformer/).
+
+
+#### Learners 
+
+
+* **Language Models are Unsupervised Multitask Learners** by Radford et al. (2019): This paper introduced the GPT-3 architecture, which is the foundation of most 
+modern LLMs.  
+
+Learners are the core component of LLMs. They are trained on large amounts of text data to learn patterns and relationships between words, phrases, and sentences. 
+Their ability to understand and generate human-like text makes them a powerful tool for a wide range of applications, from language translation 
+to creative writing and even generating coherent stories.
 
 #### **RAG: Retrieval Augmented Generation**
 
@@ -89,17 +90,30 @@ RAG (Retrieval Augmented Generation) is a powerful technique in the field of Nat
 * This retrieved information is then used to augment the language model's input, providing it with more context and specific facts.
 * Finally, the language model uses this augmented input to generate a more comprehensive and informative response, leveraging both its knowledge base and its language generation capabilities.
 
-#### Vector Database
+#### **Prompt**
+
+A specific set of instructions or questions given to an LLM to guide its response. Well-crafted prompts are crucial for getting accurate and relevant output from LLMs.
+Ex :  "Write a Python function to check if a string is a palindrome."
+
+#### **Token**
+
+The smallest unit of meaning processed by an LLM.  Tokens can be words, parts of words, punctuation marks, or special characters. LLMs process text by analyzing sequences of tokens, making it important to understand how they are broken down.
+Ex : The sentence "I love programming" would be split into the following tokens: "I", "love", "programming".
+
+#### **Temperature**
+
+A parameter in some LLMs that controls the randomness or creativity of the generated text. Adjust temperature based on the desired level of creativity or accuracy in the LLM's output.
+
+* A higher temperature generate more randomness and unpredictability in the output.
+* A lower temperature generate more predictable and coherent output.
+
+#### **Vector Database**
 
 A vector database is a specialized database designed to store and retrieve high-dimensional vectors efficiently. It is particularly useful for applications involving similarity search, such as image recognition, recommendation systems, and natural language processing.
 
 You can have a look to a 3D model of a vector database [here](https://projector.tensorflow.org).
 
-#### Transformers
 
-Transformers are a type of neural network architecture that have revolutionized the field of NLP. They are based on the idea of self-attention, which allows the model to focus on different parts of the input sequence when making predictions. This makes them particularly effective for tasks like machine translation and text summarization.
-
-You can have a look to a visual model of a transformer [here](https://jalammar.github.io/illustrated-transformer/).
 
 ## A bit of History
 
