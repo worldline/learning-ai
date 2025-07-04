@@ -10,7 +10,7 @@ actions:
 features:
   - title: Introduction
     details: Prerequisites - Key concepts and terminology - A bit of History - The market
-  - title: Prompting Frameworks usage in apps lifecycle
+  - title: Prompting usage in apps lifecycle
     details: Understanding prompting techniques, developper usage of LLMs for coding, and the application lifecycle
   - title: Online/Offline LLMs clients (Librechat & LM Studio)
     details: History, Favorites, Presets, Preformatted prompts, AI providers, Agent, Plugins & mixing, RAG,  Installation, Model configuration, enable APIs...

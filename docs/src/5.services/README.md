@@ -183,11 +183,11 @@ Author: Unknown
 - [API Model list](https://docs.mistral.ai/api/#tag/models/operation/list_models_v1_models_get)
 - [Chat completions](https://docs.mistral.ai/api/#tag/chat/operation/chat_completion_v1_chat_completions_post)
 
-<!---
+
 ::: details Solution
 [Google Collab notebook](https://colab.research.google.com/drive/1CHb_WX3kZaCKShHdCI-4zut1Ro0HqgPd?usp=sharing)
 :::
--->
+
 
 ## Context aware frameworks (LangChain)
 

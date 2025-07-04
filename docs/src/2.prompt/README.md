@@ -1,4 +1,4 @@
-# Prompting Frameworks
+# Prompting usages
 
 ## Prompt engineering
 
@@ -180,7 +180,7 @@ public class Book
 As a C# Developer, create a class named `Book` that has properties for `Title`, `Author`, and `PublicationYear`. Include a method named `DisplayDetails` that prints the book's details in a formatted string.
 
 :::
---> 
+-->
 
 #### Simple Web Server
 
@@ -215,8 +215,6 @@ As a JavaScript Developer, set up a simple web server using the `http` module th
 
 -->
 
-
-
 #### Data Validation
 
 **Details:**
@@ -232,7 +230,6 @@ def valid_email?(email)
     !!(email =~ regex)
 end
 ```
-
 
 <!--
 ::: details Solutions
@@ -293,7 +290,6 @@ The profile should include:
 * Email
 * Address (Street, City, State, Zip Code)
 * Phone Number
-
 
 <!--
 ::: details Solutions
