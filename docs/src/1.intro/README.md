@@ -26,6 +26,8 @@ There is a dedicated sharepoint for basic general assistant quick start at World
 
 ## Generative AI ?
 
+![Definitions](../assets/images/definitions.png)
+
 #### Machine Learning (ML)
 
 Machine Learning is a subset of AI that focuses on training algorithms to learn from data and make predictions or decisions without explicit programming. ML powers many AI applications, including image recognition, natural language processing, and predictive analytics.
@@ -73,7 +75,6 @@ You can have a look to a visual model of a transformer [here](https://jalammar.g
 
 
 #### Learners 
-
 
 * **Language Models are Unsupervised Multitask Learners** by Radford et al. (2019): This paper introduced the GPT-3 architecture, which is the foundation of most 
 modern LLMs.  
