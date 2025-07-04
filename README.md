@@ -1,4 +1,4 @@
-# Agentic AI for devs : Unlocking the Power of Generative Technologies
+# From Generative to Agentic AI for Developers
 
 ## Description
 
@@ -24,13 +24,13 @@ Module 1: Introduction to Generative AI
 - Key concepts and terminology
 - Use cases in software development
 
-Module 2: Prompting Frameworks and Application Lifecycle
+Module 2: Prompting usage in apps lifecycle
 
 - Understanding prompting techniques
 - Tips for ideation and architecture design
 - Refactoring and generating tests using AI
 
-Module 3: genAI Tools and Software Usage
+Module 3: Online/Offline LLMs clients
 
 - Overview of main plugins and their functionalities
 - Mixing plugins and using presets
@@ -42,14 +42,25 @@ Module 4: Code Assistants in IDEs
 - Generating code snippets and tests
 - Creating a website from prompts
 
-Module 5: genAI for Services
+Module 5: GenAI for services
 
 - Managing LLM API calls in JSON mode and handling structured outputs
 - Use context-aware frameworks with techniques for prompt templating and chaining
 - Usage of vector databases for chain-of-thought creations
 - Retrieval-Augmented Generation (RAG) structured and unstructured.
 
-Module 6: Cloud Provider Tools
+Module 6: Agentic AI with MCP (kotlin-mcp-sdk)
+
+- Understanding the Model Context Protocol, 
+- Building agentic AI applications, Integrating MCP with existing tools and workflows
+
+Module 7: GenAI with UI node-based tools
+
+- Creating and customizing AI workflows with ComfyUI
+- Integrating LLMs with ComfyUI
+- Building complex workflows with various AI models and techniques
+
+Module 8: Cloud Provider Tools
 
 - Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.)
 - Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.)
@@ -58,25 +69,29 @@ Module 6: Cloud Provider Tools
 Module 7: Agentic AI with MCP framework (soon)
 
 # AI for devs | Tech at Worldline
+
 ## Who we are ?
 
-![avatar](docs/src/assets/images/logo_worldline.png)  
+![avatar](docs/src/assets/images/logo_worldline.png)
 
-**We design payments technology that powers the growth of millions​ of businesses around the world. Engineering the next frontiers​ in payments technology​**  
-* Leader in payment and secured transactions. ​ 
-* Over 50bn transactions/year​
-* 7000+ engineers​ in over 40 countries​
-* A huge & diverse​ tech-stack
+**We design payments technology that powers the growth of millions of businesses around the world. Engineering the next frontiers in payments technology**
+
+* Leader in payment and secured transactions.
+* Over 50bn transactions/year
+* 7000+ engineers in over 40 countries
+* A huge & diverse tech-stack
 
 ### Follow trainers of this codelab
 
-Contributors 
+Contributors
+
 * Ibrahim Gharbi
 * Sylvain Pollet Villard
 * Yassine Benabbas
 * Raphaël Semeteys
 
 Sponsors
+
 * Yacine Kessaci
 * Liyun He Guelton
 * Fanilo Andrianasolo
@@ -88,10 +103,9 @@ Sponsors
 * Martin Boulanger
 * Julien Carme
 
-
 ### Follow our Tech team
 
-[🔗 blog.worldline.tech](http://blog.worldline.tech)     
-[🔗 @WorldlineTech​](https://twitter.com/worldlinetech)
+[🔗 blog.worldline.tech](http://blog.worldline.tech)
+[🔗 @WorldlineTech](https://twitter.com/worldlinetech)
 
 Worldline © 2024 | Tech at Worldline

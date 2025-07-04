@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: ./logo.png
-heroText: Generative AI for Developers
+heroText: From Generative to Agentic AI for Developers
 tagline: use LLMs to help you code and create your applications
 actions:
   - text: Start the course →
