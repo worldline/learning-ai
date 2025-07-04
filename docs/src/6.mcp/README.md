@@ -51,7 +51,7 @@ Use Kotlin MCP SDK to :
 - use the tool in LM Studio to simulate a quiz that add explainations to the answers and final scoring.
 
 ::: details Solution
-https://github.com/worldline/learning-kotlin-multiplatform-src/tree/with-mcp-server
+[Quiz MCP server on github](https://github.com/worldline/learning-kotlin-multiplatform-src/tree/with-mcp-server)
 :::
 
 ## 📖 Further readings
