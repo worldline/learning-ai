@@ -185,7 +185,7 @@ Author: Unknown
 
 
 ::: details Solution
-[Google Collab notebook](https://colab.research.google.com/drive/1CHb_WX3kZaCKShHdCI-4zut1Ro0HqgPd?usp=sharing)
+[Google Collab notebook](https://colab.research.google.com/drive/1rE_jC4DhD33Ni8MR9YTGK9WhykOTtbcF?usp=sharing)
 :::
 
 
