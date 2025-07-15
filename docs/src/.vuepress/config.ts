@@ -1,7 +1,13 @@
+import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
-import { viteBundler } from "@vuepress/bundler-vite";
-import { markdownImagePlugin } from "@vuepress/plugin-markdown-image";
+import { pwaPlugin } from "@vuepress/plugin-pwa";
+import { seoPlugin } from "@vuepress/plugin-seo";
+import { searchPlugin } from "@vuepress/plugin-search";
+import { nprogressPlugin } from "@vuepress/plugin-nprogress";
+import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
+import { kotlinPlayground, mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+
 
 export default defineUserConfig({
   base: "/learning-ai/",
@@ -36,11 +42,37 @@ export default defineUserConfig({
     vuePluginOptions: {},
   }),
   plugins: [
-    markdownImagePlugin({
-      figure: true,
-      lazyload: true,
-      mark: true,
-      size: true,
-    }),
+        seoPlugin({
+          hostname: "https://worldline.github.io/learning-ai",
+        }),
+        searchPlugin({
+          locales: {
+            "/": {
+              placeholder: "Search...",
+            },
+          },
+        }),
+        pwaPlugin({
+          update: "hint",
+          cacheHTML: true,
+          manifest: {
+            icons: [
+              {
+                src: "/learning-ai/logo.png",
+                sizes: "192x192",
+                type: "image/png",
+              },
+              {
+                src: "/learning-ai/logo.png",
+                sizes: "512x512",
+                type: "image/png",
+              },
+            ],
+          },
+        }),
+        mdEnhancePlugin({
+          kotlinPlayground : true,
+        }),
+    
   ],
 });
