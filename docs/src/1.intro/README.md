@@ -192,9 +192,156 @@ During the turing test, the human questioner asks a series of questions to both 
 
 ## The market
 
- ![market](../assets/images/market.png)
+ #### Gen AI app landscape
 
- ![top50](../assets/images/top50.png)
+### Ecosystem of Generative AI Applications (2025)
+
+#### Layer 1: Application Layer
+
+##### Copywriting
+| Name             | Description                     |
+|------------------|---------------------------------|
+| Jasper           | Versatile AI assistant          |
+| copy.ai          | Content generation              |
+| Headline         | Headline creation               |
+| Co:here          | NLP platform                    |
+| HyperWrite       | Assisted writing                |
+| Writesonic       | Marketing content creation      |
+| Contenda         | Content automation              |
+| Unbounce         | Optimized landing pages        |
+| Copysmith        | Text generation                 |
+
+##### Coding
+| Name               | Description                                  |
+|--------------------|----------------------------------------------|
+| tabnine            | Code autocompletion                         |
+| MUTABLE AI        | Code generation                              |
+| Codiga             | Development tools                            |
+| co:here            | NLP for code                                |
+| GitHub Copilot   | Programming assistance                        |
+| CODEGEN            | AI code generation                           |
+
+##### Dev Tools
+| Name              | Description                                            |
+|-------------------|--------------------------------------------------------|
+| algolia          | AI-powered search engine                                |
+| warp             | AI terminal editor                                    |
+| Mintlify         | Smart documentation                                   |
+| cogram           | SQL query automation                                  |
+| Debuild          | API and backend generation                              |
+| replit           | Cloud-based coding platform                             |
+
+##### Chat / Communications
+| Name             | Description                                |
+|------------------|--------------------------------------------|
+| MessageBird      | AI messaging platform                     |
+| Replier.ai       | Automated responses                        |
+| Sapling          | Communication assistant                     |
+| FABLE            | Conversational chatbot                      |
+
+##### Business Operations
+| Name           | Description                             |
+|----------------|----------------------------------------|
+| viable         | Process automation                     |
+| Enterprnt     | AI business platform                     |
+| tabulate       | Spreadsheet automation                     |
+| Anecdote       | Storytelling generation                    |
+| OTHERSIDE AI | Diverse business AI tools                     |
+| casetext       | Legal research AI                            |
+| Dover          | Administrative automation                    |
+
+#### Layer 2: Infrastructure Layer
+
+##### Model Creation
+| Name            | Description                                  |
+|-----------------|----------------------------------------------|
+| AI21 Labs       | Advanced NLP models                         |
+| OpenAI          | GPT, DALL·E, etc.                            |
+| EleutherAI      | Open-source alternatives                     |
+| NVIDIA          | AI hardware solutions                         |
+| ADEPT           | AI research                                   |
+| Google AI       | Advanced models from Google                   |
+| ANTHROPIC      | Language & AI models                           |
+
+##### Hardware
+| Name            | Description                          |
+|-----------------|-------------------------------------|
+| habana          | Habana AI accelerators               |
+| SambaNova       | Data center AI chips                |
+| NVIDIA          | GPU and infrastructure                |
+| cerebras        | High-performance AI chips             |
+| Graphcore       | AI-specific processors               |
+
+##### Fine Tuning
+| Name            | Description                                      |
+|-----------------|-------------------------------------------------|
+| Google AI       | Model fine-tuning                                    |
+| AWS             | Cloud infrastructure for fine-tuning             |
+| OpenAI         | GPT model fine-tuning                                |
+| Hugging Face    | Model platform & fine-tuning                      |
+
+##### Inference
+| Name            | Description                                   |
+|-----------------|----------------------------------------------|
+| OpenAI        | API inference service                          |
+| Hugging Face  | Inference platform                                |
+
+### Top 50 Generative AI applications
+
+| Rang | Application | Plateforme | Lien |
+|-------|--------------|--------------|-------|
+| 1 | ChatGPT | Web, Mobile | [Lien](https://chat.openai.com/) |
+| 2 | ChatGPT API | API | [Lien](https://platform.openai.com/api-keys) |
+| 3 | Jasper | Web, Mac, Windows | [Lien](https://www.jasper.ai/) |
+| 4 | Bard (Google) | Web, Mobile | [Lien](https://bard.google.com/) |
+| 5 | Claude (Anthropic) | Web | [Lien](https://claude.ai/) |
+| 6 | Bing Chat | Web | [Lien](https://www.bing.com/new) |
+| 7 | Midjourney | Web | [Lien](https://www.midjourney.com/) |
+| 8 | Stable Diffusion | Web, Local | [Lien](https://stablediffusionweb.com/) |
+| 9 | Lensa AI | Mobile (iOS/Android) | [Lien](https://apps.apple.com/us/app/lensa-ai-photo-editor/id868133423) |
+| 10 | Canva Image Generator | Web, Mobile | [Lien](https://www.canva.com/) |
+| 11 | Adobe Firefly | Web | [Lien](https://helpx.adobe.com/firefly.html) |
+| 12 | Runway ML | Web, Mac, Windows | [Lien](https://runwayml.com/) |
+| 13 | DALL·E 2 | Web | [Lien](https://openai.com/dall-e-2/) |
+| 14 | Copy.ai | Web | [Lien](https://www.copy.ai/) |
+| 15 | Writesonic | Web | [Lien](https://writesonic.com/) |
+| 16 | Tome | Web | [Lien](https://tome.app/) |
+| 17 | Podcast.ai | Mobile, Web | [Lien](https://podcast.ai/) |
+| 18 | Beeble AI | Mobile | [Lien](https://apps.apple.com/us/app/beeble-ai/id1603442934) |
+| 19 | Jasper Art | Web | [Lien](https://www.jasper.ai/art) |
+| 20 | Wonder Studio | Web | [Lien](https://wonderstudio.com/) |
+| 21 | Deep Nostalgia | Web, Mobile | [Lien](https://myheritage.com/deep-nostalgia) |
+| 22 | CopySmith | Web | [Lien](https://copysmith.ai/) |
+| 23 | Nebula Cloud | Web | [Lien](https://nebulacloud.ai/) |
+| 24 | Synthesia | Web, Mobile | [Lien](https://www.synthesia.io/) |
+| 25 | Rosebud AI | Web | [Lien](https://rosebud.ai/) |
+| 26 | DeepBrain | Web | [Lien](https://www.deepbrain.io/) |
+| 27 | Prisma Labs | Android, iOS | [Lien](https://prisma-ai.com/) |
+| 28 | Jasper Chat | Web | [Lien](https://www.jasper.ai/chat) |
+| 29 | Maverick | Web | [Lien](https://www.maverick.ai/) |
+| 30 | Syntha | Web | [Lien](https://syntha.ai/) |
+| 31 | Ditto | Web | [Lien](https://ditto.com/) |
+| 32 | System1 | Web | [Lien](https://system1.com/) |
+| 33 | Waifu Diffusion | Web | [Lien](https://waifulabs.com/) |
+| 34 | Artbreeder | Web | [Lien](https://www.artbreeder.com/) |
+| 35 | Pixray | Web | [Lien](https://pxray.readthedocs.io/en/latest/) |
+| 36 | Dream by Wombo | iOS, Android | [Lien](https://www.wombo.art/) |
+| 37 | NightCafe | Web, iOS, Android | [Lien](https://creator.nightcafe.studio/) |
+| 38 | Artbreeder | Web | [Lien](https://www.artbreeder.com/) |
+| 39 | Deep Dream Generator | Web | [Lien](https://deepdreamgenerator.com/) |
+| 40 | StarryAI | iOS, Android | [Lien](https://starryai.com/) |
+| 41 | Artify | Web | [Lien](https://artify.com/) |
+| 42 | Wombo Dream | Web, iOS, Android | [Lien](https://www.wombo.art/) |
+| 43 | DeepAI | Web | [Lien](https://deepai.org/) |
+| 44 | ArtSmart | Web | [Lien](https://artsmart.ai/) |
+| 45 | Pixilart | Web, Mobile | [Lien](https://www.pixilart.com/) |
+| 46 | Runway Gen-2 | Web | [Lien](https://runwayml.com/) |
+| 47 | PaintsChainer | Web | [Lien](https://paintschainer.preferred.tech/index_en.html) |
+| 48 | Dreamstudio | Web | [Lien](https://beta.dreamstudio.ai/) |
+| 49 | Artify | Web | [Lien](https://artify.com/) |
+| 50 | Deep Dream Generator | Web | [Lien](https://deepdreamgenerator.com/) |
+
+
 
 ## 🧪 Exercises
 
