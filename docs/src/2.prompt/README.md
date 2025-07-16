@@ -440,7 +440,53 @@ console.log(generateUserProfile());
 
 You can also use prompt engineering techniques to assist with various stages of the software development lifecycle. here is an overview of it :
 
-![Software development lifecycle](../assets/images/software_lifecycle.png)
+<Mermaid :value="`
+flowchart TD
+A[Developer Prompting
+Techniques] --> B[Summarize
+• Document summaries
+• Changelog overviews
+• Article abstracts]
+A --> C[Write
+• Technical documentation
+• Step-by-step guides
+• Email templates]
+A --> D[Code Explanation
+• Function breakdowns
+• Logic walkthroughs
+• Architecture overviews]
+A --> E[Generation
+• Function creation
+• Class definitions
+• API implementations]
+A --> F[Completion
+• Auto-suggestions
+• Code snippets
+• Pattern matching]
+A --> G[Conversion
+• Language migration
+• Syntax translation
+• Framework porting]
+D --> H[Review
+• Code analysis
+• Best practices check
+• Security assessment]
+H --> I[Fixing
+• Bug resolution
+• Error correction
+• Syntax repair]
+H --> J[Refactoring
+• Code optimization
+• Structure improvement
+• Maintainability]
+E --> K[Data Mocking
+• Test data generation
+• API response mocking
+• Database fixtures]
+classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
+classDef main fill:#1976d2,stroke:#0d47a1,stroke-width:3px,color:#fff
+class A main
+`" />
 
 ### Testing
 

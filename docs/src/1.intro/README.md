@@ -26,7 +26,56 @@ There is a dedicated sharepoint for basic general assistant quick start at World
 
 ## Generative AI ?
 
-![Definitions](../assets/images/definitions.png)
+<Mermaid :value="`
+graph TD
+subgraph ML[MACHINE LEARNING]
+  subgraph DL[DEEP LEARNING]
+    subgraph NN[NEURAL NETWORKS]
+      subgraph NLP[NLP]
+        subgraph LLM[LLM]
+          MM[MultiModal:
+          GPT-4V
+          Claude 3
+          DALL-E
+          LLaVa]
+          M[Models:
+          GPT-1/4, BERT
+          T5, Claude
+          LaMDA, PaLM]
+        end
+        T[Techniques:
+        Tokenization
+        Word Embeddings
+        Attention, NER]
+      end
+      TY[Types:
+      Perceptron, MLP
+      Feedforward
+      Backpropagation]
+    end
+    A[Architectures:
+    CNN, RNN, LSTM
+    Transformers, GANs
+    Autoencoders]
+  end
+  CT[Classical Techniques:
+  SVM, Random Forest
+  Linear Regression
+  K-Means, Decision Trees]
+end
+classDef white fill:#ffffff,stroke:#1565c0,stroke-width:2px,color:#000
+classDef level1 fill:#ffffff,stroke:#0d47a1,stroke-width:3px,color:#000
+classDef level2 fill:#ffffff,stroke:#1976d2,stroke-width:2px,color:#000
+classDef level3 fill:#ffffff,stroke:#1976d2,stroke-width:2px,color:#000
+classDef level4 fill:#ffffff,stroke:#42a5f5,stroke-width:2px,color:#000
+classDef level5 fill:#ffffff,stroke:#64b5f6,stroke-width:2px,color:#000
+class ML level1
+class DL level2
+class NN level3
+class NLP level4
+class LLM level5
+class MM,M,T,TY,A,CT white
+`" />
 
 #### Machine Learning (ML)
 

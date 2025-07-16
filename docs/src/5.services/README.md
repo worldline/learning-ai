@@ -333,7 +333,30 @@ Let's request the Mistral AI API to get the embedding of a question and compare 
 
 Here is the schema  :
 
-![schema](../assets/images/chaining.png)
+<Mermaid :value="`
+flowchart TD
+A[JSON FAQs
+Questions & Answers] --> B[Convert to List]
+B --> C[LLM Embedding
+Request]
+C --> D((FAQ
+Embedding))
+E[User Prompt
+Can I get refund?] --> F[LLM Embedding
+Request]
+F --> G((User
+Embedding))
+D --> H[Cosine
+Comparison]
+G --> H
+H --> I((Closest FAQ
+Match))
+I --> J[LLM Final
+Response]
+classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
+classDef circle fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#000
+class D,G,I circle
+`" />
 
 
 ::: details Solution
@@ -360,7 +383,7 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 
 - Sign up for an API key from a weather service provider (e.g., OpenWeatherMap). - You can generate your key [here](https://home.openweathermap.org/api_keys) - You can call the API as following :
   `bash curl https://api.openweathermap.org/data/2.5/weather?q=Lille&appid=<your_api_key>&units=metric `
-  :::
+:::
 
 ##### Steps
 

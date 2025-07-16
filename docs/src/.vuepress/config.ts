@@ -9,7 +9,9 @@ import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
 import { kotlinPlayground, mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 
 
+
 export default defineUserConfig({
+
   base: "/learning-ai/",
   port: 3000,
 
@@ -73,6 +75,7 @@ export default defineUserConfig({
         mdEnhancePlugin({
           kotlinPlayground : true,
         }),
+
+]
     
-  ],
 });

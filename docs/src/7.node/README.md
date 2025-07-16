@@ -20,3 +20,5 @@ To get started with ComfyUI, you can follow these steps:
 * [The Yoga of Image Generation – Part 1](https://blog.worldline.tech/2025/02/11/sd-comfyui-part1.html)
 * [The Yoga of Image Generation – Part 2](https://blog.worldline.tech/2025/04/14/sd-comfyui-part2.html)
 * [The Yoga of Image Generation – Part 3](https://blog.worldline.tech/2025/06/24/sd-comfyui-part3.html)
+* [Relay.ai](https://www.relay.app/?_sm_vck=Jq0QMVqMPr7RtrJHNJ3ZSFfj0H0P2ns56Nr2snrMQD3MVq7vrMwQ)
+* [Make.com](https://www.make.com/en)

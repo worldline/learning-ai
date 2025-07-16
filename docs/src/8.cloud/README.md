@@ -4,6 +4,125 @@ Google Cloud is a suite of cloud computing services provided by Google. It inclu
 
 Globally Vertex products are supported by the developper branch of Google, and Gemini is supported by ML teams of Google.
 
+<Mermaid :value="`
+graph TD
+    %% Style definitions
+    classDef consumerApp fill:#4285f4,stroke:#333,stroke-width:2px,color:#fff
+    classDef apis fill:#9c27b0,stroke:#333,stroke-width:2px,color:#fff
+    classDef geminiML fill:#ea4335,stroke:#333,stroke-width:2px,color:#fff
+    classDef vertexDev fill:#0f9d58,stroke:#333,stroke-width:2px,color:#fff
+    classDef tensorflow fill:#ff9800,stroke:#333,stroke-width:2px,color:#fff
+    %% Applications Grand Public - Niveau le plus applicatif au sommet
+    subgraph Applications Grand Public
+        GSEARCH[Google Search AI]:::consumerApp
+        GASSIST[Google Assistant]:::consumerApp
+        GPHOTOS[Google Photos AI]:::consumerApp
+        GMAIL[Gmail Smart Compose]:::consumerApp
+        GTRANS[Google Translate]:::consumerApp
+        GLENS[Google Lens]:::consumerApp
+        BARD[Bard Gemini Chat]:::consumerApp
+        GSEARCH ~~~ GASSIST
+        GASSIST ~~~ GPHOTOS
+        GPHOTOS ~~~ GMAIL
+        GMAIL ~~~ GTRANS
+        GTRANS ~~~ GLENS
+        GLENS ~~~ BARD
+    end
+    %% APIs and Pre-trained Models
+    subgraph APIs and Pre-trained Models
+        NLAPI[Natural Language API]:::apis
+        VAPI[Vision API]:::apis
+        STTAPI[Speech-to-Text API]:::apis
+        TTSAPI[Text-to-Speech API]:::apis
+        TRANSAPI[Translation API]:::apis
+        DOCAI[Document AI]:::apis
+        VIDAPI[Video Intelligence API]:::apis
+        AUTOML[AutoML Tables]:::apis
+        DFCX[Dialogflow CX]:::apis
+        DFES[Dialogflow ES]:::apis
+        CCAI[Contact Center AI]:::apis
+        RECAI[Recommendations AI]:::apis
+        RETAI[Retail AI]:::apis
+        HEALTHAI[Healthcare AI]:::apis
+        MEDTRANS[Media Translation]:::apis
+        NLAPI ~~~ VAPI
+        VAPI ~~~ STTAPI
+        STTAPI ~~~ TTSAPI
+        TTSAPI ~~~ TRANSAPI
+        TRANSAPI ~~~ DOCAI
+        DOCAI ~~~ VIDAPI
+        VIDAPI ~~~ AUTOML
+        AUTOML ~~~ DFCX
+        DFCX ~~~ DFES
+        DFES ~~~ CCAI
+        CCAI ~~~ RECAI
+        RECAI ~~~ RETAI
+        RETAI ~~~ HEALTHAI
+        HEALTHAI ~~~ MEDTRANS
+    end
+    %% Gemini Branch - ML Teams
+    subgraph Gemini - ML Teams
+        GU[Gemini Ultra]:::geminiML
+        GP[Gemini Pro]:::geminiML  
+        GN[Gemini Nano]:::geminiML
+        AIS[AI Studio]:::geminiML
+        GWS[Gemini for Google Workspace]:::geminiML
+        GCA[Gemini Code Assist]:::geminiML 
+        GU ~~~ GP
+        GP ~~~ GN
+        GN ~~~ AIS
+        AIS ~~~ GWS
+        GWS ~~~ GCA
+    end
+    %% Vertex AI Branch - Developers
+    subgraph Vertex AI - Developers
+        VAS[Vertex AI Studio]:::vertexDev
+        VAW[Vertex AI Workbench]:::vertexDev
+        VAP[Vertex AI Pipelines]:::vertexDev
+        VAMG[Vertex AI Model Garden]:::vertexDev
+        VAFS[Vertex AI Feature Store]:::vertexDev
+        VAME[Vertex AI Matching Engine]:::vertexDev
+        VAE[Vertex AI Experiments]:::vertexDev
+        VAPRED[Vertex AI Predictions]:::vertexDev
+        VAT[Vertex AI Training]:::vertexDev
+        VAM[Vertex AI Monitoring]:::vertexDev
+        VAEX[Vertex AI Explainable AI]:::vertexDev
+        COLAB[Google Colab]:::vertexDev
+        COLABENT[Colab Enterprise]:::vertexDev
+        VAS ~~~ VAW
+        VAW ~~~ VAP
+        VAP ~~~ VAMG
+        VAMG ~~~ VAFS
+        VAFS ~~~ VAME
+        VAME ~~~ VAE
+        VAE ~~~ VAPRED
+        VAPRED ~~~ VAT
+        VAT ~~~ VAM
+        VAM ~~~ VAEX
+        VAEX ~~~ COLAB
+        COLAB ~~~ COLABENT
+    end
+    %% TensorFlow Layer - Base du diagramme
+    subgraph TensorFlow Layer
+        TF[TensorFlow]:::tensorflow
+        TFL[TensorFlow Lite]:::tensorflow
+        TFJS[TensorFlow.js]:::tensorflow
+        JAX[JAX]:::tensorflow
+        KERAS[Keras]:::tensorflow
+        TB[TensorBoard]:::tensorflow
+        TF ~~~ TFL
+        TFL ~~~ TFJS
+        TFJS ~~~ JAX
+        JAX ~~~ KERAS
+        KERAS ~~~ TB
+    end
+    %% Alignement vertical
+    GSEARCH ~~~ NLAPI
+    NLAPI ~~~ GU
+    GU ~~~ VAS
+    VAS ~~~ TF
+`"/>
+
 ## Large Consumer-Facing
 
 -**[Gemini:](https://gemini.google.com/)** Google's large language model (LLM), positioned as a competitor to OpenAI's GPT models. Gemini's capabilities are integrated into various Google products and services, and are also accessible through APIs. Different versions of Gemini (e.g., Gemini Pro, Gemini Ultra) offer varying levels of capability and access. It powers several consumer-facing features across Google's ecosystem.
