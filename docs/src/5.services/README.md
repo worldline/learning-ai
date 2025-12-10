@@ -22,6 +22,8 @@ With a notebooks you can :
 
 ### Google Colab notebooks
 
+![Colab capture](./images/colab.png)
+
 #### Store API keys 
 
 You can store secret keys such as API keys in the `userdata` of your Colab environment. To do so, follow these steps:
@@ -158,20 +160,20 @@ Author: Unknown
 --------------------------
 ```
 
-::: tip Starting point
-- Open the following [Google Colab notebook](https://colab.research.google.com/#create=true) and complete the exercise there.
-:::
+::: warning How to start ?
+- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1ZSQKYENLtjJqI7EvujcDS1O8SRvWq_n-#copy=true
+) and complete the exercise there.
 
-*Steps* :
+**Steps**
 1. Create a function `get_developer_motivation(name, language, project_description)` that:
 2. Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
 3. Uses the Mistral AI API to generate a humorous motivational quote. use request package to make the API call.
 4. Returns a structured response containing the quote.
-
+:::
 
 ::: tip solution
   ::: details here
-  [Google Collab notebook](https://colab.research.google.com/#create=true)
+  [Google Collab notebook](https://colab.research.google.com/drive/1rE_jC4DhD33Ni8MR9YTGK9WhykOTtbcF?usp=sharing)
   :::
 :::
 
@@ -207,7 +209,6 @@ llm = ChatMistralAI(api_key=API_KEY, model="open-mistral-7b")
 
 [`Chat Prompt templating`](https://reference.langchain.com/python/langchain_core/prompts/) is a powerful feature that allows you to create dynamic prompts based on the input data. It enables you to generate prompts that are tailored to the specific requirements of your application.
 
-::: warning to update with chat prompt template
 ```python
 from langchain.prompts import PromptTemplate
 
@@ -216,7 +217,6 @@ prompt = PromptTemplate(
     template="translate the following text to {language}: {text}",
 )
 ```
-:::
 
 #### Chaining
 
@@ -288,22 +288,26 @@ Author: Unknown
 --------------------------
 ```
 
+::: warning How to start ?
+- Open the following [Google Colab notebook](#) and complete the exercise there.
+
 **Steps**
+1. Create a function `get_developer_motivation(name, language, project_description)` that:
+2. Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
+3. Uses LangChain to send a request to the LLM to generate a humorous motivational quote.
+4. Returns a structured response containing the quote, the developer's name, the programming language, and the project description.
+:::
 
-Create a function `get_developer_motivation(name, language, project_description)` that:
-
-- Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
-- Uses LangChain to send a request to the LLM to generate a humorous motivational quote.
-- Returns a structured response containing the quote, the developer's name, the programming language, and the project description.
-
-::: details Solution
-[Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+::: tip solution
+  ::: details here
+  [Google Collab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+  :::
 :::
 
 
-### Tool/Function calling
+### Tools
 
-[`Function/Tool calling`](https://docs.langchain.com/oss/python/langchain/tools#tools) is a feature that allows the llm to call existing functions from your code. It is useful for working with functions, such as APIs, and for interacting with models that require function calls. Once a tool function is created, you can register it as a tool within LangChain for being used by the LLM.
+[`Tools or Function calling`](https://docs.langchain.com/oss/python/langchain/tools#tools) is a feature that allows the llm to call existing functions from your code. It is useful for working with functions, such as APIs, and for interacting with models that require function calls. Once a tool function is created, you can register it as a tool within LangChain for being used by the LLM.
 
 ### 🧪 Exercise
 
@@ -322,48 +326,35 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 ------------------------------------------------------------------------------
 ```
 
-::: tip Configuration
+::: warning How to start ?
 
-- Sign up for an API key from a weather service provider (e.g., OpenWeatherMap). - You can generate your key [here](https://home.openweathermap.org/api_keys) - You can call the API as following :
-  `bash curl https://api.openweathermap.org/data/2.5/weather?q=Lille&appid=<your_api_key>&units=metric `
-:::
+- Sign up for an API key from a weather service provider (e.g., OpenWeatherMap). - You can generate your key [here](https://home.openweathermap.org/api_keys) 
+- Here is the API documentation for current weather data: [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
 
-##### Steps
-
-**Create the Weather Fetching Function**
-
+| Endpoint & Description                                                     | Method & URL                                          | Parameters                                                                                                            | Response                                                                                         |
+| -------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Get Current Weather**<br>Fetch current weather data for a specified city | GET `https://api.openweathermap.org/data/2.5/weather` | `q`: City name (e.g., "Lille")<br>`appid`: Your API key<br>`units`: Units of measurement (e.g., "metric" for Celsius) | `json { "weather": [{ "description": "clear sky", ... }], "main": { "temp": 15.5, ... }, ... } ` |
+- Open the following [Google Colab notebook](#) and complete the exercise there.
 - Define a function `fetch_weather(city: str) -> dict` that takes a city name as input and returns the weather data as a dictionary. Use the weather API to fetch the data.
-
-**Register the Weather Tool**
-
 - Use the [`Tool`](https://python.langchain.com/docs/concepts/tools/) class from LangChain to register the `fetch_weather` function as a tool.
-
-**Set Up the LangChain Components**
-
 - Create a prompt template that asks about the weather in a specified city.
 - Instantiate the `ChatMistralAI` model with your Mistral API key.
 - Create a chain that combines the prompt template, the chat model, and the registered weather tool.
-
-**Handle User Input**
-
 - Implement a function `handle_user_input(city)` that:
   - Takes user input for the city name.
   - Invokes the chain with the input data.
   - Checks if the response includes [`tool calls`](https://python.langchain.com/docs/how_to/tool_calling/).
   - Extracts the function name and arguments from the tool call and invokes the weather tool if necessary.
   - Returns the weather information or the LLM's response.
-
-**Run the Application**
-
 - Prompt the user to enter a city name.
 - Call the `handle_user_input` function with the provided city name and display the result.
-
-
-::: details Solution
-[Google Collab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
 :::
 
-
+::: tip Solution
+   ::: details here
+      [Google Collab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
+    :::
+:::
 
 ## RAG  with llama-index
 
@@ -380,26 +371,9 @@ query_engine = index.as_query_engine(response_mode="tree_summarize", llm=llm)
 response = query_engine.query("<your_query_here>")
 ```
 
-### Question Answering (QA) over Structured Data (MySQL)
+### 🧪 Exercise
 
-Structured Data is another common source of information for RAG applications. This data is typically stored in databases or spreadsheets and can be queried using SQL or other query languages. LlamaIndex provides tools for connecting LLMs to databases and querying structured data, allowing you to build RAG applications that can retrieve information from databases.
-
-```python
-#The database library used in this example is SQLAlchemy
-sql_database = SQLDatabase(engine, include_tables=["books"])
-query_engine = NLSQLTableQueryEngine(
-    sql_database=sql_database,
-    tables=["books"],
-    llm=llm,
-    embed_model=embed_model,
-)
-
-query_engine.query("Who wrote 'To Kill a Mockingbird'?")
-```
-
-## 🧪 Exercises
-
-#### RAG : Querying on Unstructured Documents
+#### Querying on Unstructured Documents
 
 Create a Python application that provide a txt document containings a list of application comments and make sentiment analysis on it with `llama-index`.
 
@@ -419,12 +393,43 @@ Saving customer_reviews.txt to customer_reviews (4).txt
 User uploaded file "customer_reviews (4).txt" with length 338 bytes
 The customers' experiences with the company and its products vary. Some have had positive experiences, such as excellent service and high-quality products, while others have encountered issues with faulty products and unhelpful customer support.
 ```
-
-
-::: details Solution
-[Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
+::: warning How to start ?
+- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Create a text file named `customer_reviews.txt` containing the provided customer reviews.
+- Use colab's file upload feature to upload the `customer_reviews.txt` file to your Colab environment.
+- Load the document using `SimpleDirectoryReader` from `llama_index`.
+- Create a `SummaryIndex` from the loaded document.
+- Instantiate a query engine using the index and the LLM.
+- Implement a function `analyze_sentiment()` that:
+  - Queries the index for sentiment analysis of the customer reviews.
+  - Returns the sentiment analysis result.
+- Call the `analyze_sentiment()` function and display the result.
 :::
 
+::: tip Solution    
+::: details here
+         [Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
+    :::
+:::
+
+###  Question Answering (QA) over Structured Data (MySQL)
+
+Structured Data is another common source of information for RAG applications. This data is typically stored in databases or spreadsheets and can be queried using SQL or other query languages. LlamaIndex provides tools for connecting LLMs to databases and querying structured data, allowing you to build RAG applications that can retrieve information from databases.
+
+```python
+#The database library used in this example is SQLAlchemy
+sql_database = SQLDatabase(engine, include_tables=["books"])
+query_engine = NLSQLTableQueryEngine(
+    sql_database=sql_database,
+    tables=["books"],
+    llm=llm,
+    embed_model=embed_model,
+)
+
+query_engine.query("Who wrote 'To Kill a Mockingbird'?")
+```
+
+### 🧪 Exercise
 
 ##### RAG : Querying SQL Databases with Natural Language
 
@@ -459,20 +464,59 @@ The LLM should be able to understand the context and retrieve the relevant infor
 Guido van Rossum created Python in 1991.
 ```
 
-:::tip Solution
-[Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
+::: warning How to start ?
+- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Define a SQLAlchemy model for the programming languages table.
+- Initialize the database with a list of programming languages and their creators.
+- Create a `SQLDatabase` instance using the SQLAlchemy engine.
+- Instantiate the `NLSQLTableQueryEngine` with the SQL database and the LLM.
+- Implement a function `get_language_creator(language_name)` that:
+  - Takes a programming language name as input.
+  - Uses the query engine to retrieve the creator of the specified language.
+  - Returns the creator's name and the year the language was created.
+- Prompt the user to enter a programming language name.
+- Call the `get_language_creator` function with the provided language name and display the result.
+:::
+
+::: tip Solution
+::: details here
+    [Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
+    :::
 :::
 
 
-
 ## Embeddings 
+
+Embeddings are numerical representations of words, phrases, or entire documents in a continuous vector space. They capture semantic relationships between different pieces of text, allowing LLMs to understand context and meaning more effectively. An Embedding is the specialization of a Vector in the context of language models.
+
+It can be usefull to store embeddings in a vector database to enable efficient similarity search and retrieval of relevant information and have cost effective solutions for large scale applications.
+
+Contesxt aware frameworks like LangChain provide easy to use APIs to interact with embedding endpoints of LLM providers.
+
+```python
+from langchain_mistralai.embeddings import MistralAIEmbeddings
+````
+
 
 ## 🧪 Exercises
 
 #### Exercice 1- Use langchain to request  Mistral AI API embedding endpoint to get the embedding of a text prompt
 
-::: details Solution
-[Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+::: warning How to start ?
+- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Install the `langchain_mistralai` package in your Colab environment.
+- Create a `MistralAIEmbeddings` object with your Mistral API key.
+- Implement a function `get_text_embedding(text)` that:
+  - Takes a text prompt as input.
+  - Uses the `MistralAIEmbeddings` object to get the embedding of the text.
+  - Returns the embedding as a list of floats.
+- Call the `get_text_embedding` function with a sample text prompt and display the embedding.
+:::
+
+::: tip Solution
+   ::: details here
+      [Google Collab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+    :::
 :::
 
 #### Exercice 2 - Let's use chaining to create a chain that compares the embeddings.
@@ -507,17 +551,28 @@ classDef circle fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#000
 class D,G,I circle
 `" />
 
-
-::: details Solution
-[Google Colab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
+::: warning How to start ?
+- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Create a JSON file named `faqs.json` containing a list of FAQ questions and answers.
+- Load the FAQ data from the JSON file and convert it to a list of questions and answers.
+- Create a `MistralAIEmbeddings` object with your Mistral API key.
+- Implement a function `get_most_similar_faq(user_question)` that:
+  - Takes a user question as input.
+  - Uses the `MistralAIEmbeddings` object to get the embedding of the user question.
+  - Compares the user question embedding with the FAQ question embeddings using cosine similarity.
+  - Returns the most similar FAQ question and its answer.
+- Call the `get_most_similar_faq` function with a sample user question and display the result.
 :::
 
+::: tip Solution
+::: details here
+        [Google Collab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
+    :::
+:::
 
+## Vector databases (Soon)
 
-
-
-## (Vector databases )
-
+A vector database is a specialized database designed to store and retrieve high-dimensional vectors efficiently. It is particularly useful for applications involving similarity search, such as image recognition, recommendation systems, and natural language processing.
 
 ### Usage of Chroma
 Chroma is a vector database that allows you to store and query vectors of data. Lanchain provides a simple and efficient way to integrate [Chroma](https://www.trychroma.com/) into your applications, allowing you to store and query vectors of data using LLMs.

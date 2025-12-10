@@ -24,7 +24,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: "logo_worldline.png",
     repo: "https://github.com/worldline/learning-ai/activity",
-    repoLabel: "⭐ See changelogs & Contribute!",
+    repoLabel: "⭐ See changelogs & contribute",
     
 
     sidebar: [
