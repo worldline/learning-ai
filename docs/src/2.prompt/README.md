@@ -194,12 +194,21 @@ Act as a code generator. Generate a Python function that takes a list of
 numbers as input and returns the sum of all the numbers.
 ```
 
-## 🧪 Exercises
+## 🧪 Exercises: Prompting for Devs
 
 #### Basic Function Creation
 
-- Create a function that calculates the factorial of a number.
-- Handle both positive integers and zero, with error handling for negative inputs.
+Create a Python function that calculates the factorial of a number. Handle both positive integers and zero, with error handling for negative inputs.
+
+::: details Solution
+
+**Persona:** Python Developer
+
+**Task:** Create a function
+
+**Context:** You need to calculate the factorial of a number.
+
+As a Python Developer, create a function named `factorial` that takes a single integer input and returns its factorial. The function should handle both positive integers and zero. Include error handling for negative inputs.
 
 **Expected Output (python)**
 
@@ -215,56 +224,111 @@ def factorial(n):
     return result
 ```
 
-
-::: details Solutions
-
-**Persona:** Python Developer
-**Task:** Create a function
-**Context:** You need to calculate the factorial of a number.
-
-As a Python Developer, create a function named `factorial` that takes a single integer input and returns its factorial. The function should handle both positive integers and zero. Include error handling for negative inputs.
 :::
-
-
-## Devs techniques
 
 #### API Request Handling
 
-- Write a function to fetch data from a given URL using the Fetch API.
-- Return the JSON response and handle any potential errors.
+Write a JavaScript function to fetch current weather data at current user location using the Fetch API, the Geolocation API and the Open Meteo API. The request URL is `https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true`. Return the temperature from the JSON response and handle any potential errors.
 
-**Expected Output (javascript)**
+::: details Solution
+
+**Persona:** JavaScript Developer
+
+**Task:** Write a JavaScript function to fetch current temperature at current location using the Fetch API, the Geolocation API and the Open Meteo API. Return the temperature from the JSON response and handle any potential errors.
+
+**Context:** The request URL is `https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true`.
+
+As a JavaScript Developer, write a function named `fetchTemperature` that retrieves current temperature from current weather data at current location using the Fetch API, the Geolocation API and the Open Meteo API. Return the temperature from the JSON response and handle any potential errors. The request URL is `https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true`.
+
+**Example of expected Output (JavaScript)**
 
 ```javascript
-async function fetchData(url) {
+/**
+ * Fetches the current temperature at the user's current location
+ * @returns {Promise<number>} The current temperature in Celsius
+ * @throws {Error} If geolocation or API request fails
+ */
+async function fetchTemperature() {
+    
+    // Helper function to get user's coordinates
+    const getCoordinates = () => {
+        return new Promise((resolve, reject) => {
+            if (!navigator.geolocation) {
+                reject(new Error("Geolocation is not supported by this browser."));
+                return;
+            }
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    resolve({
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude
+                    });
+                },
+                (error) => {
+                    const errorMessages = {
+                        [error.PERMISSION_DENIED]: "Location permission denied.",
+                        [error.POSITION_UNAVAILABLE]: "Location unavailable.",
+                        [error.TIMEOUT]: "Location request timed out."
+                    };
+                    reject(new Error(errorMessages[error.code] || "Unknown geolocation error."));
+                },
+                {
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 300000
+                }
+            );
+        });
+    };
+
     try {
+        // Get user's current coordinates
+        const { latitude, longitude } = await getCoordinates();
+
+        // Build API URL and fetch weather data
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
         const response = await fetch(url);
+
+        // Validate response
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`API error: ${response.status} ${response.statusText}`);
         }
+
+        // Parse JSON and extract temperature
         const data = await response.json();
-        return data;
+
+        if (!data.current_weather || typeof data.current_weather.temperature === "undefined") {
+            throw new Error("Temperature data not found in API response.");
+        }
+
+        return data.current_weather.temperature;
+
     } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Failed to fetch temperature:", error.message);
+        throw error;
     }
 }
 ```
 
-::: details Solutions
 
-**Persona:** JavaScript Developer
-**Task:** Write a function to handle API requests
-**Context:** You need to fetch data from a given URL.
 
-As a JavaScript Developer, write a function named `fetchData` that takes a URL as an argument and fetches data from that URL using the Fetch API. The function should return the JSON response and handle any errors that may occur during the fetch operation.
 :::
-
-
 
 #### Class Definition
 
-- Define a class representing a book with properties for title, author, and publication year.
-- Include a method to display the book's details.
+In C# language, define a class representing a book with properties for title, author, and publication year. Include a method to display the book's details.
+
+::: details Solution
+
+**Persona:** C# Developer
+
+**Task:** Define a class
+
+**Context:** You are creating a representation of a book.
+
+As a C# Developer, create a class named `Book` that has properties for `Title`, `Author`, and `PublicationYear`. Include a method named `DisplayDetails` that prints the book's details in a formatted string.
+
 
 **Expected Output (C#)**
 
@@ -282,20 +346,20 @@ public class Book
 }
 ```
 
-::: details Solutions
-
-**Persona:** C# Developer
-**Task:** Define a class
-**Context:** You are creating a representation of a book.
-
-As a C# Developer, create a class named `Book` that has properties for `Title`, `Author`, and `PublicationYear`. Include a method named `DisplayDetails` that prints the book's details in a formatted string.
-
 :::
 
 #### Simple Web Server
 
-- Set up a basic web server that listens on port 3000.
-- Respond with a simple message when accessed.
+Set up a basic Node.js web server that listens on port 3000. Respond with a simple "Hello, World!" message when accessed.
+
+::: details Solution
+
+**Persona:** Node.js Developer
+**Task:** Set up a web server
+**Context:** You need to create a simple server that responds to requests.
+
+As a Node.js Developer, set up a basic Node.js web server that listens on port 3000 and responds with "Hello, World!" when accessed.
+
 
 **Expected Output (Javascript)**
 
@@ -313,23 +377,24 @@ server.listen(3000, () => {
 });
 ```
 
-::: details Solutions
-
-**Persona:** JavaScript Developer
-**Task:** Set up a web server
-**Context:** You need to create a simple server that responds to requests.
-
-As a JavaScript Developer, set up a simple web server using the `http` module that listens on port 3000 and responds with "Hello, World!" when accessed.
 :::
 
 
 
 #### Data Validation
 
-**Details:**
+Write a method in Ruby language to validate if a given string is a valid email address. Use a regular expression for the validation.
 
-- Write a method to validate if a given string is a valid email address.
-- Use a regular expression for the validation.
+::: details Solution
+
+**Persona:** Ruby Developer
+
+**Task:** Write a validation method
+
+**Context:** You need to validate email addresses.
+
+As a Ruby Developer, write a method named `valid_email?` that takes a string as input and returns true if it is a valid email address, and false otherwise. Use a regular expression for validation.
+
 
 **Expected Output (Ruby)**
 
@@ -339,15 +404,6 @@ def valid_email?(email)
     !!(email =~ regex)
 end
 ```
-
-
-::: details Solutions
-
-**Persona:** Ruby Developer
-**Task:** Write a validation method
-**Context:** You need to validate email addresses.
-
-As a Ruby Developer, write a method named `valid_email?` that takes a string as input and returns true if it is a valid email address, and false otherwise. Use a regular expression for validation.
 
 :::
 
@@ -383,13 +439,9 @@ Code refactor is a prompt engineering technique that involves providing a code r
 
 ### Data mocking
 
-Mock data generation is a prompt engineering technique that involves providing a mock data set for a given code snippet or function. This technique is useful for developers who want to test their code with mock data or for those who want to generate test data for their projects. It avoid creating manually fake data for testing.
+**Data mocking** is a prompt engineering technique for generating mock datasets to test code without manually creating fake data. It's useful for developers who need sample data for testing or project validation.
 
-## 🧪 Exercises
-
-#### Mock Data Generation
-
-Create prompts that can generate mock user profiles. The language used is JavaScript.
+**Exercise**: Create a prompt that can generate mock user profiles. The language used is JavaScript.
 
 The profile should include:
 
@@ -400,11 +452,17 @@ The profile should include:
 * Phone Number
 
 
-::: details Solutions
+::: details Solution
 
-Mock Data Generation
+**Persona:** JavaScript Developer
+
+**Task:** write a function named `generateUserProfile` that generates a mock user profile with the following details: name, age, email, address, and phone number
+
+**Context:** The function should return an object containing the user profile details.
 
 As a JavaScript Developer, write a function named `generateUserProfile` that generates a mock user profile with the following details: name, age, email, address, and phone number. The function should return an object containing the user profile details.
+
+**Expected Output (JavaScript)**
 
 ```javascript
 function generateUserProfile() {
