@@ -18,55 +18,53 @@ generative AI into their development workflows, fostering innovation and efficie
 
 ## Syllabus
 
-Module 1: Introduction to Generative AI
+**Module 1: Introduction to Generative AI**
 
 - Overview of Generative AI and its significance
 - Key concepts and terminology
 - Use cases in software development
 
-Module 2: Prompting usage in apps lifecycle
+**Module 2: Prompting usage in apps lifecycle**
 
 - Understanding prompting techniques
 - Tips for ideation and architecture design
 - Refactoring and generating tests using AI
 
-Module 3: Online/Offline LLMs clients
+**Module 3: Online/Offline LLMs clients**
 
 - Overview of main plugins and their functionalities
 - Mixing plugins and using presets
 - Introduction to Retrieval-Augmented Generation (RAG)
 
-Module 4: Code Assistants in IDEs
+**Module 4: Code Assistants in IDEs**
 
 - Features of code assistants
 - Generating code snippets and tests
 - Creating a website from prompts
 
-Module 5: GenAI for services
+**Module 5: GenAI for services**
 
 - Managing LLM API calls in JSON mode and handling structured outputs
 - Use context-aware frameworks with techniques for prompt templating and chaining
 - Usage of vector databases for chain-of-thought creations
 - Retrieval-Augmented Generation (RAG) structured and unstructured.
 
-Module 6: Agentic AI with MCP (kotlin-mcp-sdk)
+**Module 6: Agentic AI with MCP (kotlin-mcp-sdk)**
 
 - Understanding the Model Context Protocol, 
 - Building agentic AI applications, Integrating MCP with existing tools and workflows
 
-Module 7: GenAI with UI node-based tools
+**Module 7: GenAI with UI node-based tools**
 
 - Creating and customizing AI workflows with ComfyUI
 - Integrating LLMs with ComfyUI
 - Building complex workflows with various AI models and techniques
 
-Module 8: Cloud Provider Tools
+*Module 8: Cloud Provider Tools | Soon*
 
-- Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.)
+- Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.)*
 - Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.)
 - Best practices for deploying AI solutions in the cloud
-
-Module 7: Agentic AI with MCP framework (soon)
 
 # AI for devs | Tech at Worldline
 
