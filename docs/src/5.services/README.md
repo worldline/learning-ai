@@ -303,7 +303,7 @@ Create a function `get_developer_motivation(name, language, project_description)
 
 ### Tool/Function calling
 
-[`Function/Tool calling`](https://docs.langchain.com/oss/python/langchain/tools#tools) is a feature that allows the llm to call existing functions from your code. It is useful for working with functions, such as APIs, and for interacting with models that require function calls. Once a tool function is created, you can register it as a tool within LangChain for being used by the LLM.
+[`Function/Tool calling`](https://docs.langchain.com/oss/python/langchain/tools#tools) is a feature that allows the LLM to call existing functions from your code. It is useful for allowing the LLM to interact wiht external APIs or other models that require function calls. Once a tool function is created, you can register it as a tool within LangChain for being used by the LLM.
 
 ### 🧪 Exercise
 
