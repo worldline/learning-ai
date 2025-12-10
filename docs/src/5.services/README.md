@@ -16,6 +16,8 @@ With a notebooks you can :
 * Easily share your work with others
 * Collaborate with others 
 
+**NB: please do not use for now Worldline GCloud account for connecting to Google Colab or you will have permission issues. Create a dedicated Google account for that training, if needed**
+
 :::
 
 ### Google Colab notebooks
@@ -52,17 +54,17 @@ for fn in uploaded.keys():
 # 2. Now you can read the file as usual
 ```
 
+#### Importing libraries
 
-## Dialog with LLMs REST APIs (Mistral)
+To setup your Colab environment whith third party libraries, you can use the `pip` command directly in a code cell as follows:
+```python
+!pip install <library-name>
+```
 
-::: tip configuration
-**To set Up Your Environment**
+After clicking on the play button of the code cell, the library will be installed in your Colab environment and you can import it as usual in the next code cells.
 
-- Install the necessary packages using pip:
-  ```bash
-  pip install requests langchain langchain_mistralai
-  ```
-:::
+
+## LLMs with REST APIs 
 
 #### OpenAI API standard
 
@@ -74,6 +76,12 @@ OpenAI provides a set of standard endpoints for interacting with their LLMs. Thi
 | **Chat Completions**<br>Generate chat-based responses | POST `/v1/chat/completions` | `Authorization: Bearer {api_key}`<br>`Content-Type: application/json` | `{ "model": "gpt-4", "messages": [{"role": "system", "content": "..."}, {"role": "user", "content": "..."}], "temperature": 0.7, "max_tokens": 100, "top_p": 1 }` | `{ "id": "chatcmpl-abc123", "object": "chat.completion", "created": 1234567890, "model": "gpt-4", "choices": [{ "index": 0, "message": {"role": "assistant", "content": "..."}, "finish_reason": "stop" }], "usage": { "prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30 } }` |
 | **Embeddings**<br>Generate vector embeddings for text | POST `/v1/embeddings` | `Authorization: Bearer {api_key}`<br>`Content-Type: application/json` | `{ "model": "text-embedding-3-small", "input": "Hello world", "encoding_format": "float" }` | `{ "object": "list", "data": [{ "object": "embedding", "embedding": [0.123, -0.456, ...], "index": 0 }], "model": "text-embedding-3-small", "usage": { "prompt_tokens": 3, "total_tokens": 3 } }` |
 | **Completions (Legacy)**<br>Generate text completions | POST `/v1/completions` | `Authorization: Bearer {api_key}`<br>`Content-Type: application/json` | `{ "model": "gpt-3.5-turbo-instruct", "prompt": "Once upon a time", "max_tokens": 100, "temperature": 0.7 }` | `{ "id": "cmpl-abc123", "object": "text_completion", "created": 1234567890, "model": "gpt-3.5-turbo-instruct", "choices": [{ "text": "...", "index": 0, "finish_reason": "stop", "logprobs": null }], "usage": { "prompt_tokens": 5, "completion_tokens": 20, "total_tokens": 25 } }` |
+
+
+API references for Mistral AI :
+- [Chat Endpoints - GET](https://docs.mistral.ai/api/#tag/models/operation/list_models_v1_models_get)
+- [Chat Endpoints - POST](https://docs.mistral.ai/api/#tag/chat/operation/chat_completion_v1_chat_completions_post)
+
 
 #### Structured Outputs
 
@@ -150,20 +158,22 @@ Author: Unknown
 --------------------------
 ```
 
+::: tip Starting point
+- Open the following [Google Colab notebook](https://colab.research.google.com/#create=true) and complete the exercise there.
+:::
+
 *Steps* :
-0. Open a new google colab notebook here : [Google Colab](https://colab.research.google.com/create)
 1. Create a function `get_developer_motivation(name, language, project_description)` that:
 2. Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
 3. Uses the Mistral AI API to generate a humorous motivational quote. use request package to make the API call.
 4. Returns a structured response containing the quote.
 
-- [API Model list](https://docs.mistral.ai/api/#tag/models/operation/list_models_v1_models_get)
-- [Chat completions](https://docs.mistral.ai/api/#tag/chat/operation/chat_completion_v1_chat_completions_post)
 
-::: details Solution
-[Google Collab notebook](https://colab.research.google.com/#create=true)
+::: tip solution
+  ::: details here
+  [Google Collab notebook](https://colab.research.google.com/#create=true)
+  :::
 :::
-
 
 ## Context aware frameworks (LangChain)
 
@@ -172,10 +182,10 @@ Finally it enables to build agents and complex workflows on top of LLMs.
 
 ### Request LLMs
 
-#### LLM supports
+#### Chat models
 
-Depending on the LLM, LangChain provides different APIs. Have a look at the following table [here](https://python.langchain.com/docs/integrations/chat/) to see which APIs are available for your LLM.
-
+Depending on the LLM, LangChain provides different APIs that are called ChatModels. These models are designed to handle conversational interactions with the LLM, allowing you to send messages and receive responses in a chat-like format.
+Have a look at the following table [here](https://python.langchain.com/docs/integrations/chat/) to see which APIs are available for your LLM.
 
 Mistral AI Chat Model is supported by LangChain and provides the following features:
 
@@ -387,7 +397,75 @@ query_engine = NLSQLTableQueryEngine(
 query_engine.query("Who wrote 'To Kill a Mockingbird'?")
 ```
 
-## Embeddings & vector DB
+## 🧪 Exercises
+
+#### RAG : Querying on Unstructured Documents
+
+Create a Python application that provide a txt document containings a list of application comments and make sentiment analysis on it with `llama-index`.
+
+Your customer review txt file :
+
+```text
+Review 1: I was very disappointed with the product. It did not meet my expectations.
+Review 2: The service was excellent! I highly recommend this company.
+Review 3: I had a terrible experience. The product was faulty, and the customer support was unhelpful.
+Review 4: I am extremely satisfied with my purchase. The quality is outstanding.
+```
+
+**Expected Shell Output:**
+
+```bash
+Saving customer_reviews.txt to customer_reviews (4).txt
+User uploaded file "customer_reviews (4).txt" with length 338 bytes
+The customers' experiences with the company and its products vary. Some have had positive experiences, such as excellent service and high-quality products, while others have encountered issues with faulty products and unhelpful customer support.
+```
+
+
+::: details Solution
+[Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
+:::
+
+
+##### RAG : Querying SQL Databases with Natural Language
+
+Create a Python application that initializes a list of languages and their creators with `sqlalchemy` and requests the LLM to retrieve the creators of a language.
+The LLM should be able to understand the context and retrieve the relevant information from the database.
+
+**Expected Shell Output:**
+
+```bash
+[
+    {
+        "language_name": "Python",
+        "creator": "Guido van Rossum",
+        "year_created": 1991
+    },
+    {
+        "language_name": "JavaScript",
+        "creator": "Brendan Eich",
+        "year_created": 1995
+    },
+    {
+        "language_name": "Java",
+        "creator": "James Gosling",
+        "year_created": 1995
+    },
+    {
+        "language_name": "C++",
+        "creator": "Bjarne Stroustrup",
+        "year_created": 1985
+    }
+]
+Guido van Rossum created Python in 1991.
+```
+
+:::tip Solution
+[Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
+:::
+
+
+
+## Embeddings 
 
 ## 🧪 Exercises
 
@@ -436,70 +514,6 @@ class D,G,I circle
 
 
 
-
-#### Exercice 3 - RAG : Querying on Unstructured Documents
-
-Create a Python application that provide a txt document containings a list of application comments and make sentiment analysis on it with `llama-index`.
-
-Your customer review txt file :
-
-```text
-Review 1: I was very disappointed with the product. It did not meet my expectations.
-Review 2: The service was excellent! I highly recommend this company.
-Review 3: I had a terrible experience. The product was faulty, and the customer support was unhelpful.
-Review 4: I am extremely satisfied with my purchase. The quality is outstanding.
-```
-
-**Expected Shell Output:**
-
-```bash
-Saving customer_reviews.txt to customer_reviews (4).txt
-User uploaded file "customer_reviews (4).txt" with length 338 bytes
-The customers' experiences with the company and its products vary. Some have had positive experiences, such as excellent service and high-quality products, while others have encountered issues with faulty products and unhelpful customer support.
-```
-
-
-::: details Solution
-[Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
-:::
-
-
-##### Exercice 4 - RAG : Querying SQL Databases with Natural Language
-
-Create a Python application that initializes a list of languages and their creators with `sqlalchemy` and requests the LLM to retrieve the creators of a language.
-The LLM should be able to understand the context and retrieve the relevant information from the database.
-
-**Expected Shell Output:**
-
-```bash
-[
-    {
-        "language_name": "Python",
-        "creator": "Guido van Rossum",
-        "year_created": 1991
-    },
-    {
-        "language_name": "JavaScript",
-        "creator": "Brendan Eich",
-        "year_created": 1995
-    },
-    {
-        "language_name": "Java",
-        "creator": "James Gosling",
-        "year_created": 1995
-    },
-    {
-        "language_name": "C++",
-        "creator": "Bjarne Stroustrup",
-        "year_created": 1985
-    }
-]
-Guido van Rossum created Python in 1991.
-```
-
-:::tip Solution
-[Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
-:::
 
 
 ## (Vector databases )
