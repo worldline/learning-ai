@@ -28,20 +28,24 @@ MCP stores are available on the [MCP store](https://mcpstore.co/).
 
 `MCP client` libraries are available in various languages, including Python, Kotlin, and JavaScript. These libraries provide a simple and consistent way to interact with MCP servers and models. LLMs clients can also be used to connect to MCP servers, allowing you to use LLMs in your applications without having to manage the underlying infrastructure.
 
+##  MCP client (LM Studio)
 
-## Create a server (Kotlin MCP SDK)
+::: warning TODO
+:::
 
+## MCP Server (Kotlin MCP SDK)
 
-## Use a MCP client (LM Studio)
+::: warning TODO
+:::
 
 ## 🧪 Exercises
-####  Exercise 1 - use an MCP server with LM Studio
+####  Exercise 1 - use an MCP client with LM Studio
 
 Use LM Studio to connect to your MCP server and try to create a git project with your prompt.
 
 Have a look at the [MCP store](https://mcpstore.co/) to find some MCP models to use.
 
-####  Exercise 2 - use an MCP server with Kotlin MCP SDK
+####  Exercise 2 - create an MCP server with Kotlin MCP SDK
 
 Use Kotlin MCP SDK to :
 
