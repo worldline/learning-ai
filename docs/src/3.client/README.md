@@ -1,5 +1,15 @@
 # Online/Offline LLMs clients 
 
+This section is dedicated to the usage of Generative AI models through different clients. We will explore both online and offline clients that allow you to interact with LLMs for various use cases. A client is a Graphical User Interface (GUI) that allows users to interact with LLMs without the need for coding. Clients provide a user-friendly interface for users to input prompts, configure settings, and view responses from the models. It can also provide additional features such as prompt management, conversation history, and integration with other tools and services.
+
+A client can be :
+- Web-based : ChatGPT, Bard, Claude, Gemini
+- Self-hosted : Librechat self-hosted instance
+- Desktop app : Claude desktop,
+- IDE plugin : ChatGPT for VS code 
+- Mobile application : copilot for mobile, le chat ai mobile app
+
+Creators of LLMs often provide official clients for their models, but there are also third-party clients available that support multiple LLMs and offer additional features.
 
 
 ## Online (Librechat)
@@ -114,7 +124,7 @@ Retrieve data from internet and use it to generate a response.
 
 ### Plugin mixing
 
-You can mix plugins to create more complex prompts. For example, you can use the DALL-E 3 plugin to generate images from text and then use the IT support plugin to get support from the IT team.
+You can mix plugins to create more complex prompts. For example, you can retrieve data from internet with the Browser plugin and use the DALL-E 3 plugin to generate images from text retrieved.
 
 ```
 Generate the favicon 16x16 pixels based on the content found in

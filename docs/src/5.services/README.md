@@ -1,36 +1,57 @@
 # GenAI for services
 
-### Notebook usage
+This section is dedicated to the usage of Generative AI models for services applications. We will explore how to interact with LLMs from simple REST API calls to more complex frameworks that enable context aware applications and agentic behaviors.
 
-You can use [Google Colab](https://colab.research.google.com/) for a simple to use notebook environment for machine learning and data science. It will provide a container with all the necessary libraries and tools to run your code and live editing interface through a browser.
+::: tip Modalities for this training
 
-A notebook is a document that contains live code, equations, visualizations, and narrative text. You can use Colab to create, share, and collaborate on Jupyter notebooks with others.
+1. We will use **[Mistral AI](https://mistral.ai/)** as the main LLM provider. Mistral AI provides free access to their models through REST APIs with a free tier making onboarding easy and fast. 
+- You can sign up here : [Mistral AI sign up](https://mistral.ai/signup) 
+- and get your API key from api keys section in your account settings here : [Mistral AI API keys](https://console.mistral.ai/api-keys/).
 
+2. Also we choose **Python** as the main programming language for this training due to its popularity in the AI/ML community and the availability of upto-date libraries and frameworks, documentations and easy onboarding.
+
+3. We will use **[Google Colab](https://colab.research.google.com/)** for an online use of jupyter notebooks. A notebook is an interactive environment for machine learning and data science. It is a single page document that contains both code and rich text elements (paragraphs, equations, figures, links, etc.) and allows you to run code in an interactive way.
 With a notebooks you can :
 * Prototype your ideas
-* easily share your work with others
-* collaborate with others
+* Easily share your work with others
+* Collaborate with others 
 
-::: tip User interaction with Colab
+:::
 
-You can store your API keys safely in the `userdata` of your Colab environment.
+### Google Colab notebooks
+
+#### Store API keys 
+
+You can store secret keys such as API keys in the `userdata` of your Colab environment. To do so, follow these steps:
+1. Open the left sidebar in your Colab notebook.
+2. Click on the "Userdata" tab (it looks like a key icon).
+3. Click on the "Add key" button.
+4. Enter a name for your key (e.g., `API_KEY`) and paste your API key in the value field.
+5. Click "Save".  
+
+Now you can retrieve the API key in your Colab notebook as follows:
+
+```python
+from google.colab import userdata  # For retrieving API keys
+# get the API key from colab userdata ( left panel of colla, picto with the key)
+api_key=userdata.get('API_KEY')
+```
+
+####  Upload files in Colab
+
 Also you can upload files to your Colab environment as follows:
 
 ```python
 from google.colab import files
-from google.colab import userdata  # For retrieving API keys
 
 # 1. Upload the file to your current colab environment ( a upload button will appear at the execution of the code)
 uploaded = files.upload()
 for fn in uploaded.keys():
     print('User uploaded file "{name}" with length {length} bytes'.format(
         name=fn, length=len(uploaded[fn])))
-
-# get the API key from colab userdata ( left panel of colla, picto with the key)
-api_key=userdata.get('API_KEY')
+# 2. Now you can read the file as usual
 ```
 
-:::
 
 ## Dialog with LLMs REST APIs (Mistral)
 
@@ -41,123 +62,72 @@ api_key=userdata.get('API_KEY')
   ```bash
   pip install requests langchain langchain_mistralai
   ```
+:::
 
-**To obtain API Keys**
+#### OpenAI API standard
 
-- Obtain an API key for the Mistral API [here](https://console.mistral.ai/api-keys/)
-  :::
-
-#### Main endpoints
-
-| Endpoint         | URL                                                             | Description                                                                            |
-| ---------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Models           | [/v1/models](https://api.mistral.ai/v1/models)                     | List models that are available with your account.                                      |
-| Chat Completions | [/v1/chat/completions](https://api.mistral.ai/v1/chat/completions) | Completion means that the LLM will generate a response based on the prompt.            |
-| Embeddings       | [/v1/embeddings](https://api.mistral.ai/v1/embeddings)             | Embeddings means that the LLM will generate a vector representation of the input text. |
-
-```bash
-curl -H "Authorization: Bearer <your_api_key>" https://api.mistral.ai/v1/models
-```
-
-output :
-
-```json
-[
-  {
-    "id": "text-davinci-003",
-    "object": "model",
-    "owned_by": "user-123456789",
-    "permission": [
-      {
-        "id": "user-123456789",
-        "object": "permission",
-        "allow_create_engine": true,
-        "allow_sampling": true,
-        "allow_logprobs": true,
-        "allow_search": true,
-        "allow_view": true,
-        "allow_fine_tuning": true,
-        "organization": "org-123456789",
-        "group": null,
-        "is_blocking": false
-      }
-    ]
-  }
-  ...
-]
-```
-
-#### JSON mode
-
-**JSON mode** is a feature that allows you to send structured data to the model through the API instead of a text prompt. To use JSON mode, you need to select the right endpoint in the API explorer and specify the input format as JSON in the prompt.
-
-For OpenAI API, you can use the following format :
-
-```json
-{
-  "model": "text-davinci-003",
-  "prompt": "Translate the following text to French: 'Hello, how are you?'",
-  "max_tokens": 100
-}
-```
-
-```bash
-curl -H "Authorization: Bearer <your_api_key>" -H "Content-Type: application/json" -d '{"model": "text-davinci-003", "prompt": "Translate the following text to French: 'Hello, how are you?'", "max_tokens": 100}' https://api.mistral.ai/v1/chat/completions
-
-{
-  "id": "chatcmpl-123456789",
-  "object": "chat.completion",
-  "created": 1679341456,
-  "model": "text-davinci-003",
-  "choices": [
-    {
-      "index": 0,
-      "message": {
-        "role": "assistant",
-        "content": "Bonjour, comment ça va?"
-      },
-      "finish_reason": "stop"
-    }
-  ],
-  "usage": {
-    "prompt_tokens": 5,
-    "completion_tokens": 7,
-    "total_tokens": 12
-  }
-}
-```
+OpenAI provides a set of standard endpoints for interacting with their LLMs. This standard is widely adopted by many LLM providers including Mistral AI. The main endpoints are as follows:
+| Endpoint & Description | Method & URL | Header | Body | Response |
+|----------|-----|--------|-----------|----------|
+| **List Models**<br>Retrieve list of available models | GET `/v1/models` | `Authorization: Bearer {api_key}` | — | `{ "object": "list", "data": [...], "has_more": false }` |
+| **Retrieve Model**<br>Get details of a specific model | GET `/v1/models/{model}` | `Authorization: Bearer {api_key}` | — | `{ "id": "gpt-4", "object": "model", "owned_by": "openai", "permission": [...], "created": 1234567890 }` |
+| **Chat Completions**<br>Generate chat-based responses | POST `/v1/chat/completions` | `Authorization: Bearer {api_key}`<br>`Content-Type: application/json` | `{ "model": "gpt-4", "messages": [{"role": "system", "content": "..."}, {"role": "user", "content": "..."}], "temperature": 0.7, "max_tokens": 100, "top_p": 1 }` | `{ "id": "chatcmpl-abc123", "object": "chat.completion", "created": 1234567890, "model": "gpt-4", "choices": [{ "index": 0, "message": {"role": "assistant", "content": "..."}, "finish_reason": "stop" }], "usage": { "prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30 } }` |
+| **Embeddings**<br>Generate vector embeddings for text | POST `/v1/embeddings` | `Authorization: Bearer {api_key}`<br>`Content-Type: application/json` | `{ "model": "text-embedding-3-small", "input": "Hello world", "encoding_format": "float" }` | `{ "object": "list", "data": [{ "object": "embedding", "embedding": [0.123, -0.456, ...], "index": 0 }], "model": "text-embedding-3-small", "usage": { "prompt_tokens": 3, "total_tokens": 3 } }` |
+| **Completions (Legacy)**<br>Generate text completions | POST `/v1/completions` | `Authorization: Bearer {api_key}`<br>`Content-Type: application/json` | `{ "model": "gpt-3.5-turbo-instruct", "prompt": "Once upon a time", "max_tokens": 100, "temperature": 0.7 }` | `{ "id": "cmpl-abc123", "object": "text_completion", "created": 1234567890, "model": "gpt-3.5-turbo-instruct", "choices": [{ "text": "...", "index": 0, "finish_reason": "stop", "logprobs": null }], "usage": { "prompt_tokens": 5, "completion_tokens": 20, "total_tokens": 25 } }` |
 
 #### Structured Outputs
 
-`Structured outputs` are a feature that allows you to receive structured data from the model through the API. It is useful for working with models that require structured outputs, such as JSON.
+[`Structured Outputs`](https://platform.openai.com/docs/guides/structured-outputs) is a feature that ensures the model will always generate responses that adhere to your supplied [JSON Schema](https://platform.openai.com/docs/api-reference/chat/create#chat_create-response_format), so you don't need to worry about the model omitting a required key, or hallucinating an invalid enum value.
 
-To use structured outputs, you need to select the right endpoint in the API explorer and specify the output format in the prompt.
+Some benefits of Structured Outputs include:
+- Reliable type-safety: No need to validate or retry incorrectly formatted responses
+- Explicit refusals: Safety-based model refusals are now programmatically detectable
+- Simpler prompting: No need for strongly worded prompts to achieve consistent formatting
 
-for OpenAI API, you can use the following format :
+Structured Outputs is the evolution of `JSON mode`. While both ensure valid JSON is produced, only Structured Outputs ensure schema adherence.
 
-```json
-{
-  "model": "text-davinci-003",
-  "prompt": "Translate the following text to French: 'Hello, how are you?'",
-  "max_tokens": 100,
-  "output": "json"
+**Example**
+```python
+import requests
+import json
+
+api_key = "your-api-key"
+url = "https://api.openai.com/v1/chat/completions"
+
+payload = {
+    "model": "gpt-4",
+    "messages": [{"role": "user", "content": "Extract: John is 28 and lives in Paris"}],
+    "response_format": {
+        "type": "json_schema",
+        "json_schema": {
+            "name": "person",
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "age": {"type": "integer"},
+                    "city": {"type": "string"}
+                }
+            }
+        }
+    }
 }
-```
 
-the structured output can be as follow :
-
-```json
-{
-  "model": "text-davinci-003",
-  "prompt": "Translate the following text to French: 'Hello, how are you?'",
-  "max_tokens": 100,
-  "output": {
-    "text": "Bonjour, comment ça va?"
-  }
+headers = {
+    "Authorization": f"Bearer {api_key}",
+    "Content-Type": "application/json"
 }
-```
 
-## 🧪 Exercises
+response = requests.post(url, json=payload, headers=headers)
+result = json.loads(response.json()["choices"][0]["message"]["content"])
+print(result)
+```
+**Output**
+```python
+{'name': 'John', 'age': 28, 'city': 'Paris'}
+``` 
+
+## 🧪 Exercise
 
 #### Request an LLM with with basic REST request
 
@@ -180,12 +150,18 @@ Author: Unknown
 --------------------------
 ```
 
+*Steps* :
+0. Open a new google colab notebook here : [Google Colab](https://colab.research.google.com/create)
+1. Create a function `get_developer_motivation(name, language, project_description)` that:
+2. Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
+3. Uses the Mistral AI API to generate a humorous motivational quote. use request package to make the API call.
+4. Returns a structured response containing the quote.
+
 - [API Model list](https://docs.mistral.ai/api/#tag/models/operation/list_models_v1_models_get)
 - [Chat completions](https://docs.mistral.ai/api/#tag/chat/operation/chat_completion_v1_chat_completions_post)
 
-
 ::: details Solution
-[Google Collab notebook](https://colab.research.google.com/drive/1rE_jC4DhD33Ni8MR9YTGK9WhykOTtbcF?usp=sharing)
+[Google Collab notebook](https://colab.research.google.com/#create=true)
 :::
 
 
@@ -193,6 +169,8 @@ Author: Unknown
 
 LangChain is a framework for building applications powered by language models (LLMs) like OpenAI's GPT-3. It provides a set of tools and utilities for working with LLMs, including prompt engineering, chain of thought, and memory management. LangChain is designed to be modular and extensible, allowing developers to easily integrate with different LLMs and other AI services.
 Finally it enables to build agents and complex workflows on top of LLMs.
+
+### Request LLMs
 
 #### LLM supports
 
@@ -215,10 +193,11 @@ MISTRAL_API_URL = 'https://api.mistral.ai/v1/chat/completions'
 llm = ChatMistralAI(api_key=API_KEY, model="open-mistral-7b")
 ```
 
-#### Prompt templating
+#### Chat prompt template
 
-[`Prompt templating`](https://python.langchain.com/api_reference/core/prompts/langchain_core.prompts.prompt.PromptTemplate.html#prompttemplate) is a powerful feature that allows you to create dynamic prompts based on the input data. It enables you to generate prompts that are tailored to the specific requirements of your application.
+[`Chat Prompt templating`](https://reference.langchain.com/python/langchain_core/prompts/) is a powerful feature that allows you to create dynamic prompts based on the input data. It enables you to generate prompts that are tailored to the specific requirements of your application.
 
+::: warning to update with chat prompt template
 ```python
 from langchain.prompts import PromptTemplate
 
@@ -227,10 +206,13 @@ prompt = PromptTemplate(
     template="translate the following text to {language}: {text}",
 )
 ```
+:::
 
 #### Chaining
 
 [`Chain`](https://python.langchain.com/v0.1/docs/modules/chains/) Chains refer to sequences of calls - whether to an LLM, a tool, or a data pre-processing step. It is a sequence of calls that are executed in order, with the output of one call being the input for the next call.It enables you to create complex workflows by combining the output of one LLM call with the input of another. This is useful for tasks that require multiple steps or interactions with external systems.
+
+Chains can be created using the `|` operator to combine different components, such as prompts and LLM models.
 
 ```python
 from langchain.chains import LLMChain
@@ -244,53 +226,42 @@ chain = prompt | llm_model
 response=chain.invoke(input_data)
 ```
 
-Multiple prompt can be chained together to create complex workflows.
-
 #### AIMessage
 
-[AIMessage](https://api.python.langchain.com/en/latest/messages/langchain_core.messages.ai.AIMessage.html) is returned from a chat model as a response to a prompt. It contains the message type, content, and any additional parameters.
+[AIMessage](https://docs.langchain.com/oss/python/langchain/messages#ai-message) represents the output of a model invocation. They can include multimodal data, tool calls, and provider-specific metadata that you can later access
 
+```json
+{
+  "type": "ai",
+  "content": "The capital of France is Paris. It is located in northern-central France and is known for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.",
+  "response_metadata": {
+    "token_usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 15,
+      "total_tokens": 46
+    },
+    "model_name": "gpt-4",
+    "finish_reason": "stop"
+  },
+  "id": "run-abc123-xyz789",
+  "name": null,
+  "example": false
+}
+```
+#### Output Parsers
 
-#### Tool/Function calling
-
-[`Function/Tool calling`](https://python.langchain.com/docs/how_to/tool_calling/) is a feature that allows the llm to call existing functions from your code. It is useful for working with functions, such as APIs, and for interacting with models that require function calls. Once a tool function is created, you can register it as a tool within LangChain for being used by the LLM.
-
-## RAG for services (llama-index)
-
-[**llama-index**](https://docs.llamaindex.ai/en/stable/use_cases/q_and_a/) is a powerful tool for building and deploying RAG (Retrieval Augmented Generation) applications. It provides a simple and efficient way to integrate LLMs into your applications, allowing you to retrieve relevant information from a large knowledge base and use it to generate responses. RAG is a technique that leverages the power of LLMs to augment human-generated content.
-
-### RAG over Unstructured Documents
-
-Unstructured documents are a common source of information for RAG applications. These documents can be in various formats, such as text, PDF, HTML, or images. LlamaIndex provides tools for indexing and querying unstructured documents, enabling you to build powerful RAG applications that can retrieve information from a large corpus of documents.
+[`Output Parsers`](https://docs.langchain.com/oss/python/langchain/output_parsers/) are used to parse the output of an LLM into a structured format. They enable you to extract specific information from the LLM's response, making it easier to work with the data.
 
 ```python
-documents = SimpleDirectoryReader(input_files=[fn]).load_data()
-index = SummaryIndex.from_documents(documents, settings=settings)
-query_engine = index.as_query_engine(response_mode="tree_summarize", llm=llm)
-response = query_engine.query("<your_query_here>")
+from langchain.output_parsers import JsonOutputParser
+output_parser = JsonOutputParser()
+response = llm("Generate a JSON object with name and age")
+parsed_output = output_parser.parse(response)
 ```
 
-### Question Answering (QA) over Structured Data (MySQL)
+### 🧪 Exercise
 
-Structured Data is another common source of information for RAG applications. This data is typically stored in databases or spreadsheets and can be queried using SQL or other query languages. LlamaIndex provides tools for connecting LLMs to databases and querying structured data, allowing you to build RAG applications that can retrieve information from databases.
-
-```python
-#The database library used in this example is SQLAlchemy
-sql_database = SQLDatabase(engine, include_tables=["books"])
-query_engine = NLSQLTableQueryEngine(
-    sql_database=sql_database,
-    tables=["books"],
-    llm=llm,
-    embed_model=embed_model,
-)
-
-query_engine.query("Who wrote 'To Kill a Mockingbird'?")
-```
-
-
-## 🧪 Exercise
-
-#### Exercice 1 - Request an LLM with langchain
+####  Request an LLM with langchain
 
 Create a Python application that generates humorous motivational quotes for developers based on their name, favorite programming language, and a brief description of their current project or challenge.
 
@@ -319,52 +290,14 @@ Create a function `get_developer_motivation(name, language, project_description)
 [Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
 :::
 
-#### Exercice 1.1 - Use langchain to request  Mistral AI API embedding endpoint to get the embedding of a text prompt
 
-::: details Solution
-[Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
-:::
+### Tool/Function calling
 
+[`Function/Tool calling`](https://docs.langchain.com/oss/python/langchain/tools#tools) is a feature that allows the llm to call existing functions from your code. It is useful for working with functions, such as APIs, and for interacting with models that require function calls. Once a tool function is created, you can register it as a tool within LangChain for being used by the LLM.
 
-#### Exercice 1.2 - Let's use chaining to create a chain that compares the embeddings.
+### 🧪 Exercise
 
-You have a json file with a list of FAQ questions and answers.
-Let's request the Mistral AI API to get the embedding of a question and compare it with the embeddings of the FAQ questions to find the most similar one. Then return the question of the FAQ that is the most similar to the question asked to get the final answer from the LLM.
-
-Here is the schema  :
-
-<Mermaid :value="`
-flowchart TD
-A[JSON FAQs
-Questions & Answers] --> B[Convert to List]
-B --> C[LLM Embedding
-Request]
-C --> D((FAQ
-Embedding))
-E[User Prompt
-Can I get refund?] --> F[LLM Embedding
-Request]
-F --> G((User
-Embedding))
-D --> H[Cosine
-Comparison]
-G --> H
-H --> I((Closest FAQ
-Match))
-I --> J[LLM Final
-Response]
-classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
-classDef circle fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#000
-class D,G,I circle
-`" />
-
-
-::: details Solution
-[Google Colab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
-:::
-
-
-#### Exercice 2 - Tool/Function calling : Request an LLM with Tool/Function calling
+####  Tool/Function calling : Request an LLM with Tool/Function calling
 
 
 Build a command-line application that fetches weather data for a specified city using LangChain and a public weather API. The application will utilize implicit tool calling to allow the LLM to decide when to call the weather-fetching tool based on user input.
@@ -419,6 +352,89 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 ::: details Solution
 [Google Collab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
 :::
+
+
+
+## RAG  with llama-index
+
+[**llama-index**](https://docs.llamaindex.ai/en/stable/use_cases/q_and_a/) is a powerful tool for building and deploying RAG (Retrieval Augmented Generation) applications. It provides a simple and efficient way to integrate LLMs into your applications, allowing you to retrieve relevant information from a large knowledge base and use it to generate responses. RAG is a technique that leverages the power of LLMs to augment human-generated content.
+
+### RAG over Unstructured Documents
+
+Unstructured documents are a common source of information for RAG applications. These documents can be in various formats, such as text, PDF, HTML, or images. LlamaIndex provides tools for indexing and querying unstructured documents, enabling you to build powerful RAG applications that can retrieve information from a large corpus of documents.
+
+```python
+documents = SimpleDirectoryReader(input_files=[fn]).load_data()
+index = SummaryIndex.from_documents(documents, settings=settings)
+query_engine = index.as_query_engine(response_mode="tree_summarize", llm=llm)
+response = query_engine.query("<your_query_here>")
+```
+
+### Question Answering (QA) over Structured Data (MySQL)
+
+Structured Data is another common source of information for RAG applications. This data is typically stored in databases or spreadsheets and can be queried using SQL or other query languages. LlamaIndex provides tools for connecting LLMs to databases and querying structured data, allowing you to build RAG applications that can retrieve information from databases.
+
+```python
+#The database library used in this example is SQLAlchemy
+sql_database = SQLDatabase(engine, include_tables=["books"])
+query_engine = NLSQLTableQueryEngine(
+    sql_database=sql_database,
+    tables=["books"],
+    llm=llm,
+    embed_model=embed_model,
+)
+
+query_engine.query("Who wrote 'To Kill a Mockingbird'?")
+```
+
+## Embeddings & vector DB
+
+## 🧪 Exercises
+
+#### Exercice 1- Use langchain to request  Mistral AI API embedding endpoint to get the embedding of a text prompt
+
+::: details Solution
+[Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+:::
+
+#### Exercice 2 - Let's use chaining to create a chain that compares the embeddings.
+
+You have a json file with a list of FAQ questions and answers.
+Let's request the Mistral AI API to get the embedding of a question and compare it with the embeddings of the FAQ questions to find the most similar one. Then return the question of the FAQ that is the most similar to the question asked to get the final answer from the LLM.
+
+Here is the schema  :
+
+<Mermaid :value="`
+flowchart TD
+A[JSON FAQs
+Questions & Answers] --> B[Convert to List]
+B --> C[LLM Embedding
+Request]
+C --> D((FAQ
+Embedding))
+E[User Prompt
+Can I get refund?] --> F[LLM Embedding
+Request]
+F --> G((User
+Embedding))
+D --> H[Cosine
+Comparison]
+G --> H
+H --> I((Closest FAQ
+Match))
+I --> J[LLM Final
+Response]
+classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
+classDef circle fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#000
+class D,G,I circle
+`" />
+
+
+::: details Solution
+[Google Colab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
+:::
+
+
 
 
 #### Exercice 3 - RAG : Querying on Unstructured Documents

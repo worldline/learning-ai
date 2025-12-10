@@ -2,11 +2,7 @@
 
 ## GitHub Copilot
 
-::: tip Update
-Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions
-:::
-
-GitHub Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality.
+GitHub Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality. Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions. You can choose the model you want to use in the settings of your IDE.
 
 ::: tip Alternative code assistance
 There is also other producs indegrated to IDEs such as :
@@ -15,50 +11,45 @@ There is also other producs indegrated to IDEs such as :
 - [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview?hl=fr),
 - [SuperMaven](https://supermaven.com/),
 - [AWS CodeWhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/what-is-cwspr.html), and more.
-  :::
+:::
 
-### Copilot Chat
+### Copilot Chat 
 
-Copilot Chat is a chat interface that allows you to ask questions and get suggestions for code improvements.
+Copilot Chat is a chat interface that allows you to ask questions and get suggestions for code improvements. It is a similar approach to chat GPT prompting optimised for the developper experience.
 
 it's available on :
-
 - [JetBrains IDEs](https://plugins.jetbrains.com/plugin/17718-github-copilot)
 - [Visual Studio](https://visualstudio.microsoft.com/fr/github-copilot/)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
 - In [GitHub mobile App](https://github.com/mobile)
 - Web version in [github.com (Preview)](https://docs.github.com/fr/enterprise-cloud@latest/copilot/using-github-copilot/asking-github-copilot-questions-in-github)
+- CLI version in [GitHub CLI](https://cli.github.com/) : CLI helps you using you command line interpreter
 
-It is a similar approach to chat GPT prompting optimised for the developper experience.
-
-### CLI
-
-CLI helps you using you command line interpreter
 You can use it in the terminal with the following command:
-
 ```bash
 gh auth login
 gh extension install github.copilot
 gh copilot explain "traceroute github.com"
 ```
 
-::: warning
-GitHub CLI is not supported yet with our Worldline account, so you need to use the web version with the link here
-:::
-
 ### IDEs integration (VSCode)
+
+Copilot chat is available as an extension for VSCode. You can install it from the VSCode marketplace. The client  enables you to interact with copilot chat directly from your IDE for :
 
 #### Completion
 
 ![copilot-assistance](../assets/images/copilot_completion.gif)
 
-#### Generation & Refactoring
+#### Code generation & refactoring
 
 ![copilot-completion](../assets/images/copilot_generation.gif)
 
 #### Assistance
 
+##### Explain code
 ![copilot-assistance](../assets/images/copilot_assistance.gif)
+
+##### Fix code
 ![copilot-assistance2](../assets/images/copilot_assistance2.gif)
 
 #### Test generation
@@ -125,15 +116,19 @@ graph TD;
     H -->|CRUD Operations| I
 ```
 
+### Agent mode 
+
+The agent mode of copilot allows you to create multi step workflows to automate complex tasks and interacts with the IDE and external tools such as terminal, browser, file system, etc. It is using reasoning capabilities of LLMs to decompose a task into smaller sub-tasks and execute them sequentially or in parallel.
+
 ## 🧪 Exercise
 
-### Install GitHub Copilot on VSCode
+#### Install GitHub Copilot on VSCode
 
 1. Install the [GitHub Copilot extension](https://marketplace.visualstudio.com/items?itemName=github.copilot) on your VSCode
 2. Sign in with your GitHub account, if not already done
 3. Create a new file and start typing a function or a class, to see the suggestions provided by Copilot
 
-### Generating unit tests
+#### Generating unit tests
 
 We"re going to use GitHub Copilot to generate unit tests for a simple JavaScript project repository.
 
@@ -162,7 +157,7 @@ To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/
 
 </details>
 
-### Refactoring
+#### Refactoring
 
 Now we are going to use Copilot to refactor a piece of code in the same project.
 
@@ -198,6 +193,18 @@ Now we are going to use Copilot to refactor a piece of code in the same project.
 <img src="./images/testSuggestion.png" />
 </details>
 
+
+### Vibe coding with Agent mode
+
+Create an application that does the following:
+- Create a new React project using Vite
+- Add a todo list component with the following features: add, delete, mark as done, tag, filter and sort.
+- Use Tailwind CSS for styling
+- Create a GitHub repository and push the code to it
+
+Use only GitHub Copilot in agent mode to complete this task. You can use the terminal and file system tools to help you with the task.
+
+
 ## Gihub Spark
 
 [GitHub Spark](https://githubnext.com/projects/github-spark#introducing-github-spark) is an AI-powered tool for creating and sharing micro apps (“sparks”), which can be tailored to your exact needs and preferences, and are directly usable from your desktop and mobile devices. Without needing to write or deploy any code.
@@ -210,14 +217,14 @@ And it enables this through a combination of three tightly-integrated components
 
 ## 🧪 Exercises
 
-### Create a web app with V0 and blot
+#### Create a web app with V0/ Bolt / or GitHub Spark 
 
 - Open [V0.dev](https://v0.dev/) and enter a prompt to create a todo list web app with common features: add, delete, mark as done, tag, filter and sort.
   - Download the code and run it on your local machine. Try to understand the code generated by V0.
 - Try again this time with [bolt.new](https://bolt.new/).
   - What are the differences between the two tools?
 
-### Create a GitHub Spark (on waitlist as of December 2024)
+#### Create a GitHub Spark (on waitlist as of December 2024)
 
 ## 📖 Further readings
 
