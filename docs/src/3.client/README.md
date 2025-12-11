@@ -26,13 +26,21 @@ Let's discover how to use LibreChat to create efficient and effective conversati
 
 Prompts history allows users to save and load prompts for their conversations and easily access them later. Reusing prompts can save time and effort, especially when working with multiple conversations and keep track of the context and details of a conversation.
 
-### Favorites
+Remember to : 
+- switch to a new conversation when a new topic is started
+- take an older conversation when you want to continue a previous topic
 
-The favorites feature allows users to save and load favorite prompts for their conversations and easily access them later.
+### Bookmarks
+ 
+ Keep the conversation organized by bookmarking them. You can easily find the conversations you want to access later with bookmarks. A bookmark is a group of conversations grouped with a tag name
+ 
+### Custom Instructions
 
-### Presets
+Custom instructions allow users to set specific guidelines for the AI to follow during conversations. This feature helps tailor the AI's responses to better suit the user's needs and preferences.
 
-The `presets` feature allows users to save and load predefined settings for initialise a conversations. Users can import and export these presets as JSON files, set a default preset, and share them with others.
+### Memories
+
+Memories allow users to save important information or context from previous conversations to be used in future interactions. This feature helps maintain continuity and relevance in conversations by providing the AI with relevant background information.
 
 ### Prompts
 
@@ -56,6 +64,10 @@ Explain the following {{language:Java|Kotlin|Javascript}} snippet of code:
 - Now you can use the `/explain` command to get the explanation of the code snippet.
 
 ![preformatted_prompts_usage](../assets/images/demo_prompt.gif)
+
+### Agent Builder
+
+Librechat Agent Builder allows users to create custom AI agents that can perform specific tasks or functions. Users can define the agent's behavior, capabilities, and interactions with users. This feature enables users to build specialized AI assistants tailored to their needs. The agent can be shared on a marketplace for other users to use it.
 
 ### AI providers
 
