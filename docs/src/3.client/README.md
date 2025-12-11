@@ -34,14 +34,15 @@ The favorites feature allows users to save and load favorite prompts for their c
 
 The `presets` feature allows users to save and load predefined settings for initialise a conversations. Users can import and export these presets as JSON files, set a default preset, and share them with others.
 
-### Preformatted prompts
+### Prompts
 
 The prompts feature allows users to save and load predefined prompts to use it during their conversations.
 You can use a prompt with the /[`prompt command`]. A prompt can have parameters, which are replaced with values when the prompt is used.
 
-**Exemple of preformatted prompts : Explain the following code snippet in Java, Kotlin or Javascript**
+**Exemple**
 
-- Click on the `+` button to add a new prompt.
+- On the right side menu, go to the `💬 Prompts` tab.
+- Click on the `+ add a new prompt`.
 - name your prompt : `explain`
 - on Text tab, you can write your prompt :
 
