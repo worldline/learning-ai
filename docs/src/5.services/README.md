@@ -533,7 +533,7 @@ Guido van Rossum created Python in 1991.
 
 Embeddings are numerical representations of words, phrases, or entire documents in a continuous vector space. They capture semantic relationships between different pieces of text, allowing LLMs to understand context and meaning more effectively. An Embedding is the specialization of a Vector in the context of language models.
 
-It can be usefull to store embeddings in a vector database to enable efficient similarity search and retrieval of relevant information and have cost effective solutions for large scale applications.
+It can be useful to store embeddings in a vector database to enable efficient similarity search and retrieval of relevant information and have cost effective solutions for large scale applications.
 
 Contesxt aware frameworks like LangChain provide easy to use APIs to interact with embedding endpoints of LLM providers.
 

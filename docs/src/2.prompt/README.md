@@ -8,26 +8,32 @@ Prompt engineering involves the design and creation of prompts that are used to 
 
 In the context of AI language models, prompt engineering is especially important for shaping the model's behavior and output. By designing prompts effectively, engineers can influence the model's responses and ensure that it generates coherent, relevant, and accurate content.
 
-There are four main areas to consider when writing an effective prompt. You don’t need to use all four, but using a few will help!
+There are four main things to specify when writing an effective prompt. You don’t need to use all four, but using a few will help!
 
 - `Persona`: Who is the user you're writing for? What are their skills and knowledge?
 - `Task`: What specific action do you want the user to perform?
 - `Context`: What information does the user need to know to complete the task?
 - `Format`: What is the desired output of the task?
 
-**Example Prompt:**
+By starting your prompt with *"Act as {desired persona}"* you are establishing a specific context for the language model and guiding it to understand the type of task or request you are making. This helps to set the right expectations and provides the language model with the necessary context to generate a response tailored to the defined role.
+
+**Example:**
 
 * [`Persona`] You are a Google Cloud program manager.
 * [`Task`] Draft an executive summary email
 * [`Context`] to [person description] based on [details about relevant program docs].
-* [`Format`] Limit to bullet points.
+* [`Format`] Bullet points, concise and professional.
 
-By using "act as," you are establishing a specific context for the language model and guiding it to understand the type of task or request you are making. This helps to set the right expectations and provides the language model with the necessary context to generate a response tailored to the defined role.
+which can be combined into the following prompt:
 
 ```
-"Act as a creative writing assistant and generate a short story based 
-on a prompt about a futuristic world where robots have become sentient."
+Act as a a Google Cloud program manager and draft an executive summary
+ email to a senior executive based on the following program details:
+ [insert program details here]. 
+ Use bullet points to highlight key information 
+ and keep the email concise and professional.
 ```
+
 ## Frameworks
 
 ### Framework : Chain of Thought
@@ -95,7 +101,7 @@ def calculate_average(numbers):
 | Hard to debug | Easy to spot errors |
 | Less accurate | More reliable |
 
-**Simple trigger**: Add "Let's think step by step" or "Analyze this systematically" to your prompts.
+To make a model use chain of thought, a simple trigger is to add *"Let's think step by step"* or *"Analyze this systematically"* to your prompts.
 
 
 
@@ -158,45 +164,90 @@ Act 4: Finish[TikTok's recommendation system uses primarily Go for backend servi
 **Simple pattern**: Think → Act → Observe → Repeat until solution found.
 
 
-## Prompting techniques (basics)
+## Prompting examples (basics)
 
 ### Summarize
 
-Summary is a prompt engineering technique that involves providing a summary of a given document or text. It can helps for summarizing changelogs, articles, or other technical documents.
+Summarizing changelogs, articles, or other technical documents:
 
-```
-Help me write an article of this document [Insert or copy paste document text]
+`Help me write an article of this document [Insert or copy paste document text]
 Generate 5 titles out of the following topic….
 Generate a subtitle to catch readers’ attention on the following 
 topic [describe the topic]
-```
+`
 
 ### Write
 
-Write is a prompt engineering technique that involves providing a step-by-step guide or instructions for a given task or process. Its useful for developers to create functional and technical documentations.
+Help with the redaction of templates, step-by-step guides, technical documentation:
 
-```
+`
 Create a template of an email response to customer inquiring about ….
 Create a guide that explains how to use ….
 Write step by step instructions
+`
+
+### Explain code
+
+Ask for a detailed explanation of a code snippet or function:
+
+`What does this highlighted code do?`
+
+`What is the purpose of variable 'i' in the following function?`
+
+[Example in IDE with Github Copilot](../4.assistant/#explain-code)
+
+### Generate code
+
+`Act as a Python developer. Write a Python function that takes a list of numbers as input and returns the sum of all the numbers.`
+
+[Example in IDE with Github Copilot](../4.assistant/#code-generation-refactoring)
+
+### Complete/Improve code
+
+ Suggest possible code changes or improvements based on their existing code:
+
+`Handle potential error cases I missed in the highlighted code`
+
+`Add logs to the following function to help with debugging`
+
+### Convert code into another language
+
+`Port the following Python function into JavaScript`
+
+### Code Review
+
+`Review the following code for best practices and potential issues`
+
+### Fixing code
+
+When facing bugs in your code or looking for ways to improve the quality of their code:
+
+```
+Help me find mistakes in my code [insert your code]
+Explain what this snippet of code does [insert code snippet]
+What it the correct syntax for a [statement or function] 
+in [programming language]
+How do I fix the following programming language code 
+[program language] code which explain the functioning [Insert code snippet]
 ```
 
-### Code explanation
+[Example in IDE with Github Copilot](../4.assistant/#fix-code)
 
-Code explanation is a prompt engineering technique that involves providing a detailed explanation of a code snippet or function. This technique is useful for developers who want to understand the inner workings of a codebase or for those who want to document their code.
+### Refactoring
 
-cf. Preformatted prompts for an example of code explanation
+To quickly apply some modifications of an existing code, of if you want to improve the readability and maintainability of your code:
 
-### Generation
+`Refactor the following code to get rid of side effects`
 
-```
-Act as a code generator. Generate a Python function that takes a list of 
-numbers as input and returns the sum of all the numbers.
-```
+`Rewrite the following function to work with a structured data input`
 
-## 🧪 Exercises: Prompting for Devs
+`Extract the magic numbers from the following code into named constants`
 
-#### Basic Function Creation
+[Example in IDE with Github Copilot](../4.assistant/#code-generation-refactoring)
+
+## 🧪 Exercises
+
+### Basic Function Creation
 
 Create a Python function that calculates the factorial of a number. Handle both positive integers and zero, with error handling for negative inputs.
 
@@ -226,7 +277,7 @@ def factorial(n):
 
 :::
 
-#### API Request Handling
+### API Request Handling
 
 Write a JavaScript function to fetch current weather data at current user location using the Fetch API, the Geolocation API and the Open Meteo API. The request URL is `https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true`. Return the temperature from the JSON response and handle any potential errors.
 
@@ -315,7 +366,7 @@ async function fetchTemperature() {
 
 :::
 
-#### Class Definition
+### Class Definition
 
 In C# language, define a class representing a book with properties for title, author, and publication year. Include a method to display the book's details.
 
@@ -348,7 +399,7 @@ public class Book
 
 :::
 
-#### Simple Web Server
+### Simple Web Server
 
 Set up a basic Node.js web server that listens on port 3000. Respond with a simple "Hello, World!" message when accessed.
 
@@ -381,7 +432,7 @@ server.listen(3000, () => {
 
 
 
-#### Data Validation
+### Data Validation
 
 Write a method in Ruby language to validate if a given string is a valid email address. Use a regular expression for the validation.
 
@@ -406,36 +457,6 @@ end
 ```
 
 :::
-
-
-### Completion
-
-Code completion is a prompt engineering technique that involves providing a list of possible completions for a given code snippet or function. This technique is useful for developers who want to suggest possible code changes or improvements based on their existing code.
-
-### Conversion
-
-Code conversion is a prompt engineering technique that involves providing a conversion of a code snippet or function from one programming language to another. This technique is useful for developers who want to migrate their code from one language to another or for those who want to use a different programming language for their projects.
-
-### Review
-
-Code review is a prompt engineering technique that involves providing a code review of a given code snippet or function. This technique is useful for developers who want to review their code for potential issues,bugs, or for those who want to provide feedback on their code.
-
-### Fixing
-
-Code fixing is a prompt engineering technique that involves providing a code fix for a given code snippet or function. This technique is useful for developers who want to fix bugs or issues in their code or for those who want to improve the quality of their code.
-
-```
-Help me find mistakes in my code [insert your code]
-Explain what this snippet of code does [insert code snippet]
-What it the correct syntax for a [statement or function] 
-in [programming language]
-How do I fix the following programming language code 
-[program language] code which explain the functioning [Insert code snippet]
-```
-
-### Refactoring
-
-Code refactor is a prompt engineering technique that involves providing a code refactoring of a given code snippet or function within a specific scope. This technique is useful for developers who want to refactor their code within a specific context or for those who want to improve the readability and maintainability of their code.
 
 ### Data mocking
 
