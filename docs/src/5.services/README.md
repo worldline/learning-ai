@@ -8,16 +8,16 @@ This section is dedicated to the usage of Generative AI models for services appl
 - You can sign up here : [Mistral AI sign up](https://mistral.ai/signup) 
 - and get your API key from api keys section in your account settings here : [Mistral AI API keys](https://console.mistral.ai/api-keys/).
 
-2. Also we choose **Python** as the main programming language for this training due to its popularity in the AI/ML community and the availability of upto-date libraries and frameworks, documentations and easy onboarding.
+2. Also we choose **Python** as the main programming language for this training due to its popularity in the AI/ML community and the availability of up-to-date libraries and frameworks, documentations and easy onboarding.
 
 3. We will use **[Google Colab](https://colab.research.google.com/)** for an online use of jupyter notebooks. A notebook is an interactive environment for machine learning and data science. It is a single page document that contains both code and rich text elements (paragraphs, equations, figures, links, etc.) and allows you to run code in an interactive way.
 With a notebooks you can :
 * Prototype your ideas
 * Easily share your work with others
 * Collaborate with others 
+* Gemini is pre-installed in Google Colab environments so you can code with ease even if you're not familiar with Python development.
 
-**NB: please do not use for now Worldline GCloud account for connecting to Google Colab or you will have permission issues. Create a dedicated Google account for that training, if needed**
-
+**NB: Please do not use, for now, Worldline GCloud account for connecting to Google Colab or you will have permission issues. If needed, create a dedicated Google account for that training.**
 :::
 
 ### Google Colab notebooks
@@ -94,7 +94,7 @@ Some benefits of Structured Outputs include:
 - Explicit refusals: Safety-based model refusals are now programmatically detectable
 - Simpler prompting: No need for strongly worded prompts to achieve consistent formatting
 
-Structured Outputs is the evolution of `JSON mode`. While both ensure valid JSON is produced, only Structured Outputs ensure schema adherence.
+Structured Outputs is the evolution of [`JSON mode`](https://docs.mistral.ai/capabilities/structured_output/json_mode). While both ensure valid JSON is produced, only Structured Outputs ensure schema adherence.
 
 **Example**
 ```python
@@ -289,7 +289,7 @@ Author: Unknown
 ```
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1YA6ZhjPiqJkOiPk9Q8UzVYkcvXxJ9kNr?#copy=true) and complete the exercise there.
 
 **Steps**
 1. Create a function `get_developer_motivation(name, language, project_description)` that:
@@ -308,6 +308,50 @@ Author: Unknown
 ### Tools
 
 [`Function/Tool calling`](https://docs.langchain.com/oss/python/langchain/tools#tools) is a feature that allows the LLM to call existing functions from your code. It is useful for allowing the LLM to interact wiht external APIs or other models that require function calls. Once a tool function is created, you can register it as a tool within LangChain for being used by the LLM.
+
+#### Create a tool
+
+**With annotated function**
+```python
+@tool(name_or_callable="do_something", description="this tool does something.")
+def some_function(arg: str) -> dict:
+    return {"output": f"Did something with {arg}"}
+``` 
+
+**With Tool class**
+```python
+a_tool = Tool(
+    name="do_something",
+    description="this tool does something",
+    func=some_function
+)
+```
+#### Bind tool to LLM
+You can bind the tool to the LLM using the `bind_tools` method. This allows the LLM to call the tool when needed.
+
+```python
+llm_with_tools = llm.bind_tools([weather_tool])
+```
+
+#### Handle tool calls
+You can handle tool calls by checking if the response from the LLM includes any tool calls. If a tool call is detected, you can extract the function name and arguments from the tool call and invoke the corresponding tool function.
+```python
+response = llm_with_tools.invoke(input_data)
+
+f 'tool_calls' in response.additional_kwargs:
+        # Extract the tool call information
+        tool_calls = response.additional_kwargs['tool_calls']
+
+        for tool_call in tool_calls:
+            # Extract the function object and arguments
+            function_info = tool_call['function']
+            function_name = function_info['name']
+            arguments = function_info['arguments']
+             if function_name == 'some_tool':
+                # Call the tool function with the extracted arguments
+                tool_response = some_tool(**arguments)
+                return tool_response
+```
 
 ### 🧪 Exercise
 
@@ -334,7 +378,7 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 | Endpoint & Description                                                     | Method & URL                                          | Parameters                                                                                                            | Response                                                                                         |
 | -------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | **Get Current Weather**<br>Fetch current weather data for a specified city | GET `https://api.openweathermap.org/data/2.5/weather` | `q`: City name (e.g., "Lille")<br>`appid`: Your API key<br>`units`: Units of measurement (e.g., "metric" for Celsius) | `json { "weather": [{ "description": "clear sky", ... }], "main": { "temp": 15.5, ... }, ... } ` |
-- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1dK3C9p9aMbjcK6PHmTKZQYpIcH4A4ZTn?#copy=true) and complete the exercise there.
 - Define a function `fetch_weather(city: str) -> dict` that takes a city name as input and returns the weather data as a dictionary. Use the weather API to fetch the data.
 - Use the [`Tool`](https://python.langchain.com/docs/concepts/tools/) class from LangChain to register the `fetch_weather` function as a tool.
 - Create a prompt template that asks about the weather in a specified city.
@@ -351,9 +395,9 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 :::
 
 ::: tip Solution
-   ::: details here
-      [Google Collab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
-    :::
+  ::: details here
+    [Google Collab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
+  :::
 :::
 
 ## RAG  with llama-index
@@ -407,9 +451,9 @@ The customers' experiences with the company and its products vary. Some have had
 :::
 
 ::: tip Solution    
-::: details here
-         [Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
-    :::
+  ::: details here
+    [Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
+  :::
 :::
 
 ###  Question Answering (QA) over Structured Data (MySQL)
@@ -479,9 +523,9 @@ Guido van Rossum created Python in 1991.
 :::
 
 ::: tip Solution
-::: details here
-    [Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
-    :::
+  ::: details here
+   [Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
+  :::
 :::
 
 
@@ -503,7 +547,8 @@ from langchain_mistralai.embeddings import MistralAIEmbeddings
 #### Exercice 1- Use langchain to request  Mistral AI API embedding endpoint to get the embedding of a text prompt
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](#) and complete the exercise there.
+
+- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1O5cnBQdX1CpvKL8_IkHfkFXlhYwsGXMy?#copy=true) and complete the exercise there.
 - Install the `langchain_mistralai` package in your Colab environment.
 - Create a `MistralAIEmbeddings` object with your Mistral API key.
 - Implement a function `get_text_embedding(text)` that:
@@ -514,9 +559,9 @@ from langchain_mistralai.embeddings import MistralAIEmbeddings
 :::
 
 ::: tip Solution
-   ::: details here
-      [Google Collab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
-    :::
+  ::: details here
+   [Google Collab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+  :::
 :::
 
 #### Exercice 2 - Let's use chaining to create a chain that compares the embeddings.
@@ -552,7 +597,7 @@ class D,G,I circle
 `" />
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1Mdw_Ac0raY_vZeTjH4U_436J42cyHmoi?#copy=true) and complete the exercise there.
 - Create a JSON file named `faqs.json` containing a list of FAQ questions and answers.
 - Load the FAQ data from the JSON file and convert it to a list of questions and answers.
 - Create a `MistralAIEmbeddings` object with your Mistral API key.
@@ -565,9 +610,9 @@ class D,G,I circle
 :::
 
 ::: tip Solution
-::: details here
-        [Google Collab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
-    :::
+  ::: details here
+    [Google Collab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
+  :::
 :::
 
 ## Vector databases (Soon)
