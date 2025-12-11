@@ -17,7 +17,7 @@ With a notebooks you can :
 * Collaborate with others 
 * Gemini is pre-installed in Google Colab environments so you can code with ease even if you're not familiar with Python development.
 
-**NB: Please do not use, for now, Worldline GCloud account for connecting to Google Colab or you will have permission issues. If needed, create a dedicated Google account for that training.**
+**NB: Please do not use, for now, Worldline email for connecting to Google Colab or you will have permission issues. If needed, create a dedicated Google account for that training.**
 :::
 
 ### Google Colab notebooks
