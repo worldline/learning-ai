@@ -38,18 +38,28 @@ Copilot chat is available as an extension for VSCode. You can install it from th
 
 #### Completion
 
+[Examples of prompts](/learning-ai/2.prompt/#completion)
+
 ![copilot-assistance](../assets/images/copilot_completion.gif)
 
 #### Code generation & refactoring
+
+[Examples of prompts](/learning-ai/2.prompt/#refactoring)
 
 ![copilot-completion](../assets/images/copilot_generation.gif)
 
 #### Assistance
 
 ##### Explain code
+
+[Examples of prompts](/learning-ai/2.prompt/#explain-code)
+
 ![copilot-assistance](../assets/images/copilot_assistance.gif)
 
 ##### Fix code
+
+[Examples of prompts](/learning-ai/2.prompt/#fixing-code)
+
 ![copilot-assistance2](../assets/images/copilot_assistance2.gif)
 
 #### Test generation
