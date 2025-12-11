@@ -85,6 +85,10 @@ API references for Mistral AI :
 - [Chat Endpoints - POST](https://docs.mistral.ai/api/#tag/chat/operation/chat_completion_v1_chat_completions_post)
 
 
+You can test these endpoints here:
+
+<RestLlmTester />
+
 #### Structured Outputs
 
 [`Structured Outputs`](https://platform.openai.com/docs/guides/structured-outputs) is a feature that ensures the model will always generate responses that adhere to your supplied [JSON Schema](https://platform.openai.com/docs/api-reference/chat/create#chat_create-response_format), so you don't need to worry about the model omitting a required key, or hallucinating an invalid enum value.
