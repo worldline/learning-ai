@@ -573,6 +573,8 @@ Testing is a prompt engineering technique that involves providing a test case fo
 
 ### System design and architecture
 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1120819061?h=c364063439&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="How to use mermaid with librechat for creating diagrams ?"></iframe>
+
 System design and architecture is a prompt engineering technique that involves providing a system design or architecture for a given code snippet or function. This technique is useful for developers who want to design their code or for those who want to understand the overall architecture of their projects.
 
 ### Documentation generation
