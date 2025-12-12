@@ -109,40 +109,6 @@
                     Test Endpoint
                 </button>
             </div>
-
-            <!-- Legacy Completions -->
-            <div class="endpoint-card">
-                <div class="endpoint-header">
-                    <h4><span class="method post">POST</span> Completions (Legacy)</h4>
-                    <p>Generate text completions</p>
-                </div>
-                <div class="form-grid">
-                    <div class="input-group">
-                        <label>Model:</label>
-                        <input v-model="completionRequest.model" type="text" placeholder="open-mistral-7b"
-                            class="endpoint-input" />
-                    </div>
-                    <div class="input-group">
-                        <label>Temperature:</label>
-                        <input v-model.number="completionRequest.temperature" type="number" min="0" max="2" step="0.1"
-                            class="endpoint-input" />
-                    </div>
-                    <div class="input-group">
-                        <label>Max Tokens:</label>
-                        <input v-model.number="completionRequest.max_tokens" type="number" min="1"
-                            class="endpoint-input" />
-                    </div>
-                </div>
-                <div class="input-group">
-                    <label>Prompt:</label>
-                    <textarea v-model="completionRequest.prompt" placeholder="Once upon a time"
-                        class="endpoint-textarea" rows="2"></textarea>
-                </div>
-                <button @click="testCompletions" :disabled="!config.apiKey || !completionRequest.prompt"
-                    class="test-button">
-                    Test Endpoint
-                </button>
-            </div>
         </div>
 
         <!-- Console Output -->
@@ -290,17 +256,6 @@ const testEmbeddings = () => {
     }
 
     makeRequest('POST', '/v1/embeddings', body)
-}
-
-const testCompletions = () => {
-    const body = {
-        model: completionRequest.model,
-        prompt: completionRequest.prompt,
-        max_tokens: completionRequest.max_tokens,
-        temperature: completionRequest.temperature
-    }
-
-    makeRequest('POST', '/v1/completions', body)
 }
 
 const clearConsole = () => {
