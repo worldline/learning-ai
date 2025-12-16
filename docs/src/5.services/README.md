@@ -207,9 +207,9 @@ MISTRAL_API_URL = 'https://api.mistral.ai/v1/chat/completions'
 llm = ChatMistralAI(api_key=API_KEY, model="open-mistral-7b")
 ```
 
-#### Chat prompt template
+#### Prompt template
 
-[`Chat Prompt templating`](https://reference.langchain.com/python/langchain_core/prompts/) is a powerful feature that allows you to create dynamic prompts based on the input data. It enables you to generate prompts that are tailored to the specific requirements of your application.
+[`Prompt templating`](https://reference.langchain.com/python/langchain_core/prompts/) is a powerful feature that allows you to create dynamic prompts based on the input data. It enables you to generate prompts that are tailored to the specific requirements of your application.
 
 ```python
 from langchain.prompts import PromptTemplate
