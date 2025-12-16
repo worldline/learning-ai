@@ -569,39 +569,44 @@ class A main
 
 ### Testing
 
-Testing is a prompt engineering technique that involves providing a test case for a given code snippet or function. This technique is useful for developers who want to test their code or for those who want to ensure the correctness of their code.
+You can ask a LLM to provide a test case for a given code snippet or function:
+
+`Generate unit tests for the following function using [test framework] in [programming language]`
 
 ### System design and architecture
 
-System design and architecture is a prompt engineering technique that involves providing a system design or architecture for a given code snippet or function. This technique is useful for developers who want to design their code or for those who want to understand the overall architecture of their projects.
+Architecture Diagrams can be generated from text prompts using tools like Mermaid.js integrated with LLMs:
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1120819061?h=c364063439&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="How to use mermaid with librechat for creating diagrams ?"></iframe></div>
 
 ### Documentation generation
 
-Documentation generation is a prompt engineering technique that involves providing a documentation for a given code snippet or function. This technique is useful for developers who want to document their code or for those who want to provide documentation for their projects. It can be used to generate documentation in various formats such as Markdown, HTML, or PDF.
+LLM, in particular when combined with RAG and Agentic AI techniques, can be used to generate documentation for various codes, from snippets to entire projects. This documentation can be generated in various formats such as Markdown, HTML, or PDF.
 
-### Commit Message Generation
+`Generate a README.md file for installing and using the following project, based on the commands found in the linked `pom.xml` file`
 
-Commit message generation is a prompt engineering technique that involves providing a commit message for a given code snippet or function. This technique is useful for developers who want to generate commit messages for their code or for those who want to ensure that their commit messages are clear and concise.
+`Analyze the API endpoints in `api` folder and generate API documentation in Markdown format`
 
 ### Vulnerability checking
 
-Vulnerability checking is a prompt engineering technique that involves providing a vulnerability check for a given code snippet or function. This technique is useful for developers who want to check for vulnerabilities in their code or for those who want to ensure that their code is secure.
+`Analyze the following code for potential security vulnerabilities and suggest improvements`
 
 ::: warning
-This prompt is not recommended for production use. It is intended for testing and debugging purposes only and is not a proof of security or safety of your app.
+This is not recommended for production use. It is intended for testing and debugging purposes only and is not a proof of security or safety of your app.
 :::
 
 ### Shell/CLI commands manual
 
 As a developer, you’re not limited to only writing code. LLMs can assist with CLI such as shell commands and version control using Git.
 
+`Move all .txt files from the current directory to a folder named 'docs'`
+
+`Create a new Git branch named 'feature-x' and switch to it`
+
 ### Regular expression explanation
 
-You can understand complex regular expressions and generate ones that match specific patterns in text. This technique is useful for developers who want to write complex regular expressions or for those who want to understand the syntax of regular expressions.
+Ask LLM to help you understand complex regular expressions or generate ones that match specific patterns in text.
 
-```
-Explain this regular expression in JavaScript: const regex = 
-/^[A-Za-z0–9._%+-]+@[A-Za-z0–9.-]+\\.[A-Za-z]{2,}$/;
-```
+`Explain this regular expression in JavaScript: const regex = /^[A-Za-z0–9._%+-]+@[A-Za-z0–9.-]+\\.[A-Za-z]{2,}$/;`
+
+`Generate a Perl regular expression that matches US phone numbers in the format (123) 456-7890`

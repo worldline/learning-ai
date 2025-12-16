@@ -235,7 +235,6 @@ You can use the APIs to generate responses from the models. To enable the API se
 2024-11-15 18:45:22  [INFO] [LM STUDIO SERVER] Supported endpoints:
 2024-11-15 18:45:22  [INFO] [LM STUDIO SERVER] ->	GET  http://localhost:1234/v1/models
 2024-11-15 18:45:22  [INFO] [LM STUDIO SERVER] ->	POST http://localhost:1234/v1/chat/completions
-2024-11-15 18:45:22  [INFO] [LM STUDIO SERVER] ->	POST http://localhost:1234/v1/completions
 2024-11-15 18:45:22  [INFO] [LM STUDIO SERVER] ->	POST http://localhost:1234/v1/embeddings
 2024-11-15 18:45:22  [INFO]
 2024-11-15 18:45:22  [INFO] [LM STUDIO SERVER] Logs are saved into /Users/ibrahim/.cache/lm-studio/server-logs
@@ -247,7 +246,6 @@ You can use the endpoints to generate responses from the models. The endpoints a
 
 - `GET /v1/models`: This endpoint returns a list of the available models.
 - `POST /v1/chat/completions`: This endpoint generates responses from the models using the chat format.Chat format is used for tasks such as chatbots, conversational AI, and language learning.
-- `POST /v1/completions`: This endpoint generates responses from the models using the completion format. Completion format is used for tasks such as question answering, summarization, and text generation.
 - `POST /v1/embeddings`: This endpoint generates embeddings from the models. Embeddings are used for tasks such as sentiment analysis, text classification, and language translation.
 
 

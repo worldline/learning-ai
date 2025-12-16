@@ -65,6 +65,10 @@ Copilot chat is available as an extension for VSCode. You can install it from th
 
 ![copilot-assistance2](../assets/images/copilot_assistance2.gif)
 
+#### Generate commit message
+
+![copilot-commit](../assets/images/copilot_commit.gif)
+
 #### Test generation
 
 ![copilot-test](../assets/images/copilot_testing.gif)
