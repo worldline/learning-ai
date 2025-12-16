@@ -1,4 +1,4 @@
-# (Node-based genAI)
+# Agentic AI node-based 
 
 Node based genAI tools allow users to create and manage AI workflows using a visual interface that represents different components as nodes. These nodes can be connected to define the flow of data and operations, making it easier for users to build complex AI applications without extensive coding knowledge.
 
@@ -30,6 +30,9 @@ More specic node-based genAI tools like comfyUI do the same for image generation
 Agentic architectures involve the use of multiple specialized agents that work together to achieve complex tasks. Each agent is designed to perform specific functions, and they communicate and collaborate to accomplish the overall goal.
 
 With node-based tools, you can create workflows that involve multiple agents, each responsible for a specific aspect of the task. For example, in a content generation workflow, you might have one agent for text generation, another for image creation, and a third for data analysis. These agents can be represented as nodes in the workflow, allowing you to visualize and manage their interactions.
+
+### DEMO
+
 
 ### 🧪 Exercise
 

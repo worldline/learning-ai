@@ -1,4 +1,4 @@
-# (GenAI in the Cloud)
+# (Agentic AI on the cloud)
 
 Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.
 

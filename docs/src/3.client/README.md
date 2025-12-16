@@ -248,7 +248,7 @@ You can use the endpoints to generate responses from the models. The endpoints a
 - `POST /v1/chat/completions`: This endpoint generates responses from the models using the chat format.Chat format is used for tasks such as chatbots, conversational AI, and language learning.
 - `POST /v1/embeddings`: This endpoint generates embeddings from the models. Embeddings are used for tasks such as sentiment analysis, text classification, and language translation.
 
-
+### DEMO
 
 ### 🧪 Exercises
 
