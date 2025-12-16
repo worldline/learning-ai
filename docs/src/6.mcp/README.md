@@ -1,11 +1,13 @@
 # Agentic AI with MCP
 
+Agentic AI refers to artificial intelligence systems that can act autonomously to achieve specific goals. These systems are designed to make decisions, learn from their environment, and adapt their behavior over time. Agentic AI can be used in a variety of applications. There is a lot of architectures and frameworks to build agentic AI systems, this section focuses providing an introduction to core architecture concepts for agentic platforms such as Langchain Agents and Model Context Protocol (MCP).
+
 ## Defining Agentic AI
 
-### Agents
+### Langchain Agents
 
 Langchain Agents are a powerful tool for building complex workflows on top of LLMs. They enable you to define a set of actions and rules that the LLM can follow to achieve a specific goal. Agents can be used to automate tasks, manage workflows, and provide personalized assistance to users. 
-Ag
+
 ### Model Context Protocol (MCP)
 
 The Model Context Protocol (MCP) is a framework for managing and deploying AI models. It standardizes like a swagger for AI models, providing a common interface for interacting with models across different platforms and environments. 

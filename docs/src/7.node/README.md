@@ -2,7 +2,7 @@
 
 Node based genAI tools allow users to create and manage AI workflows using a visual interface that represents different components as nodes. These nodes can be connected to define the flow of data and operations, making it easier for users to build complex AI applications without extensive coding knowledge.
 
-It still for developers an option to consider, as it allows rapid prototyping and testing of AI workflows, enabling developers to focus on higher-level design and logic rather than low-level implementation details.
+It is still for developers an option to consider, as it allows rapid prototyping and testing of AI workflows, enabling developers to focus on higher-level design and logic rather than low-level implementation details.
 
 ## N8N
 

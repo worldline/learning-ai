@@ -1,5 +1,8 @@
 # Code Assistants in IDEs
 
+Assistant tools integrated into IDEs can help developers to write code faster and with better quality. These tools use large language models (LLMs) to provide code suggestions, complete code snippets, generate tests... and more.
+This section presents GitHub Copilot, one of the most popular code assistants available today.
+
 ## GitHub Copilot
 
 GitHub Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality. Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions. You can choose the model you want to use in the settings of your IDE.
@@ -132,13 +135,13 @@ The agent mode of copilot allows you to create multi step workflows to automate 
 
 ## 🧪 Exercise
 
-#### Install GitHub Copilot on VSCode
+#### Exercice 1 : Install GitHub Copilot on VSCode
 
 1. Install the [GitHub Copilot extension](https://marketplace.visualstudio.com/items?itemName=github.copilot) on your VSCode
 2. Sign in with your GitHub account, if not already done
 3. Create a new file and start typing a function or a class, to see the suggestions provided by Copilot
 
-#### Generating unit tests
+#### Exercice 2 :Generating unit tests
 
 We"re going to use GitHub Copilot to generate unit tests for a simple JavaScript project repository.
 
@@ -167,7 +170,7 @@ To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/
 
 </details>
 
-#### Refactoring
+#### Exercice 3 :Refactoring
 
 Now we are going to use Copilot to refactor a piece of code in the same project.
 
@@ -204,7 +207,7 @@ Now we are going to use Copilot to refactor a piece of code in the same project.
 </details>
 
 
-### Vibe coding with Agent mode
+#### Exercice 4 : Prompt Engineering with Agent mode
 
 Create an application that does the following:
 - Create a new React project using Vite

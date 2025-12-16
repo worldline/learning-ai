@@ -438,7 +438,7 @@ User uploaded file "customer_reviews (4).txt" with length 338 bytes
 The customers' experiences with the company and its products vary. Some have had positive experiences, such as excellent service and high-quality products, while others have encountered issues with faulty products and unhelpful customer support.
 ```
 ::: warning How to start ?
-- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1_1CpaIHiu3bfSlpGamhOtTH-SRCpSB2q?#copy=true) and complete the exercise there.
 - Create a text file named `customer_reviews.txt` containing the provided customer reviews.
 - Use colab's file upload feature to upload the `customer_reviews.txt` file to your Colab environment.
 - Load the document using `SimpleDirectoryReader` from `llama_index`.
@@ -509,7 +509,7 @@ Guido van Rossum created Python in 1991.
 ```
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](#) and complete the exercise there.
+- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1Gvzue-0s4NYvKIKFDNtj6y_a1wdNSWbO?#copy=true) and complete the exercise there.
 - Define a SQLAlchemy model for the programming languages table.
 - Initialize the database with a list of programming languages and their creators.
 - Create a `SQLDatabase` instance using the SQLAlchemy engine.

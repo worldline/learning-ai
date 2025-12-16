@@ -69,11 +69,32 @@ Explain the following {{language:Java|Kotlin|Javascript}} snippet of code:
 
 Librechat Agent Builder allows users to create custom AI agents that can perform specific tasks or functions. Users can define the agent's behavior, capabilities, and interactions with users. This feature enables users to build specialized AI assistants tailored to their needs. The agent can be shared on a marketplace for other users to use it.
 
-### AI providers
+### Models
+
+#### Default model 
+
+By default, LibreChat uses the OpenAI GPT- nano model to generate responses. This model is a smaller version of the GPT-3 model, which is designed to be more efficient and faster while still providing high-quality responses and also be cost effective.
+
+#### Worldline Agent
+
+The Worldline Agent is a custom AI agent built using LibreChat's Agent Builder. It is designed to assist users with tasks related to Worldline's services and products. The Worldline Agent can provide information, answer questions, and perform specific actions based on user requests.
+
+#### Reasoning model for code/creativity
+
+For tasks that require reasoning, such as code generation or creative writing, it is recommended to use a more powerful model like Claude Haiku. These models are better suited for complex tasks that require a deeper understanding of context and logic.
+
+#### Long context model
+
+For tasks that require a long context, such as document summarization or long conversations, it is recommended to use a model that supports long context, like Gemini Pro. These models can handle larger amounts of text and maintain context over longer interactions.
+
+
+#### Translation model
+
+For translation tasks, it is recommended to use specialized translation model
 
 #### Azure OpenAI
 
-Azure OpenAI Service provides REST API access to OpenAI's powerful language models, including the o1-preview, o1-mini, GPT-4o, GPT-4o mini, GPT-4 Turbo with Vision, GPT-4, GPT-3.5-Turbo, and Embeddings model series.
+Azure OpenAI provides access to OpenAI's powerful language models through Microsoft's Azure cloud platform. It allows developers to integrate advanced AI capabilities into their applications, such as natural language understanding, text generation, and more.
 
 #### Google Gemini
 
@@ -83,13 +104,28 @@ Gemini is a large language model (LLM) developed by Google. It's designed to be 
 
 Claude is an Artificial Intelligence, trained by Anthropic. Claude can process large amounts of information, brainstorm ideas, generate text and code, help you understand subjects, coach you through difficult situations, help simplify your busywork so you can focus on what matters most, and so much more.
 
-### Assistants
+### Assistants 
+
+#### Creating Assistants
 
 The Assistants API enables the creation of AI assistants, offering functionalities like code interpreter, knowledge retrieval of files, and function execution. The Assistants API allows you to build AI assistants within your own applications for specific needs. An Assistant has instructions and can leverage models, tools, and files to respond to user queries. The Assistants API currently supports three types of tools: Code Interpreter, File Search, and Function calling.
 
 ![assistant](../assets/images/assistant.png)
 
-### Plugins
+
+#### Marketplace
+
+The Marketplace is a collection of pre-built AI assistants that users can browse, install, and use within LibreChat. These assistants are designed to perform specific tasks or provide specialized knowledge in various domains. Users can explore the marketplace to find assistants that suit their needs and enhance their interactions with AI.
+
+You can access the marketplace from the top left side menu by clicking on the `Marketplace` icon.
+
+::: tip Image generation assistants
+There are image generation assistants available in the marketplace that use models such as DALL-E
+:::
+
+### Tools
+
+Tools section provide standalone tools that can be used to enhance your conversations with LLMs. These tools can be used to add additional knowledge and functionalities to your conversations.
 
 The plugins endpoint opens the door to prompting LLMs in new ways other than traditional input/output prompting.
 
@@ -98,55 +134,30 @@ Every additional plugin selected will increase your token usage as there are det
 For best use, be selective with plugins per message and narrow your requests as much as possible
 :::
 
-#### DALL-E 3
-
-Dall-e 3 is a librechat Plugin for generating images from text. You can use it to generate images from text, such as product descriptions, product images, or even documentation images to illustrate your technical documentation.
-
-#### Confluence
-
-Ask confluence is a librechat Plugin for Confluence documents.
-
-#### IT support
-
-Ask for IT support enable you to get support from the IT team and create WLSD tickets from your chats.
-
-#### WOLF
-
-`Wolf` is a librechat Plugin for WL Managagement System documents.
-The sharepoint documention is available [here](https://worldline365.sharepoint.com/sites/AAC815)
-
-Ask to WorldLine management system Friend everything you are looking for in the WMS content.
-AskWOLF plugin is meant to help you navigate through the multitude of information provided by the WMS (Applicable Policies, Processes & Procedures, Transversal & Operations SP pages links, …). This Worldline LibreChat plugin relies on ChatGPT technologies.
-
-​​​​​​​Worldline Management System (WMS) is the Group reference for all information pertaining to our operating model such as applicable policies, processes and governance structures.
-Key responsibilities are :
-
-- consistently address its customers’ and markets’ requirements across all its geographies
-- continuous improvement of customer satisfaction through effective application of WMS
-- correct interpretation of applicable ISO standards requirements
-
-Example of prompts:
-
-- AskWOLF: What is the WMS?
-- AskWOLF: What are the policies?
-- AskWOLF: What are the processes?
-
-#### Browse plugins
+#### Web search
 
 Retrieve data from internet and use it to generate a response.
 
-### Plugin mixing
+#### File search
 
-You can mix plugins to create more complex prompts. For example, you can retrieve data from internet with the Browser plugin and use the DALL-E 3 plugin to generate images from text retrieved.
+Upload files to the conversation and use them to generate a response.
 
-```
-Generate the favicon 16x16 pixels based on the content found in
-https://worldline.github.io/learning-ai/overview/ with Browser plugin
-and generate the favicon with DallE. I want no background and black and white image
-```
 
-![prompt](../assets/images/multi_plugin.png)
-![Favicon](../assets/images/result_prompt.png)
+#### Artifacts
+
+Add complementary knowledge to your conversations with Artifacts such as visual preview of html pages.
+
+
+### MCP servers
+
+MCP section provide remote tools to add complementary knowledge and functionalities to your LLM conversations. On librechat a list of MCP servers is available to connect to your conversations provided by your organization or third parties such as slack, chart, confluence, jira 
+
+### Tools mixing
+
+You can mix too to create more complex prompts. For example, you can retrieve data from internet with the Browser tool and use the chart tool to create a graph based on the retrieved data.
+
+![tool_mixing](../assets/images/tool_mixing.png)
+
 
 ### RAG
 
@@ -163,7 +174,8 @@ Select one prompt engineering technique and make a prompt in librechat that can 
 
 #### 2. Plugins mixing
 
-Use the Browse and Dall-E plugins to create a prompt that generates a a favicon based on the content of this learning-ai website.
+Use the Browse and Chart tool to create a prompt that generates a chart from data retrieved from worldline website
+https://worldline.com/en/home/top-navigation/about-worldline/who-we-are 
 
 #### 3. Make your own assistant
 
@@ -249,10 +261,10 @@ You can use the endpoints to generate responses from the models. The endpoints a
 ## 📖 Further readings
 
 - [LibreChat Worldline guides](https://worldline365.sharepoint.com/:u:/r/sites/GenerativeAIQA/SitePages/LibreChat-guides.aspx?csf=1&web=1&e=evKJpU)
-- [LibreChat worldline instance](https://librechat.as8677.net/login)
+- [LibreChat worldline instance](https://librechat.worldline-solutions.com/)
 - [LibreChat official website](https://www.librechat.ai/)
 - [LibreChat GitHub repository](https://github.com/danny-avila/LibreChat)
-- [Gemini Prompting guide]()
+- [Gemini Prompting guide](https://workspace.google.com/resources/ai/writing-effective-prompts/)
 - [Azure search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search)
 - [Google programmable search engine](https://programmablesearchengine.google.com/about/)
 - [Claude AI](https://www.anthropic.com/)
