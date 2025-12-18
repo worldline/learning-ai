@@ -49,19 +49,18 @@ generative AI into their development workflows, fostering innovation and efficie
 - Usage of vector databases for chain-of-thought creations
 - Retrieval-Augmented Generation (RAG) structured and unstructured.
 
-**Module 6: Agentic AI with MCP (kotlin-mcp-sdk)**
+**Module 6: Agentic AI for services**
+- Understanding Agent with Langchain Agents
+- Model Context Protocol (MCP)
+- MCP clients and servers
+- Agentic architectures and their applications
 
-- Understanding the Model Context Protocol, 
-- Building agentic AI applications, Integrating MCP with existing tools and workflows
+**Module 7: Agentic AI node-based tools**
+- Node based genAI tools overview
+- N8N introduction
+- Agentic architecture with node based tools
 
-**Module 7: GenAI with UI node-based tools**
-
-- Creating and customizing AI workflows with ComfyUI
-- Integrating LLMs with ComfyUI
-- Building complex workflows with various AI models and techniques
-
-*Module 8: Cloud Provider Tools | Soon*
-
+**Module 8: Agentic AI in the Cloud | Soon**
 - Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.)*
 - Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.)
 - Best practices for deploying AI solutions in the cloud

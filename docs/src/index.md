@@ -32,13 +32,13 @@ GitHub Copilot, and project generation with Bolt, v0
 ## 5. GenAI for services (langchain, llama-index)
 LLM API calls, Developpement with LangChain, Python notebooks, Context aware frameworks, RAG, Vector databases, Agents, Model Context Protocol
   
-## 6. Agentic AI with MCP (kotlin-mcp-sdk)
-Understanding the Model Context Protocol, Building agentic AI applications, Integrating MCP with existing tools and workflows
+## 6. Agentic AI for services
+Understanding Agentic AI, Langchain Agents, Model Context Protocol (MCP), MCP clients and servers
 
-## 7. GenAI with UI node-based tools (ComfyUI)
-Creating and customizing AI workflows with ComfyUI, Integrating LLMs with ComfyUI, Building complex workflows with various AI models and techniques
- 
- ## 8. GenAI in the Cloud (vertex AI)
+## 7. Agentic AI node-based tools
+Node based genAI tools overview, N8N introduction, Agentic architecture with node based tools
+
+ ## 8. Agentic AI in the Cloud
 Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.), Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.), deploying AI solutions in the cloud
 
 ## About
