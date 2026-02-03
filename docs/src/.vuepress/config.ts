@@ -34,7 +34,7 @@ export default defineUserConfig({
       "/3.client/",
       "/4.assistant/",
       "/5.services/",
-      "/6.mcp/",
+      "/6.agentic/",
       "/7.node/",
       "/8.cloud/",
     ],

@@ -222,7 +222,12 @@ Create an application that does the following:
 Use only GitHub Copilot in agent mode to complete this task. You can use the terminal and file system tools to help you with the task.
 
 
-## Gihub Spark
+
+## Spec Driven Development 
+
+Spec Driven Development (SDD) is an approach where you define the specifications of your application before writing any code. You can use AI tools to help you generate these specifications based on your requirements.
+
+First platforms offering SDD capabilities are V0/ Bolt/ GitHub Spark. It allows you to create web applications by simply describing your requirements in natural language.
 
 [GitHub Spark](https://githubnext.com/projects/github-spark#introducing-github-spark) is an AI-powered tool for creating and sharing micro apps (“sparks”), which can be tailored to your exact needs and preferences, and are directly usable from your desktop and mobile devices. Without needing to write or deploy any code.
 
@@ -231,6 +236,20 @@ And it enables this through a combination of three tightly-integrated components
 - An NL-based editor, which allows easily describing your ideas, and then refining them over time
 - A managed runtime environment, which hosts your sparks, and provides them access to data storage, theming, and LLMs
 - A PWA-enabled dashboard, which lets you manage and launch your sparks from anywhere
+
+
+More advanced spec driven tools can be integrated on IDEs such as Google Antigravity, Cursor AI, and more. 
+It's a new way of building applications that leverages the power of AI to accelerate the development process and to target autonomus code generation and build platforms such aas [Blitzy.com](https://blitzy.com/), emergent.sh and more.
+
+::: warning Vibe coding vs SDD
+Spec Driven Development is different from "vibe coding" where developers use AI tools to generate code snippets or complete functions based on prompts. In SDD, the focus is on defining the overall structure and behavior of the application before writing any code. Also mastering the technical stack is still required to review and validate the generated code.
+:::
+
+## Billing 
+
+Copilot is a paid service with different pricing plans based on the usage and the type of account. You can find more information about the pricing on the [GitHub Copilot pricing page](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-licenses).
+
+Tokens used by Copilot are billed based on the number of characters generated. You can monitor your usage and set limits in the settings of your GitHub account.
 
 ## 🧪 Exercise
 
