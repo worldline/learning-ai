@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.26" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"(Agentic AI on the cloud)","image":[""],"dateModified":"2025-12-16T11:34:05.000Z","author":[]}</script><meta property="og:url" content="https://worldline.github.io/learning-ai/learning-ai/8.cloud/"><meta property="og:title" content="(Agentic AI on the cloud)"><meta property="og:description" content="(Agentic AI on the cloud) Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs,..."><meta property="og:type" content="article"><meta property="og:locale" content="en-US"><meta property="og:updated_time" content="2025-12-16T11:34:05.000Z"><meta property="article:modified_time" content="2025-12-16T11:34:05.000Z"><link rel="icon" href="/learning-ai/favicon.ico"><link rel="manifest" href="/learning-ai/manifest.webmanifest"><meta name="theme-color" content="#00A67E"><meta name="mobile-web-app-capable" content="yes"><link rel="apple-touch-icon" href="/learning-ai/logo.png"><title>(Agentic AI on the cloud)</title><meta name="description" content="(Agentic AI on the cloud) Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs,...">
+    <link rel="preload" href="/learning-ai/assets/style-ylIbZYxg.css" as="style"><link rel="stylesheet" href="/learning-ai/assets/style-ylIbZYxg.css">
+    <link rel="modulepreload" href="/learning-ai/assets/app-DmbIGF3-.js"><link rel="modulepreload" href="/learning-ai/assets/index.html-DSMPBn86.js">
+    <link rel="prefetch" href="/learning-ai/assets/index.html-Zm4Bs2b8.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index.html-CSX1SPNI.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index.html-CYexrqkm.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index.html-CtqQtP39.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index.html-DN4qfUpI.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index.html-DhySt__C.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index.html-Dg7YfMyW.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index.html-BBuOJu-k.js" as="script"><link rel="prefetch" href="/learning-ai/assets/404.html-eQbHGPPb.js" as="script"><link rel="prefetch" href="/learning-ai/assets/index-DTEEl-sV.js" as="script"><link rel="prefetch" href="/learning-ai/assets/katex-BXNjbZo7-DwZch6wb.js" as="script"><link rel="prefetch" href="/learning-ai/assets/dagre-SWNTG5WE-DSC1Q6c--tJStmTmP.js" as="script"><link rel="prefetch" href="/learning-ai/assets/c4Diagram-GPMAACGM-PJaXuOsG-D__CqRtM.js" as="script"><link rel="prefetch" href="/learning-ai/assets/flowDiagram-TSWR6T2D-Dul0xtMP-C_wb_pvE.js" as="script"><link rel="prefetch" href="/learning-ai/assets/flowDiagram-TSWR6T2D-Dul0xtMP-C_wb_pvE.js" as="script"><link rel="prefetch" href="/learning-ai/assets/erDiagram-WO52GFNT-DluJ77q3-C2mgQHFM.js" as="script"><link rel="prefetch" href="/learning-ai/assets/gitGraphDiagram-5C7YHVU6-o7rQLK0p-tfZGSifH.js" as="script"><link rel="prefetch" href="/learning-ai/assets/ganttDiagram-FAOCOTIY-QMiwl3Ii-BXGeVqty.js" as="script"><link rel="prefetch" href="/learning-ai/assets/infoDiagram-P5D6MX3V-BHt8SMCk-BzsL-xUt.js" as="script"><link rel="prefetch" href="/learning-ai/assets/pieDiagram-BLWKPB35-CtctdKjp-D4VztY9B.js" as="script"><link rel="prefetch" href="/learning-ai/assets/quadrantDiagram-QXWEEFXS-DatTgCl2-CtFKWk1s.js" as="script"><link rel="prefetch" href="/learning-ai/assets/xychartDiagram-MYLB5AYS-C-og51gq-BHstRROK.js" as="script"><link rel="prefetch" href="/learning-ai/assets/requirementDiagram-XAUNFCZY-DYsS1_Ym-Yjz3huVl.js" as="script"><link rel="prefetch" href="/learning-ai/assets/sequenceDiagram-D25TJ2OB-pKzEJHJE-CDno5ou-.js" as="script"><link rel="prefetch" href="/learning-ai/assets/classDiagram-FEGYTUDG-Ckev2IdL-CalNLXJM.js" as="script"><link rel="prefetch" href="/learning-ai/assets/classDiagram-v2-R65JCUOM-Ckev2IdL-CalNLXJM.js" as="script"><link rel="prefetch" href="/learning-ai/assets/stateDiagram-GNSP7T6Y-B3_6J16p-B0gWhQcE.js" as="script"><link rel="prefetch" href="/learning-ai/assets/stateDiagram-v2-HP6YRVRG-C7LWn7Of-CeN_JbV0.js" as="script"><link rel="prefetch" href="/learning-ai/assets/journeyDiagram-UIGPPNLY-CNXj_qEy-o_7AZuEl.js" as="script"><link rel="prefetch" href="/learning-ai/assets/flowDiagram-TSWR6T2D-Dul0xtMP-C_wb_pvE.js" as="script"><link rel="prefetch" href="/learning-ai/assets/timeline-definition-27KQCCZ3-CpKNx_hR-DoYIWrAX.js" as="script"><link rel="prefetch" href="/learning-ai/assets/mindmap-definition-R7LC4OIY-C2O8unyl-CkPxQdRx.js" as="script"><link rel="prefetch" href="/learning-ai/assets/kanban-definition-KMT3NSR2-CZuFpg4Z-ClAaYINY.js" as="script"><link rel="prefetch" href="/learning-ai/assets/sankeyDiagram-LVV36NHA-SibqQMmk-tS1p01PO.js" as="script"><link rel="prefetch" href="/learning-ai/assets/diagram-NZMEDLQF-BGsSdY7i-JtMH6xMb.js" as="script"><link rel="prefetch" href="/learning-ai/assets/blockDiagram-XN6IQ5JY-MzQvMLpX-EBvG3PZz.js" as="script"><link rel="prefetch" href="/learning-ai/assets/architectureDiagram-AYX4OTIS-1x9VSuVi-Ds5TJjSc.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/learning-ai/"><img class="vp-site-logo" src="/learning-ai/logo_worldline.png" alt><!----></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/worldline/learning-ai/activity" aria-label="⭐ See changelogs &amp; contribute" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->⭐ See changelogs &amp; contribute<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><form class="search-box" role="search"><input type="search" placeholder="Search..." autocomplete="off" spellcheck="false" value><!----></form></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/worldline/learning-ai/activity" aria-label="⭐ See changelogs &amp; contribute" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->⭐ See changelogs &amp; contribute<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/" aria-label="Home"><!--[--><!--[--><!--]--><!--]-->Home<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/1.intro/" aria-label="Introduction"><!--[--><!--[--><!--]--><!--]-->Introduction<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/2.prompt/" aria-label="Prompting usages"><!--[--><!--[--><!--]--><!--]-->Prompting usages<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/3.client/" aria-label="Online/Offline LLMs clients"><!--[--><!--[--><!--]--><!--]-->Online/Offline LLMs clients<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/4.assistant/" aria-label="Code Assistants in IDEs"><!--[--><!--[--><!--]--><!--]-->Code Assistants in IDEs<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/5.services/" aria-label="GenAI for services"><!--[--><!--[--><!--]--><!--]-->GenAI for services<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/6.agentic/" aria-label="Agentic AI for services"><!--[--><!--[--><!--]--><!--]-->Agentic AI for services<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item vp-sidebar-heading" href="/learning-ai/7.node/" aria-label="Agentic AI node-based"><!--[--><!--[--><!--]--><!--]-->Agentic AI node-based<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link route-link-active auto-link vp-sidebar-item vp-sidebar-heading active" href="/learning-ai/8.cloud/" aria-label="(Agentic AI on the cloud)"><!--[--><!--[--><!--]--><!--]-->(Agentic AI on the cloud)<!--[--><!--[--><!--]--><!--]--></a><!----></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div vp-content><!--[--><!--]--><div id="content"><h1 id="agentic-ai-on-the-cloud" tabindex="-1"><a class="header-anchor" href="#agentic-ai-on-the-cloud"><span>(Agentic AI on the cloud)</span></a></h1><p>Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.</p><p>Globally Vertex products are supported by the developper branch of Google, and Gemini is supported by ML teams of Google.</p><div>
+graph TD
+    %% Style definitions
+    classDef consumerApp fill:#4285f4,stroke:#333,stroke-width:2px,color:#fff
+    classDef apis fill:#9c27b0,stroke:#333,stroke-width:2px,color:#fff
+    classDef geminiML fill:#ea4335,stroke:#333,stroke-width:2px,color:#fff
+    classDef vertexDev fill:#0f9d58,stroke:#333,stroke-width:2px,color:#fff
+    classDef tensorflow fill:#ff9800,stroke:#333,stroke-width:2px,color:#fff
+    %% Applications Grand Public - Niveau le plus applicatif au sommet
+    subgraph Applications Grand Public
+        GSEARCH[Google Search AI]:::consumerApp
+        GASSIST[Google Assistant]:::consumerApp
+        GPHOTOS[Google Photos AI]:::consumerApp
+        GMAIL[Gmail Smart Compose]:::consumerApp
+        GTRANS[Google Translate]:::consumerApp
+        GLENS[Google Lens]:::consumerApp
+        BARD[Bard Gemini Chat]:::consumerApp
+        GSEARCH ~~~ GASSIST
+        GASSIST ~~~ GPHOTOS
+        GPHOTOS ~~~ GMAIL
+        GMAIL ~~~ GTRANS
+        GTRANS ~~~ GLENS
+        GLENS ~~~ BARD
+    end
+    %% APIs and Pre-trained Models
+    subgraph APIs and Pre-trained Models
+        NLAPI[Natural Language API]:::apis
+        VAPI[Vision API]:::apis
+        STTAPI[Speech-to-Text API]:::apis
+        TTSAPI[Text-to-Speech API]:::apis
+        TRANSAPI[Translation API]:::apis
+        DOCAI[Document AI]:::apis
+        VIDAPI[Video Intelligence API]:::apis
+        AUTOML[AutoML Tables]:::apis
+        DFCX[Dialogflow CX]:::apis
+        DFES[Dialogflow ES]:::apis
+        CCAI[Contact Center AI]:::apis
+        RECAI[Recommendations AI]:::apis
+        RETAI[Retail AI]:::apis
+        HEALTHAI[Healthcare AI]:::apis
+        MEDTRANS[Media Translation]:::apis
+        NLAPI ~~~ VAPI
+        VAPI ~~~ STTAPI
+        STTAPI ~~~ TTSAPI
+        TTSAPI ~~~ TRANSAPI
+        TRANSAPI ~~~ DOCAI
+        DOCAI ~~~ VIDAPI
+        VIDAPI ~~~ AUTOML
+        AUTOML ~~~ DFCX
+        DFCX ~~~ DFES
+        DFES ~~~ CCAI
+        CCAI ~~~ RECAI
+        RECAI ~~~ RETAI
+        RETAI ~~~ HEALTHAI
+        HEALTHAI ~~~ MEDTRANS
+    end
+    %% Gemini Branch - ML Teams
+    subgraph Gemini - ML Teams
+        GU[Gemini Ultra]:::geminiML
+        GP[Gemini Pro]:::geminiML  
+        GN[Gemini Nano]:::geminiML
+        AIS[AI Studio]:::geminiML
+        GWS[Gemini for Google Workspace]:::geminiML
+        GCA[Gemini Code Assist]:::geminiML 
+        GU ~~~ GP
+        GP ~~~ GN
+        GN ~~~ AIS
+        AIS ~~~ GWS
+        GWS ~~~ GCA
+    end
+    %% Vertex AI Branch - Developers
+    subgraph Vertex AI - Developers
+        VAS[Vertex AI Studio]:::vertexDev
+        VAW[Vertex AI Workbench]:::vertexDev
+        VAP[Vertex AI Pipelines]:::vertexDev
+        VAMG[Vertex AI Model Garden]:::vertexDev
+        VAFS[Vertex AI Feature Store]:::vertexDev
+        VAME[Vertex AI Matching Engine]:::vertexDev
+        VAE[Vertex AI Experiments]:::vertexDev
+        VAPRED[Vertex AI Predictions]:::vertexDev
+        VAT[Vertex AI Training]:::vertexDev
+        VAM[Vertex AI Monitoring]:::vertexDev
+        VAEX[Vertex AI Explainable AI]:::vertexDev
+        COLAB[Google Colab]:::vertexDev
+        COLABENT[Colab Enterprise]:::vertexDev
+        VAS ~~~ VAW
+        VAW ~~~ VAP
+        VAP ~~~ VAMG
+        VAMG ~~~ VAFS
+        VAFS ~~~ VAME
+        VAME ~~~ VAE
+        VAE ~~~ VAPRED
+        VAPRED ~~~ VAT
+        VAT ~~~ VAM
+        VAM ~~~ VAEX
+        VAEX ~~~ COLAB
+        COLAB ~~~ COLABENT
+    end
+    %% TensorFlow Layer - Base du diagramme
+    subgraph TensorFlow Layer
+        TF[TensorFlow]:::tensorflow
+        TFL[TensorFlow Lite]:::tensorflow
+        TFJS[TensorFlow.js]:::tensorflow
+        JAX[JAX]:::tensorflow
+        KERAS[Keras]:::tensorflow
+        TB[TensorBoard]:::tensorflow
+        TF ~~~ TFL
+        TFL ~~~ TFJS
+        TFJS ~~~ JAX
+        JAX ~~~ KERAS
+        KERAS ~~~ TB
+    end
+    %% Alignement vertical
+    GSEARCH ~~~ NLAPI
+    NLAPI ~~~ GU
+    GU ~~~ VAS
+    VAS ~~~ TF
+</div><h2 id="large-consumer-facing" tabindex="-1"><a class="header-anchor" href="#large-consumer-facing"><span>Large Consumer-Facing</span></a></h2><p>-<strong><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini:</a></strong> Google&#39;s large language model (LLM), positioned as a competitor to OpenAI&#39;s GPT models. Gemini&#39;s capabilities are integrated into various Google products and services, and are also accessible through APIs. Different versions of Gemini (e.g., Gemini Pro, Gemini Ultra) offer varying levels of capability and access. It powers several consumer-facing features across Google&#39;s ecosystem.</p><p>-<strong><a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">AI Studio:</a></strong> Cloud-based machine learning platform offered by several companies, most notably Google with its Google AI Studio (now Vertex AI Studio). It provides APIs for leading foundation models, and tools to rapidly prototype, easily tune models with your own data, and seamlessly deploy to applications.</p><h2 id="vertex-ai" tabindex="-1"><a class="header-anchor" href="#vertex-ai"><span>Vertex AI</span></a></h2><p>This is the central hub for most Google Cloud&#39;s AI/ML services. It integrates and supersedes many previous offerings.</p><p>-<strong>Custom Training:</strong> Training machine learning models using various algorithms and frameworks (TensorFlow, PyTorch, scikit-learn, XGBoost, etc.). Provides access to managed compute instances (including TPUs).</p><p>-<strong>Prediction:</strong> Deploying trained models for inference (making predictions). Offers different deployment options based on scale and latency requirements.</p><p>-<strong>Pipelines:</strong> Creating and managing machine learning workflows, including data preprocessing, model training, evaluation, and deployment, as a series of connected steps.</p><p>-<strong>Model Monitoring:</strong> Monitoring deployed models for performance degradation and potential issues (drift).</p><p>-<strong>Feature Store:</strong> Centralized repository for storing, managing, and versioning features used in machine learning models, improving collaboration and reuse.</p><ul><li>...</li></ul><h2 id="google-cloud-apis" tabindex="-1"><a class="header-anchor" href="#google-cloud-apis"><span>Google Cloud APIs</span></a></h2><p>Pre-trained Models and APIs: Google offers numerous pre-trained models and APIs for various tasks, making it easier to integrate AI into applications without building models from scratch. Examples include:</p><p>-<strong>Natural Language:</strong> Processing and understanding text (sentiment analysis, entity recognition, etc.).</p><p>-<strong>Vision:</strong> Analyzing images (object detection, image classification, optical character recognition, etc.).</p><p>-<strong>Speech-to-Text:</strong> Converting audio to text.</p><p>-<strong>Text-to-Speech:</strong> Converting text to audio.</p><p>-<strong>Translation API:</strong> Translating text between languages.</p><ul><li>...</li></ul><h2 id="specialized-ai-products" tabindex="-1"><a class="header-anchor" href="#specialized-ai-products"><span>Specialized AI Products</span></a></h2><p>Beyond the core platform and APIs, Google offers several specialized AI products:</p><p>-<strong>TensorFlow:</strong> A popular open-source machine learning framework developed by Google. While not strictly a &quot;Google Cloud&quot; product, it&#39;s deeply integrated with their services.</p><p>-<strong>Dialogflow:</strong> A conversational AI platform for building complex conversational experiences.</p><ul><li>...</li></ul><h2 id="collaborative-hugging-face" tabindex="-1"><a class="header-anchor" href="#collaborative-hugging-face"><span>Collaborative (Hugging Face)</span></a></h2><p>The platform where the machine learning community collaborates on models, datasets, and applications.</p><p>Hugging Face is a platform for researchers and developers to share, explore, and build AI models. It provides a centralized repository for models, datasets, and applications, making it easy to find, use, and contribute to the growing ecosystem of AI technologies.</p><ul><li>Creating/deploy/customize a model</li><li>Pre-trained model, use behind the APIs, also a ML part, training model generation for use</li></ul><h2 id="manage-models-ml-flow" tabindex="-1"><a class="header-anchor" href="#manage-models-ml-flow"><span>Manage models (ML Flow)</span></a></h2><p>MLflow provides tools for managing experiments, tracking model versions, deploying models to various environments, and managing models in a central registry. It&#39;s designed to be platform-agnostic, meaning it can work with many different cloud providers and even on-premises infrastructure.</p><h2 id="🧪-exercises" tabindex="-1"><a class="header-anchor" href="#🧪-exercises"><span>🧪 Exercises</span></a></h2><h4 id="exercise-1-fork-and-deploy-a-model-in-vertex-ai" tabindex="-1"><a class="header-anchor" href="#exercise-1-fork-and-deploy-a-model-in-vertex-ai"><span>Exercise 1 - Fork and deploy a model in Vertex AI</span></a></h4><ul><li>Fork and deploy a model</li><li>Train a simple model</li><li>Create a simple chatbot application with your instance</li></ul><h4 id="exercise-2-use-a-pre-trained-model-with-hugging-face" tabindex="-1"><a class="header-anchor" href="#exercise-2-use-a-pre-trained-model-with-hugging-face"><span>Exercise 2 - Use a pre-trained model with Hugging Face</span></a></h4><ul><li>Use a pre-trained model of worldline fraud detection model</li></ul><h4 id="exercice-3-create-a-model-registry-in-google-cloud-instance" tabindex="-1"><a class="header-anchor" href="#exercice-3-create-a-model-registry-in-google-cloud-instance"><span>Exercice 3 -Create a model registry in Google Cloud instance</span></a></h4><ol><li>Create a model registry in Google Cloud instance</li><li>Create a model in the registry</li><li>Deploy the model to Google Cloud instance</li></ol></div><!--[--><!--]--></div><footer class="vp-page-meta"><div class="vp-meta-item edit-link"><a class="auto-link external-link label" href="https://github.com/worldline/learning-ai/activity/edit/main/8.cloud/README.md" aria-label="Edit this page" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><svg class="edit-icon" viewbox="0 0 1024 1024"><g fill="currentColor"><path d="M430.818 653.65a60.46 60.46 0 0 1-50.96-93.281l71.69-114.012 7.773-10.365L816.038 80.138A60.46 60.46 0 0 1 859.225 62a60.46 60.46 0 0 1 43.186 18.138l43.186 43.186a60.46 60.46 0 0 1 0 86.373L588.879 565.55l-8.637 8.637-117.466 68.234a60.46 60.46 0 0 1-31.958 11.229z"></path><path d="M728.802 962H252.891A190.883 190.883 0 0 1 62.008 771.98V296.934a190.883 190.883 0 0 1 190.883-192.61h267.754a60.46 60.46 0 0 1 0 120.92H252.891a69.962 69.962 0 0 0-69.098 69.099V771.98a69.962 69.962 0 0 0 69.098 69.098h475.911A69.962 69.962 0 0 0 797.9 771.98V503.363a60.46 60.46 0 1 1 120.922 0V771.98A190.883 190.883 0 0 1 728.802 962z"></path></g></svg><!--]--><!--]-->Edit this page<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">Last Updated: </span><time class="meta-item-info" datetime="2025-12-16T11:34:05.000Z" data-allow-mismatch>12/16/25, 11:34 AM</time></div><div class="vp-meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: brah.gharbi@gmail.com">Brah</span><!----><!--]--><!--]--></span></div></div></footer><nav class="vp-page-nav" aria-label="page navigation"><a class="route-link auto-link prev" href="/learning-ai/7.node/" aria-label="Agentic AI node-based"><!--[--><div class="hint"><span class="arrow left"></span> Prev</div><div class="link"><span class="external-link">Agentic AI node-based</span></div><!--]--></a><!----></nav><!--[--><!--]--></main><!--]--></div><!--[--><!----><!----><!--]--><!--]--></div>
+    <script type="module" src="/learning-ai/assets/app-DmbIGF3-.js" defer></script>
+  </body>
+</html>
