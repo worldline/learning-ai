@@ -148,6 +148,7 @@ Upload files to the conversation and use them to generate a response.
 Add complementary knowledge to your conversations with Artifacts such as visual preview of html pages.
 
 
+
 ### MCP servers
 
 MCP section provide remote tools to add complementary knowledge and functionalities to your LLM conversations. On librechat a list of MCP servers is available to connect to your conversations provided by your organization or third parties such as slack, chart, confluence, jira 
