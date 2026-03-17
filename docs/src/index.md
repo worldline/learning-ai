@@ -1,44 +1,50 @@
 ---
 home: true
 heroImage: ./logo.png
-heroText: From generative to agentic AI for developers
+heroText: AI for Tech
 tagline: use LLMs to help you code and create your applications
 actions:
   - text: Start the course →
     link: /1.intro/
     type: primary
 
-footer: Worldline © 2024 | tech at Worldline
+footer: Worldline © 2026 | Tech at Worldline
 ---
+
 ::: warning Disclamer
-LLMs and MMLLMs are constantly evolving, and new applications for developer training are emerging all the time.
+LLMs and MMLLMs are constantly evolving, with new developer-oriented tools and practices continually emerging.
 :::
 
 
 # Summary
 
-## 1. Introduction
+## Module 1: Mastering LLMs throughout the Software Development Lifecycle (SDLC) 
+
+### a. Introduction
 Prerequisites - Key concepts and terminology - A bit of History - The market
 
-## 2. Prompting usage in apps lifecycle
+### b. Prompting usage in apps lifecycle
 Understanding prompting techniques, developper usage of LLMs for coding, and the application lifecycle
 
-## 3. Online/Offline LLMs clients (Librechat & LM Studio)
+### c. Online/Offline LLMs clients (Librechat & LM Studio)
 History, Favorites, Presets, Preformatted prompts, AI providers, Agent, Plugins & mixing, RAG,  Installation, Model configuration, enable APIs...
 
-## 4. Code Assistants in IDEs (Copilot)
+### d. Code Assistants in IDEs (Copilot)
 GitHub Copilot, and project generation with Bolt, v0
 
-## 5. GenAI for services (langchain, llama-index)
+
+## Module 2: Building Intelligent Applications
+
+### a. GenAI for services (langchain, llama-index)
 LLM API calls, Developpement with LangChain, Python notebooks, Context aware frameworks, RAG, Vector databases, Agents, Model Context Protocol
   
-## 6. Agentic AI for services
-Understanding Agentic AI, Langchain Agents, Model Context Protocol (MCP), MCP clients and servers
+### b. Agentic AI for services
+Understanding Agentic AI, Langchain Agents, Model Context Protocol (MCP), MCP clients and servers, skils
 
-## 7. Agentic AI node-based tools
+### c. Agentic AI node-based tools
 Node based genAI tools overview, N8N introduction, Agentic architecture with node based tools
 
- ## 8. Agentic AI in the Cloud
+### d. Agentic AI in the Cloud
 Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.), Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.), deploying AI solutions in the cloud
 
 ## About
