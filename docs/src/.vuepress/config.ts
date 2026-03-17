@@ -29,14 +29,23 @@ export default defineUserConfig({
 
     sidebar: [
       { text: "Home", link: "/" },
-      "/1.intro/",
+      {text: "Mastering LLMs throughout the SDLC",
+      children: [
+         "/1.intro/",
       "/2.prompt/",
       "/3.client/",
       "/4.assistant/",
-      "/5.services/",
+      ],
+    },
+        {text: "Building Intelligent Applications ",
+      children: [
+       "/5.services/",
       "/6.agentic/",
       "/7.node/",
       "/8.cloud/",
+      ],
+    },
+     
     ],
   }),
 
