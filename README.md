@@ -1,6 +1,6 @@
-# From Generative to Agentic AI for Developers
+# AI for Tech | Training material
 
-## Description
+## Syllabus
 
 This course is designed for developers aiming to harness the capabilities of generative artificial intelligence
  in their software development processes and their application services. It provides a comprehensive overview
@@ -16,56 +16,62 @@ It also addresses the management of API calls to large language models (LLMs), t
 By the end of the course, participants will be equipped with the knowledge and skills necessary to effectively integrate
 generative AI into their development workflows, fostering innovation and efficiency.
 
-## Syllabus
+## Summary 
 
-**Module 1: Introduction to Generative AI**
+### Module 1: Mastering LLMs throughout the Software Development Lifecycle (SDLC) (0.5d) 
+This part equips developers with practical AI skills across the full software development application lifecycle. It covers foundational LLM concepts, prompting techniques for coding tasks, an LLMs clients overview, and AI-powered coding tools in IDEs and on the command line. At the end, developers have an immediately operational toolkit to accelerate their daily tasks.
+
+#### A - Introduction to Generative AI
 
 - Overview of Generative AI and its significance
 - Key concepts and terminology
 - Use cases in software development
 
-**Module 2: Prompting usage in apps lifecycle**
+#### B - Prompting usage in apps lifecycle
 
 - Understanding prompting techniques
 - Tips for ideation and architecture design
 - Refactoring and generating tests using AI
 
-**Module 3: Online/Offline LLMs clients**
+#### C - Online/Offline LLMs clients
 
 - Overview of main plugins and their functionalities
 - Mixing plugins and using presets
 - Introduction to Retrieval-Augmented Generation (RAG)
 
-**Module 4: Code Assistants in IDEs**
+#### D - Code Assistants in IDEs
 
 - Features of code assistants
 - Generating code snippets and tests
 - Creating a website from prompts
 
-**Module 5: GenAI for services**
+### Module 2 : Building Intelligent Applications (0.5 to 1d)
+This part focuses on embedding generative and agentic AI directly into software products, services, and architectures. It covers LLM API consumption, context-aware frameworks, RAG pipelines, and the shift toward autonomous agent systems using framework (ex langchain) and protocols ( ex: MCP). It also introduces node-based tools for visually orchestrating complex multi-agent workflows without deep low-level implementation.
+
+#### A - GenAI for services
 
 - Managing LLM API calls in JSON mode and handling structured outputs
 - Use context-aware frameworks with techniques for prompt templating and chaining
 - Usage of vector databases for chain-of-thought creations
 - Retrieval-Augmented Generation (RAG) structured and unstructured.
 
-**Module 6: Agentic AI for services**
+#### B - Agentic AI for services**
 - Understanding Agent with Langchain Agents
 - Model Context Protocol (MCP)
 - MCP clients and servers
 - Agentic architectures and their applications
 
-**Module 7: Agentic AI node-based tools**
+#### C - Agentic AI node-based tools
 - Node based genAI tools overview
 - N8N introduction
 - Agentic architecture with node based tools
 
-**Module 8: Agentic AI in the Cloud | Soon**
+#### D - Agentic AI in the Cloud | Soon
 - Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.)*
 - Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.)
 - Best practices for deploying AI solutions in the cloud
 
-# AI for devs | Tech at Worldline
+# About
 
 ## Who we are ?
 
@@ -73,9 +79,8 @@ generative AI into their development workflows, fostering innovation and efficie
 
 **We design payments technology that powers the growth of millions of businesses around the world. Engineering the next frontiers in payments technology**
 
-* Leader in payment and secured transactions.
+* European leader in payment and secured transactions.
 * Over 50bn transactions/year
-* 7000+ engineers in over 40 countries
 * A huge & diverse tech-stack
 
 ### Follow trainers of this codelab
@@ -105,4 +110,4 @@ Sponsors
 [🔗 blog.worldline.tech](http://blog.worldline.tech)
 [🔗 @WorldlineTech](https://twitter.com/worldlinetech)
 
-Worldline © 2024 | Tech at Worldline
+Worldline © 2026 | Tech at Worldline
