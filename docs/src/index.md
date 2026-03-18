@@ -2,7 +2,7 @@
 home: true
 heroImage: ./logo.png
 heroText: AI for Tech
-tagline: use LLMs to help you code and create your applications
+tagline: Use LLMs to help you code and create intelligent applications
 actions:
   - text: Start the course →
     link: /1.intro/
