@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: ./logo.png
+heroImage: ./logo2.png
 heroText: AI for Tech
 tagline: use LLMs to help you code and create your applications
 actions:
