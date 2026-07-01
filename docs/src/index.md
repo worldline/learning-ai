@@ -11,7 +11,7 @@ actions:
 footer: Worldline © 2026 | Tech at Worldline
 ---
 
-::: warning Disclamer
+::: warning Disclaimer
 LLMs and MMLLMs are constantly evolving, with new developer-oriented tools and practices continually emerging.
 :::
 
@@ -24,7 +24,7 @@ LLMs and MMLLMs are constantly evolving, with new developer-oriented tools and p
 Prerequisites - Key concepts and terminology - A bit of History - The market
 
 ### b. Prompting usage in apps lifecycle
-Understanding prompting techniques, developper usage of LLMs for coding, and the application lifecycle
+Understanding prompting techniques, developer usage of LLMs for coding, and the application lifecycle
 
 ### c. Online/Offline LLMs clients (Librechat & LM Studio)
 History, Favorites, Presets, Preformatted prompts, AI providers, Agent, Plugins & mixing, RAG,  Installation, Model configuration, enable APIs...
@@ -36,10 +36,10 @@ GitHub Copilot, and project generation with Bolt, v0
 ## Module 2: Building Intelligent Applications
 
 ### a. GenAI for services (langchain, llama-index)
-LLM API calls, Developpement with LangChain, Python notebooks, Context aware frameworks, RAG, Vector databases, Agents, Model Context Protocol
+LLM API calls, Development with LangChain, Python notebooks, Context aware frameworks, RAG, Vector databases, Agents, Model Context Protocol
   
 ### b. Agentic AI for services
-Understanding Agentic AI, Langchain Agents, Model Context Protocol (MCP), MCP clients and servers, skils
+Understanding Agentic AI, LangChain Agents, Model Context Protocol (MCP), MCP clients and servers, skills
 
 ### c. Agentic AI node-based tools
 Node based genAI tools overview, N8N introduction, Agentic architecture with node based tools

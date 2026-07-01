@@ -47,7 +47,7 @@ Memories allow users to save important information or context from previous conv
 The prompts feature allows users to save and load predefined prompts to use it during their conversations.
 You can use a prompt with the /[`prompt command`]. A prompt can have parameters, which are replaced with values when the prompt is used.
 
-**Exemple**
+**Example**
 
 - On the right side menu, go to the `💬 Prompts` tab.
 - Click on the `+ add a new prompt`.
@@ -185,7 +185,7 @@ Choose your favorite topic ( cooking, travel, sports, etc.) and create an assist
 
 ## Offline (LM Studio)  
 
-::: warning Disclamer
+::: warning Disclaimer
 Be careful with offline prompting models downloaded from the internet. They can contain malicious code. And also the size of the model can be very large from few Gb to few Tb. 
 :::
 

@@ -11,7 +11,7 @@ This section is dedicated to the usage of Generative AI models for services appl
 2. Also we choose **Python** as the main programming language for this training due to its popularity in the AI/ML community and the availability of up-to-date libraries and frameworks, documentations and easy onboarding.
 
 3. We will use **[Google Colab](https://colab.research.google.com/)** for an online use of jupyter notebooks. A notebook is an interactive environment for machine learning and data science. It is a single page document that contains both code and rich text elements (paragraphs, equations, figures, links, etc.) and allows you to run code in an interactive way.
-With a notebooks you can :
+With a notebook you can:
 * Prototype your ideas
 * Easily share your work with others
 * Collaborate with others 
@@ -175,7 +175,7 @@ Author: Unknown
 
 ::: tip solution
   ::: details here
-  [Google Collab notebook](https://colab.research.google.com/drive/1rE_jC4DhD33Ni8MR9YTGK9WhykOTtbcF?usp=sharing)
+  [Google Colab notebook](https://colab.research.google.com/drive/1rE_jC4DhD33Ni8MR9YTGK9WhykOTtbcF?usp=sharing)
   :::
 :::
 
@@ -302,7 +302,7 @@ Author: Unknown
 
 ::: tip solution
   ::: details here
-  [Google Collab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+  [Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
   :::
 :::
 
@@ -398,7 +398,7 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 
 ::: tip Solution
   ::: details here
-    [Google Collab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
+    [Google Colab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
   :::
 :::
 
@@ -454,7 +454,7 @@ The customers' experiences with the company and its products vary. Some have had
 
 ::: tip Solution    
   ::: details here
-    [Google Collab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
+    [Google Colab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
   :::
 :::
 
@@ -526,7 +526,7 @@ Guido van Rossum created Python in 1991.
 
 ::: tip Solution
   ::: details here
-   [Google Collab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
+   [Google Colab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
   :::
 :::
 
@@ -562,7 +562,7 @@ from langchain_mistralai.embeddings import MistralAIEmbeddings
 
 ::: tip Solution
   ::: details here
-   [Google Collab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+   [Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
   :::
 :::
 
@@ -613,7 +613,7 @@ class D,G,I circle
 
 ::: tip Solution
   ::: details here
-    [Google Collab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
+    [Google Colab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
   :::
 :::
 

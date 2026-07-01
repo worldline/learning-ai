@@ -8,7 +8,7 @@ This section presents GitHub Copilot, one of the most popular code assistants av
 GitHub Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality. Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions. You can choose the model you want to use in the settings of your IDE.
 
 ::: tip Alternative code assistance
-There is also other producs indegrated to IDEs such as :
+There are also other products integrated into IDEs such as:
 
 - [Gitlab Duo](https://about.gitlab.com/fr-fr/gitlab-duo/),
 - [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview?hl=fr),
@@ -18,7 +18,7 @@ There is also other producs indegrated to IDEs such as :
 
 ### Copilot Chat 
 
-Copilot Chat is a chat interface that allows you to ask questions and get suggestions for code improvements. It is a similar approach to chat GPT prompting optimised for the developper experience.
+Copilot Chat is a chat interface that allows you to ask questions and get suggestions for code improvements. It is a similar approach to ChatGPT prompting optimised for the developer experience.
 
 it's available on :
 - [JetBrains IDEs](https://plugins.jetbrains.com/plugin/17718-github-copilot)
@@ -73,7 +73,7 @@ Copilot chat is available as an extension for VSCode. You can install it from th
 
 ![copilot-test](../assets/images/copilot_testing.gif)
 
-::: tip Sortcut usage of Copilot chat
+::: tip Shortcut usage of Copilot chat
 
 You can also use the chat interface to ask questions with shortcuts :
 
@@ -139,15 +139,15 @@ The agent mode of copilot allows you to create multi step workflows to automate 
 
 ## 🧪 Exercise
 
-#### Exercice 1 : Install GitHub Copilot on VSCode
+#### Exercise 1 : Install GitHub Copilot on VSCode
 
 1. Install the [GitHub Copilot extension](https://marketplace.visualstudio.com/items?itemName=github.copilot) on your VSCode
 2. Sign in with your GitHub account, if not already done
 3. Create a new file and start typing a function or a class, to see the suggestions provided by Copilot
 
-#### Exercice 2 :Generating unit tests
+#### Exercise 2 :Generating unit tests
 
-We"re going to use GitHub Copilot to generate unit tests for a simple JavaScript project repository.
+We're going to use GitHub Copilot to generate unit tests for a simple JavaScript project repository.
 
 To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/download/) installed on your machine.
 
@@ -174,7 +174,7 @@ To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/
 
 </details>
 
-#### Exercice 3 :Refactoring
+#### Exercise 3 :Refactoring
 
 Now we are going to use Copilot to refactor a piece of code in the same project.
 
@@ -211,7 +211,7 @@ Now we are going to use Copilot to refactor a piece of code in the same project.
 </details>
 
 
-#### Exercice 4 : Prompt Engineering with Agent mode
+#### Exercise 4 : Prompt Engineering with Agent mode
 
 Create an application that does the following:
 - Create a new React project using Vite
@@ -239,7 +239,7 @@ And it enables this through a combination of three tightly-integrated components
 
 
 More advanced spec driven tools can be integrated on IDEs such as Google Antigravity, Cursor AI, and more. 
-It's a new way of building applications that leverages the power of AI to accelerate the development process and to target autonomus code generation and build platforms such aas [Blitzy.com](https://blitzy.com/), emergent.sh and more.
+It's a new way of building applications that leverages the power of AI to accelerate the development process and to target autonomous code generation and build platforms such as [Blitzy.com](https://blitzy.com/), emergent.sh and more.
 
 ::: warning Vibe coding vs SDD
 Spec Driven Development is different from "vibe coding" where developers use AI tools to generate code snippets or complete functions based on prompts. In SDD, the focus is on defining the overall structure and behavior of the application before writing any code. Also mastering the technical stack is still required to review and validate the generated code.

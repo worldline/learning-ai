@@ -18,7 +18,7 @@ AI's history has been marked by periods of progress and setbacks. Computing powe
 
 * **1950:** Alan Turing proposes the "Turing Test" to assess machine intelligence.
 
-During the turing test, the human questioner asks a series of questions to both respondantes. After the specified time, the questionner tries to decide which terminal is operated bu the human respondant and which terminal is operated by the computer.
+During the turing test, the human questioner asks a series of questions to both respondents. After the specified time, the questioner tries to decide which terminal is operated by the human respondent and which terminal is operated by the computer.
 
 ![turing](../assets/images/turing_test.png)
 
@@ -109,8 +109,8 @@ Ex : The sentence "I love programming" would be split into the following tokens:
 #### **Temperature**
 A parameter in some LLMs that controls the randomness or creativity of the generated text. Adjust temperature based on the desired level of creativity or accuracy in the LLM's output.
 
-* A higher temperature generate more randomness and unpredictability in the output.
-* A lower temperature generate more predictable and coherent output.
+* A higher temperature generates more randomness and unpredictability in the output.
+* A lower temperature generates more predictable and coherent output.
 
 #### **Embeddings**
 Embeddings are numerical representations of words, phrases, or entire documents in a continuous vector space. They capture semantic relationships between different pieces of text, allowing LLMs to understand context and meaning more effectively. An Embedding is the specialization of a Vector in the context of language models.
@@ -218,58 +218,58 @@ You can have a look to a 3D model of a vector database [here](https://projector.
 
 ### Top 50 Generative AI applications
 
-| Rang | Application | Plateforme | Lien |
+| Rank | Application | Platform | Link |
 |-------|--------------|--------------|-------|
-| 1 | ChatGPT | Web, Mobile | [Lien](https://chat.openai.com/) |
-| 2 | ChatGPT API | API | [Lien](https://platform.openai.com/api-keys) |
-| 3 | Jasper | Web, Mac, Windows | [Lien](https://www.jasper.ai/) |
-| 4 | Bard (Google) | Web, Mobile | [Lien](https://bard.google.com/) |
-| 5 | Claude (Anthropic) | Web | [Lien](https://claude.ai/) |
-| 6 | Bing Chat | Web | [Lien](https://www.bing.com/new) |
-| 7 | Midjourney | Web | [Lien](https://www.midjourney.com/) |
-| 8 | Stable Diffusion | Web, Local | [Lien](https://stablediffusionweb.com/) |
-| 9 | Lensa AI | Mobile (iOS/Android) | [Lien](https://apps.apple.com/us/app/lensa-ai-photo-editor/id868133423) |
-| 10 | Canva Image Generator | Web, Mobile | [Lien](https://www.canva.com/) |
-| 11 | Adobe Firefly | Web | [Lien](https://helpx.adobe.com/firefly.html) |
-| 12 | Runway ML | Web, Mac, Windows | [Lien](https://runwayml.com/) |
-| 13 | DALL·E 2 | Web | [Lien](https://openai.com/dall-e-2/) |
-| 14 | Copy.ai | Web | [Lien](https://www.copy.ai/) |
-| 15 | Writesonic | Web | [Lien](https://writesonic.com/) |
-| 16 | Tome | Web | [Lien](https://tome.app/) |
-| 17 | Podcast.ai | Mobile, Web | [Lien](https://podcast.ai/) |
-| 18 | Beeble AI | Mobile | [Lien](https://apps.apple.com/us/app/beeble-ai/id1603442934) |
-| 19 | Jasper Art | Web | [Lien](https://www.jasper.ai/art) |
-| 20 | Wonder Studio | Web | [Lien](https://wonderstudio.com/) |
-| 21 | Deep Nostalgia | Web, Mobile | [Lien](https://myheritage.com/deep-nostalgia) |
-| 22 | CopySmith | Web | [Lien](https://copysmith.ai/) |
-| 23 | Nebula Cloud | Web | [Lien](https://nebulacloud.ai/) |
-| 24 | Synthesia | Web, Mobile | [Lien](https://www.synthesia.io/) |
-| 25 | Rosebud AI | Web | [Lien](https://rosebud.ai/) |
-| 26 | DeepBrain | Web | [Lien](https://www.deepbrain.io/) |
-| 27 | Prisma Labs | Android, iOS | [Lien](https://prisma-ai.com/) |
-| 28 | Jasper Chat | Web | [Lien](https://www.jasper.ai/chat) |
-| 29 | Maverick | Web | [Lien](https://www.maverick.ai/) |
-| 30 | Syntha | Web | [Lien](https://syntha.ai/) |
-| 31 | Ditto | Web | [Lien](https://ditto.com/) |
-| 32 | System1 | Web | [Lien](https://system1.com/) |
-| 33 | Waifu Diffusion | Web | [Lien](https://waifulabs.com/) |
-| 34 | Artbreeder | Web | [Lien](https://www.artbreeder.com/) |
-| 35 | Pixray | Web | [Lien](https://pxray.readthedocs.io/en/latest/) |
-| 36 | Dream by Wombo | iOS, Android | [Lien](https://www.wombo.art/) |
-| 37 | NightCafe | Web, iOS, Android | [Lien](https://creator.nightcafe.studio/) |
-| 38 | Artbreeder | Web | [Lien](https://www.artbreeder.com/) |
-| 39 | Deep Dream Generator | Web | [Lien](https://deepdreamgenerator.com/) |
-| 40 | StarryAI | iOS, Android | [Lien](https://starryai.com/) |
-| 41 | Artify | Web | [Lien](https://artify.com/) |
-| 42 | Wombo Dream | Web, iOS, Android | [Lien](https://www.wombo.art/) |
-| 43 | DeepAI | Web | [Lien](https://deepai.org/) |
-| 44 | ArtSmart | Web | [Lien](https://artsmart.ai/) |
-| 45 | Pixilart | Web, Mobile | [Lien](https://www.pixilart.com/) |
-| 46 | Runway Gen-2 | Web | [Lien](https://runwayml.com/) |
-| 47 | PaintsChainer | Web | [Lien](https://paintschainer.preferred.tech/index_en.html) |
-| 48 | Dreamstudio | Web | [Lien](https://beta.dreamstudio.ai/) |
-| 49 | Artify | Web | [Lien](https://artify.com/) |
-| 50 | Deep Dream Generator | Web | [Lien](https://deepdreamgenerator.com/) |
+| 1 | ChatGPT | Web, Mobile | [Link](https://chat.openai.com/) |
+| 2 | ChatGPT API | API | [Link](https://platform.openai.com/api-keys) |
+| 3 | Jasper | Web, Mac, Windows | [Link](https://www.jasper.ai/) |
+| 4 | Bard (Google) | Web, Mobile | [Link](https://bard.google.com/) |
+| 5 | Claude (Anthropic) | Web | [Link](https://claude.ai/) |
+| 6 | Bing Chat | Web | [Link](https://www.bing.com/new) |
+| 7 | Midjourney | Web | [Link](https://www.midjourney.com/) |
+| 8 | Stable Diffusion | Web, Local | [Link](https://stablediffusionweb.com/) |
+| 9 | Lensa AI | Mobile (iOS/Android) | [Link](https://apps.apple.com/us/app/lensa-ai-photo-editor/id868133423) |
+| 10 | Canva Image Generator | Web, Mobile | [Link](https://www.canva.com/) |
+| 11 | Adobe Firefly | Web | [Link](https://helpx.adobe.com/firefly.html) |
+| 12 | Runway ML | Web, Mac, Windows | [Link](https://runwayml.com/) |
+| 13 | DALL·E 2 | Web | [Link](https://openai.com/dall-e-2/) |
+| 14 | Copy.ai | Web | [Link](https://www.copy.ai/) |
+| 15 | Writesonic | Web | [Link](https://writesonic.com/) |
+| 16 | Tome | Web | [Link](https://tome.app/) |
+| 17 | Podcast.ai | Mobile, Web | [Link](https://podcast.ai/) |
+| 18 | Beeble AI | Mobile | [Link](https://apps.apple.com/us/app/beeble-ai/id1603442934) |
+| 19 | Jasper Art | Web | [Link](https://www.jasper.ai/art) |
+| 20 | Wonder Studio | Web | [Link](https://wonderstudio.com/) |
+| 21 | Deep Nostalgia | Web, Mobile | [Link](https://myheritage.com/deep-nostalgia) |
+| 22 | CopySmith | Web | [Link](https://copysmith.ai/) |
+| 23 | Nebula Cloud | Web | [Link](https://nebulacloud.ai/) |
+| 24 | Synthesia | Web, Mobile | [Link](https://www.synthesia.io/) |
+| 25 | Rosebud AI | Web | [Link](https://rosebud.ai/) |
+| 26 | DeepBrain | Web | [Link](https://www.deepbrain.io/) |
+| 27 | Prisma Labs | Android, iOS | [Link](https://prisma-ai.com/) |
+| 28 | Jasper Chat | Web | [Link](https://www.jasper.ai/chat) |
+| 29 | Maverick | Web | [Link](https://www.maverick.ai/) |
+| 30 | Syntha | Web | [Link](https://syntha.ai/) |
+| 31 | Ditto | Web | [Link](https://ditto.com/) |
+| 32 | System1 | Web | [Link](https://system1.com/) |
+| 33 | Waifu Diffusion | Web | [Link](https://waifulabs.com/) |
+| 34 | Artbreeder | Web | [Link](https://www.artbreeder.com/) |
+| 35 | Pixray | Web | [Link](https://pxray.readthedocs.io/en/latest/) |
+| 36 | Dream by Wombo | iOS, Android | [Link](https://www.wombo.art/) |
+| 37 | NightCafe | Web, iOS, Android | [Link](https://creator.nightcafe.studio/) |
+| 38 | Artbreeder | Web | [Link](https://www.artbreeder.com/) |
+| 39 | Deep Dream Generator | Web | [Link](https://deepdreamgenerator.com/) |
+| 40 | StarryAI | iOS, Android | [Link](https://starryai.com/) |
+| 41 | Artify | Web | [Link](https://artify.com/) |
+| 42 | Wombo Dream | Web, iOS, Android | [Link](https://www.wombo.art/) |
+| 43 | DeepAI | Web | [Link](https://deepai.org/) |
+| 44 | ArtSmart | Web | [Link](https://artsmart.ai/) |
+| 45 | Pixilart | Web, Mobile | [Link](https://www.pixilart.com/) |
+| 46 | Runway Gen-2 | Web | [Link](https://runwayml.com/) |
+| 47 | PaintsChainer | Web | [Link](https://paintschainer.preferred.tech/index_en.html) |
+| 48 | Dreamstudio | Web | [Link](https://beta.dreamstudio.ai/) |
+| 49 | Artify | Web | [Link](https://artify.com/) |
+| 50 | Deep Dream Generator | Web | [Link](https://deepdreamgenerator.com/) |
 
 
 

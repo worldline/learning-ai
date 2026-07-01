@@ -27,7 +27,7 @@ By starting your prompt with *"Act as {desired persona}"* you are establishing a
 which can be combined into the following prompt:
 
 ```
-Act as a a Google Cloud program manager and draft an executive summary
+Act as a Google Cloud program manager and draft an executive summary
  email to a senior executive based on the following program details:
  [insert program details here]. 
  Use bullet points to highlight key information 

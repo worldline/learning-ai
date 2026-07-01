@@ -1,8 +1,8 @@
-# (Agentic AI on the cloud)
+# Agentic AI in the Cloud
 
 Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.
 
-Globally Vertex products are supported by the developper branch of Google, and Gemini is supported by ML teams of Google.
+Globally Vertex products are supported by the developer branch of Google, and Gemini is supported by ML teams of Google.
 
 <Mermaid :value="`
 graph TD

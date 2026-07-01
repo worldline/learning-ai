@@ -22,7 +22,7 @@ npx n8n
 - **Open Source**: N8N is open-source software, which means you can contribute to its development, customize it, and use it without licensing fees.
 
 ::: tip Specialized node based genAI tools
-More specic node-based genAI tools like comfyUI do the same for image generation workflows.
+More specific node-based genAI tools like comfyUI do the same for image generation workflows.
 :::
 
 ## Agentic architecture 
@@ -34,11 +34,11 @@ With node-based tools, you can create workflows that involve multiple agents, ea
 ### 🧪 Exercise
 
 Create a simple workflow using N8N that involves multiple agents working together to achieve a specific task. 
-We want to search on the web the soccer results of the last weekend, summarize it with a long reasonning LLM, and send to discord channel the markdown formatted summary with a specialized LLM.
+We want to search on the web the soccer results of the last weekend, summarize it with a long reasoning LLM, and send to discord channel the markdown formatted summary with a specialized LLM.
 
 Multiple nodes will be needed and there is multiple ways to achieve this.
 Remember that each node will require configuration, including API keys for the services you will use.
-You can use Gemini Pro as reasonning LLM and Mistral AI for specialized agents.
+You can use Gemini Pro as reasoning LLM and Mistral AI for specialized agents.
 
 ![N8N soccer workflow](./images/n8n2.png)
 

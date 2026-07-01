@@ -1,18 +1,18 @@
 # Agentic AI for services
 
-Agentic AI refers to artificial intelligence systems that can act autonomously to achieve specific goals. These systems are designed to make decisions, learn from their environment, and adapt their behavior over time. Agentic AI can be used in a variety of applications. There is a lot of architectures and frameworks to build agentic AI systems, this section focuses providing an introduction to core architecture concepts for agentic platforms such as Langchain Agents and Model Context Protocol (MCP).
+Agentic AI refers to artificial intelligence systems that can act autonomously to achieve specific goals. These systems are designed to make decisions, learn from their environment, and adapt their behavior over time. Agentic AI can be used in a variety of applications. There is a lot of architectures and frameworks to build agentic AI systems, this section focuses providing an introduction to core architecture concepts for agentic platforms such as LangChain Agents and Model Context Protocol (MCP).
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1127901756?h=c9645fee64&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="GenAI4Devs - Module 6 | MCP - Episode 1"></iframe></div>
 
 ## Defining Agentic AI
 
-### [`Langchain Agents`](https://docs.langchain.com/oss/python/langchain/agents)
+### [`LangChain Agents`](https://docs.langchain.com/oss/python/langchain/agents)
 
-Langchain Agents are a powerful tool for building complex workflows on top of LLMs. They enable you to define a set of actions and rules that the LLM can follow to achieve a specific goal. Agents can be used to automate tasks, manage workflows, and provide personalized assistance to users. 
+LangChain Agents are a powerful tool for building complex workflows on top of LLMs. They enable you to define a set of actions and rules that the LLM can follow to achieve a specific goal. Agents can be used to automate tasks, manage workflows, and provide personalized assistance to users. 
 
-It's a higer level abstraction on top of context aware frameworks for making easier the creation of agentic AI systems. Langchain Agents can be used to create agents that can interact with users, access external data sources, and perform complex tasks with complex workflows.
+It's a higher level abstraction on top of context aware frameworks for making easier the creation of agentic AI systems. LangChain Agents can be used to create agents that can interact with users, access external data sources, and perform complex tasks with complex workflows.
 
-#### Example of Langchain Agent
+#### Example of LangChain Agent
 ```python
 from langchain_mistralai.chat_models import ChatMistralAI
 from langchain_core.callbacks import StdOutCallbackHandler
@@ -104,10 +104,10 @@ Here is an example architecture of a multi-agent system with a generalist agent 
 
 <Mermaid :value="`
 graph TD
-    B[Generalist Agent -> Long Reasonning LLM]
+    B[Generalist Agent -> Long Reasoning LLM]
     B --> C[Tool 1: Search]
     B --> D[Tool 2: Calculator]
-    B --> E[Discord Specialist Agent -> Short Reasonning LLM]
+    B --> E[Discord Specialist Agent -> Short Reasoning LLM]
     E --> F[Tool 3: Post Message on Discord]
     E --> G[Tool 4: Read Messages from Discord]
 `" />
@@ -117,7 +117,7 @@ Architecturing multi-agent systems requires careful consideration of agent roles
 - **Collaboration**: Agents work together to solve problems, sharing information and resources to achieve common goals.
 - **Competition**: Agents compete for resources or tasks, which can drive innovation and efficiency in certain scenarios.
 
-Langchain provides pattens ressources to build multi-agent systems, including tools for agent communication, task delegation, and workflow management here : [Langchain Multi-Agent Patterns](https://docs.langchain.com/oss/python/langchain/multi-agent) and here : [Langchain Agent Workflows](https://docs.langchain.com/oss/python/langgraph/workflows-agents).
+LangChain provides pattern resources to build multi-agent systems, including tools for agent communication, task delegation, and workflow management here : [Langchain Multi-Agent Patterns](https://docs.langchain.com/oss/python/langchain/multi-agent) and here : [LangChain Agent Workflows](https://docs.langchain.com/oss/python/langgraph/workflows-agents).
 
 Also find architecture concrete usecase examples in the galileo mastering agents handbook : [here](https://galileo.ai/mastering-agents-ebook).
 
@@ -242,17 +242,17 @@ graph TD
 
 An MCP server is a server that implements the MCP protocol. It provides a way to manage and deploy AI models, tools, and actions.
 
-It is basicaly a socket server that listens for incoming requests from MCP clients and responds with the appropriate model outputs or tool results.
+It is basically a socket server that listens for incoming requests from MCP clients and responds with the appropriate model outputs or tool results.
 
-there is actully 2 ways to exchange data with an MCP server:
+there are actually 2 ways to exchange data with an MCP server:
 - via stdin/stdout streams (for direct LLMs integration) : this is the most common way to interact with MCP servers, as it allows LLMs to communicate directly with the server without the need for additional network protocols. The MCP client sends requests to the server via stdin, and the server responds via stdout.
 - via SSE (Server-Sent Events) endpoints (mostly for web clients integration) : SSE is a unidirectional communication protocol, meaning that data flows from the server to the client only. This makes it well-suited for scenarios where the server needs to push updates to the client, such as in real-time applications or live data feeds. This method allows web clients to receive real-time updates from the MCP server. The server sends events to the client over a persistent HTTP connection, allowing for efficient communication and data transfer.
 
 It can be built using various frameworks and languages. One popular framework for building MCP servers is the Fast MCP framework, which is built on top of FastAPI.
 
 1. Install the Fast MCP framework using pip:
-```bashpip install 
-fast-mcp
+```bash
+pip install fast-mcp
 ```
 2. Create a new MCP server using the Fast MCP framework:
 ```python
