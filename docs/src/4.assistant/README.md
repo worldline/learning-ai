@@ -3,6 +3,10 @@
 Assistant tools integrated into IDEs can help developers to write code faster and with better quality. These tools use large language models (LLMs) to provide code suggestions, complete code snippets, generate tests... and more.
 This section presents GitHub Copilot, one of the most popular code assistants available today.
 
+::: warning Worldline employees — request Copilot access
+GitHub Copilot is available at Worldline. If you don't have access yet, request it via the [Worldline Copilot access form](https://forms.office.com/Pages/ResponsePage.aspx?id=z96p_ZLorEOdnxpJP5-Y0K5xnl-BonNAq9hbLN29E4dUODlERzZKMlhYNEZKVFc0VU5HWEExWlQzTy4u).
+:::
+
 ## GitHub Copilot
 
 GitHub Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality. Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions. You can choose the model you want to use in the settings of your IDE.

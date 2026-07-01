@@ -41,24 +41,9 @@ from google.colab import userdata  # For retrieving API keys
 api_key=userdata.get('API_KEY')
 ```
 
-####  Upload files in Colab
-
-Also you can upload files to your Colab environment as follows:
-
-```python
-from google.colab import files
-
-# 1. Upload the file to your current colab environment ( a upload button will appear at the execution of the code)
-uploaded = files.upload()
-for fn in uploaded.keys():
-    print('User uploaded file "{name}" with length {length} bytes'.format(
-        name=fn, length=len(uploaded[fn])))
-# 2. Now you can read the file as usual
-```
-
 #### Importing libraries
 
-To setup your Colab environment whith third party libraries, you can use the `pip` command directly in a code cell as follows:
+To setup your Colab environment with third party libraries, you can use the `pip` command directly in a code cell as follows:
 ```python
 !pip install <library-name>
 ```
@@ -141,7 +126,7 @@ print(result)
 
 ## 🧪 Exercises
 
-#### Request an LLM with with basic REST request
+#### Exercise 01 — REST API
 
 Create a Python application that generates humorous motivational quotes for developers based on their name, favorite programming language, and a brief description of their current project or challenge.
 
@@ -163,19 +148,12 @@ Author: Unknown
 ```
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1ZSQKYENLtjJqI7EvujcDS1O8SRvWq_n-#copy=true
-) and complete the exercise there.
-
-**Steps**
-1. Create a function `get_developer_motivation(name, language, project_description)` that:
-2. Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
-3. Uses the Mistral AI API to generate a humorous motivational quote. use request package to make the API call.
-4. Returns a structured response containing the quote.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZSQKYENLtjJqI7EvujcDS1O8SRvWq_n-#copy=true)
 :::
 
 ::: tip solution
   ::: details here
-  [Google Colab notebook](https://colab.research.google.com/drive/1rE_jC4DhD33Ni8MR9YTGK9WhykOTtbcF?usp=sharing)
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1rE_jC4DhD33Ni8MR9YTGK9WhykOTtbcF?usp=sharing)
   :::
 :::
 
@@ -273,7 +251,7 @@ parsed_output = output_parser.parse(response)
 
 ### 🧪 Exercises
 
-####  Request an LLM with langchain
+#### Exercise 02 — LangChain Basics
 
 Create a Python application that generates humorous motivational quotes for developers based on their name, favorite programming language, and a brief description of their current project or challenge.
 
@@ -291,18 +269,12 @@ Author: Unknown
 ```
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1YA6ZhjPiqJkOiPk9Q8UzVYkcvXxJ9kNr?#copy=true) and complete the exercise there.
-
-**Steps**
-1. Create a function `get_developer_motivation(name, language, project_description)` that:
-2. Takes a developer's name, their favorite programming language, and a brief description of their current project or challenge as input.
-3. Uses LangChain to send a request to the LLM to generate a humorous motivational quote.
-4. Returns a structured response containing the quote, the developer's name, the programming language, and the project description.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YA6ZhjPiqJkOiPk9Q8UzVYkcvXxJ9kNr?#copy=true)
 :::
 
 ::: tip solution
   ::: details here
-  [Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q9VbNSdsSEiEI6qvteQGubMBSzemRPSa?usp=sharing)
   :::
 :::
 
@@ -357,12 +329,18 @@ f 'tool_calls' in response.additional_kwargs:
 
 ### 🧪 Exercises
 
-####  Tool/Function calling : Request an LLM with Tool/Function calling
-
+#### Exercise 03 — Tool Calling
 
 Build a command-line application that fetches weather data for a specified city using LangChain and a public weather API. The application will utilize implicit tool calling to allow the LLM to decide when to call the weather-fetching tool based on user input.
 
-##### Output
+This exercise uses **[Open-Meteo](https://open-meteo.com/)** — a free weather API that requires **no API key**. It is combined with **[Nominatim](https://nominatim.org/)** (OpenStreetMap) to geocode the city name to coordinates.
+
+| Step | Endpoint | Description |
+| ---- | -------- | ----------- |
+| 1. Geocode | `https://nominatim.openstreetmap.org/search?q=<city>&format=json&limit=1` | Returns `lat` / `lon` for the city |
+| 2. Weather | `https://api.open-meteo.com/v1/forecast?latitude=<lat>&longitude=<lon>&current_weather=true` | Returns current temperature, wind speed, and weather code |
+
+**Expected output**
 
 ```bash
 Ask about the weather (e.g., 'Lille, France'): Paris
@@ -373,32 +351,12 @@ The current weather in Paris is: overcast clouds with a temperature of 6.63°C.
 ```
 
 ::: warning How to start ?
-
-- Sign up for an API key from a weather service provider (e.g., OpenWeatherMap). - You can generate your key [here](https://home.openweathermap.org/api_keys) 
-- Here is the API documentation for current weather data: [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
-
-| Endpoint & Description                                                     | Method & URL                                          | Parameters                                                                                                            | Response                                                                                         |
-| -------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Get Current Weather**<br>Fetch current weather data for a specified city | GET `https://api.openweathermap.org/data/2.5/weather` | `q`: City name (e.g., "Lille")<br>`appid`: Your API key<br>`units`: Units of measurement (e.g., "metric" for Celsius) | `json { "weather": [{ "description": "clear sky", ... }], "main": { "temp": 15.5, ... }, ... } ` |
-- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1dK3C9p9aMbjcK6PHmTKZQYpIcH4A4ZTn?#copy=true) and complete the exercise there.
-- Define a function `fetch_weather(city: str) -> dict` that takes a city name as input and returns the weather data as a dictionary. Use the weather API to fetch the data.
-- Use the [`Tool`](https://python.langchain.com/docs/concepts/tools/) class from LangChain to register the `fetch_weather` function as a tool.
-- Create a prompt template that asks about the weather in a specified city.
-- Instantiate the `ChatMistralAI` model with your Mistral API key.
-- Create a chain that combines the prompt template, the chat model, and the registered weather tool.
-- Implement a function `handle_user_input(city)` that:
-  - Takes user input for the city name.
-  - Invokes the chain with the input data.
-  - Checks if the response includes [`tool calls`](https://python.langchain.com/docs/how_to/tool_calling/).
-  - Extracts the function name and arguments from the tool call and invokes the weather tool if necessary.
-  - Returns the weather information or the LLM's response.
-- Prompt the user to enter a city name.
-- Call the `handle_user_input` function with the provided city name and display the result.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1dK3C9p9aMbjcK6PHmTKZQYpIcH4A4ZTn?#copy=true)
 :::
 
 ::: tip Solution
   ::: details here
-    [Google Colab notebook](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
+    [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16B84XU5dl2UR5XZkRtnh3MWUK0K5ZBd_?usp=sharing)
   :::
 :::
 
@@ -419,11 +377,26 @@ response = query_engine.query("<your_query_here>")
 
 ### 🧪 Exercises
 
-#### Querying on Unstructured Documents
+::: tip Uploading files in Google Colab
+```python
+from google.colab import files
 
-Create a Python application that provide a txt document containings a list of application comments and make sentiment analysis on it with `llama-index`.
+# A file picker will appear when this cell runs
+uploaded = files.upload()
+for fn in uploaded.keys():
+    print('User uploaded file "{name}" with length {length} bytes'.format(
+        name=fn, length=len(uploaded[fn])))
+# The file is now available in the current Colab environment
+```
+:::
 
-Your customer review txt file :
+#### Exercise 04 — Unstructured RAG
+
+Create a Python application that performs sentiment analysis on a set of customer reviews using `llama-index`. The LLM reads the uploaded document and summarises the overall customer sentiment.
+
+::: warning Before opening the notebook
+Create a file named `customer_reviews.txt` on your computer with the content below — you will be asked to upload it inside Colab.
+:::
 
 ```text
 Review 1: I was very disappointed with the product. It did not meet my expectations.
@@ -432,29 +405,21 @@ Review 3: I had a terrible experience. The product was faulty, and the customer 
 Review 4: I am extremely satisfied with my purchase. The quality is outstanding.
 ```
 
-**Expected Shell Output:**
+**Expected output:**
 
 ```bash
 Saving customer_reviews.txt to customer_reviews (4).txt
 User uploaded file "customer_reviews (4).txt" with length 338 bytes
 The customers' experiences with the company and its products vary. Some have had positive experiences, such as excellent service and high-quality products, while others have encountered issues with faulty products and unhelpful customer support.
 ```
+
 ::: warning How to start ?
-- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1_1CpaIHiu3bfSlpGamhOtTH-SRCpSB2q?#copy=true) and complete the exercise there.
-- Create a text file named `customer_reviews.txt` containing the provided customer reviews.
-- Use colab's file upload feature to upload the `customer_reviews.txt` file to your Colab environment.
-- Load the document using `SimpleDirectoryReader` from `llama_index`.
-- Create a `SummaryIndex` from the loaded document.
-- Instantiate a query engine using the index and the LLM.
-- Implement a function `analyze_sentiment()` that:
-  - Queries the index for sentiment analysis of the customer reviews.
-  - Returns the sentiment analysis result.
-- Call the `analyze_sentiment()` function and display the result.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_1CpaIHiu3bfSlpGamhOtTH-SRCpSB2q?#copy=true)
 :::
 
 ::: tip Solution    
   ::: details here
-    [Google Colab notebook](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
+    [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HRVqcYEl2RLQDQ8l4NoGcdxiqU-6CgJa?usp=sharing)
   :::
 :::
 
@@ -477,7 +442,7 @@ query_engine.query("Who wrote 'To Kill a Mockingbird'?")
 
 ### 🧪 Exercises
 
-##### RAG : Querying SQL Databases with Natural Language
+#### Exercise 05 — Structured RAG SQL
 
 Create a Python application that initializes a list of languages and their creators with `sqlalchemy` and requests the LLM to retrieve the creators of a language.
 The LLM should be able to understand the context and retrieve the relevant information from the database.
@@ -511,22 +476,12 @@ Guido van Rossum created Python in 1991.
 ```
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1Gvzue-0s4NYvKIKFDNtj6y_a1wdNSWbO?#copy=true) and complete the exercise there.
-- Define a SQLAlchemy model for the programming languages table.
-- Initialize the database with a list of programming languages and their creators.
-- Create a `SQLDatabase` instance using the SQLAlchemy engine.
-- Instantiate the `NLSQLTableQueryEngine` with the SQL database and the LLM.
-- Implement a function `get_language_creator(language_name)` that:
-  - Takes a programming language name as input.
-  - Uses the query engine to retrieve the creator of the specified language.
-  - Returns the creator's name and the year the language was created.
-- Prompt the user to enter a programming language name.
-- Call the `get_language_creator` function with the provided language name and display the result.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Gvzue-0s4NYvKIKFDNtj6y_a1wdNSWbO?#copy=true)
 :::
 
 ::: tip Solution
   ::: details here
-   [Google Colab notebook](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
+   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1osoFUAxRbZayftaTlCtJIqlWlj_0c3sQ?usp=sharing)
   :::
 :::
 
@@ -546,33 +501,25 @@ from langchain_mistralai.embeddings import MistralAIEmbeddings
 
 ## 🧪 Exercises
 
-#### Exercice 1- Use langchain to request  Mistral AI API embedding endpoint to get the embedding of a text prompt
+#### Exercise 06 — LangChain Embeddings
+
+Extend the LangChain motivational quote exercise by also computing and displaying the **embedding vector** of the rendered prompt using `MistralAIEmbeddings`. This exercise demonstrates how to combine text generation and vector representation in a single pipeline.
 
 ::: warning How to start ?
-
-- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1O5cnBQdX1CpvKL8_IkHfkFXlhYwsGXMy?#copy=true) and complete the exercise there.
-- Install the `langchain_mistralai` package in your Colab environment.
-- Create a `MistralAIEmbeddings` object with your Mistral API key.
-- Implement a function `get_text_embedding(text)` that:
-  - Takes a text prompt as input.
-  - Uses the `MistralAIEmbeddings` object to get the embedding of the text.
-  - Returns the embedding as a list of floats.
-- Call the `get_text_embedding` function with a sample text prompt and display the embedding.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1O5cnBQdX1CpvKL8_IkHfkFXlhYwsGXMy?#copy=true)
 :::
 
 ::: tip Solution
   ::: details here
-   [Google Colab notebook](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
+   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1oGPjmOlYPwTq19HGpY8PFhsX8OuwPK22?usp=sharing)
   :::
 :::
 
-#### Exercice 2 - Let's use chaining to create a chain that compares the embeddings.
+#### Exercise 07 — FAQ Semantic Search
 
-You have a json file with a list of FAQ questions and answers.
-Let's request the Mistral AI API to get the embedding of a question and compare it with the embeddings of the FAQ questions to find the most similar one. Then return the question of the FAQ that is the most similar to the question asked to get the final answer from the LLM.
+Given a list of FAQ questions and answers, use Mistral AI embeddings and cosine similarity to find the most semantically relevant FAQ entry for a user question, then pass the matched context to the LLM for a grounded final answer.
 
-Here is the schema  :
-
+::: details Pipeline schema
 <Mermaid :value="`
 flowchart TD
 A[JSON FAQs
@@ -597,23 +544,15 @@ classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
 classDef circle fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#000
 class D,G,I circle
 `" />
+:::
 
 ::: warning How to start ?
-- Open the following [Google Colab notebook](https://colab.research.google.com/drive/1Mdw_Ac0raY_vZeTjH4U_436J42cyHmoi?#copy=true) and complete the exercise there.
-- Create a JSON file named `faqs.json` containing a list of FAQ questions and answers.
-- Load the FAQ data from the JSON file and convert it to a list of questions and answers.
-- Create a `MistralAIEmbeddings` object with your Mistral API key.
-- Implement a function `get_most_similar_faq(user_question)` that:
-  - Takes a user question as input.
-  - Uses the `MistralAIEmbeddings` object to get the embedding of the user question.
-  - Compares the user question embedding with the FAQ question embeddings using cosine similarity.
-  - Returns the most similar FAQ question and its answer.
-- Call the `get_most_similar_faq` function with a sample user question and display the result.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Mdw_Ac0raY_vZeTjH4U_436J42cyHmoi?#copy=true)
 :::
 
 ::: tip Solution
   ::: details here
-    [Google Colab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
+    [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
   :::
 :::
 

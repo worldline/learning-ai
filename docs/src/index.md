@@ -18,34 +18,36 @@ LLMs and Multimodal LLMs are constantly evolving, with new developer-oriented to
 
 # Summary
 
-## Module 1: Mastering LLMs throughout the Software Development Lifecycle (SDLC) 
+## Module 1: Mastering LLMs throughout the SDLC
 
 ### a. Introduction
-Prerequisites - Key concepts and terminology - A bit of History - The market
+Key concepts and terminology — History — Market overview — Use cases in software development
 
-### b. Prompting usage in apps lifecycle
-Understanding prompting techniques, developer usage of LLMs for coding, and the application lifecycle
+### b. Prompting in the app lifecycle
+Prompting techniques — Ideation, architecture, refactoring and test generation with LLMs
 
-### c. Online/Offline LLMs clients (Librechat & LM Studio)
-History, Favorites, Presets, Preformatted prompts, AI providers, Agent, Plugins & mixing, RAG,  Installation, Model configuration, enable APIs...
+### c. Online/Offline LLM clients
+LibreChat, LM Studio — Presets, RAG, plugins, offline model configuration
 
-### d. Code Assistants in IDEs (Copilot)
-GitHub Copilot, and project generation with Bolt, v0
+### d. Code Assistants in IDEs
+GitHub Copilot — Spec Driven Development (Bolt, V0, GitHub Spark)
 
+### e. Agentic CLIs
+Claude Code, GitHub Copilot CLI, Gemini CLI — AGENTS.md standard — Skills — MCP client
 
 ## Module 2: Building Intelligent Applications
 
-### a. GenAI for services (langchain, llama-index)
-LLM API calls, Development with LangChain, Python notebooks, Context aware frameworks, RAG, Vector databases, Agents, Model Context Protocol
-  
+### a. GenAI for services
+LLM REST API — LangChain (prompt templates, chaining, tool calling) — llama-index RAG — Embeddings — Exercises 01–07
+
 ### b. Agentic AI for services
-Understanding Agentic AI, LangChain Agents, Model Context Protocol (MCP), MCP clients and servers, skills
+LangChain agents — Multi-agent orchestration — MCP servers with FastMCP — 3 Colab exercises (08–10)
 
-### c. Agentic AI node-based tools
-Node based genAI tools overview, N8N introduction, Agentic architecture with node based tools
+### c. Node-based tools
+N8N — Visual agentic orchestration — No-code AI workflows
 
-### d. Agentic AI in the Cloud
-Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.), Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.), deploying AI solutions in the cloud
+### d. Cloud tools
+Vertex AI — Google Colab — Cloud AI APIs (Text-to-Speech, Translation, etc.)
 
 ## About
 
@@ -53,32 +55,16 @@ Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.), Utilizing AI 
 
 **We design payments technology that powers the growth of millions of businesses around the world. Engineering the next frontiers in payments technology**
 
-- Leader in payment and secured transactions.
-- Over 50bn transactions/year
+- European leader in payment and secured transactions. Over 50bn transactions/year
 - 7000+ engineers in over 40 countries
-- A huge & diverse tech-stack
 
-### Follow trainers of this codelab
+### Contributors
 
-Contributors
+Ibrahim Gharbi · Sylvain Pollet Villard · Yassine Benabbas · Raphaël Semeteys
 
-* Ibrahim Gharbi
-* Sylvain Pollet Villard
-* Yassine Benabbas
-* Raphaël Semeteys
+### Sponsors
 
-Sponsors
-
-* Yacine Kessaci
-* Liyun He Guelton
-* Fanilo Andrianasolo
-* Vijayanand Premnath
-* Vincent Caquelard
-* Mat Goodger
-* Effan Mutembo
-* Cyril Cauchois
-* Martin Boulanger
-* Julien Carme
+Yacine Kessaci · Liyun He Guelton · Fanilo Andrianasolo · Vijayanand Premnath · Vincent Caquelard · Mat Goodger · Effan Mutembo · Cyril Cauchois · Martin Boulanger · Julien Carme
 
 ### Follow our Tech team
 

@@ -70,7 +70,19 @@ Example: ChatGPT, Claude, Gemini, Llama, Mistral, etc.
 
 #### Multi-Modal LLM (MMLLM) , or Visual LLM (VLLM)
 Multi-Modal Large Language Model is an advanced LLM that can process and generate both text and other data formats like images, audio, or video.
-Ex: GPT-4o, Gemini, Claude 3 (text + image understanding and generation)
+Ex: GPT-4o, Gemini, Claude (text + image understanding and generation)
+
+#### LLM Specializations
+
+Modern LLMs are optimized for specific use cases. Choosing the right model for the right task is key to building effective AI applications.
+
+| Use case | Examples |
+|----------|----------|
+| **Reasoning** | o3 (OpenAI), Gemini 2.5 Flash (Google), Claude Sonnet 4.6 (Anthropic), DeepSeek-R1 |
+| **Agentic** | Gemini 2.5 Pro (Google), Claude Opus 4.8 (Anthropic), Kimi K2 (Moonshot) |
+| **Coding** | Claude Fable 5 (Anthropic), Qwen2.5-Coder (Alibaba), GPT-4o (OpenAI) |
+| **Open Weights** | Llama 4 (Meta), Qwen3 (Alibaba), Mistral Large (Mistral), Gemma 3 (Google) |
+| **Multimodal** | GPT-4o (OpenAI), Gemini 2.5 Flash (Google), Veo 3 · Sora (video generation) |
 
 ## Key Concepts
 
@@ -122,97 +134,38 @@ You can have a look to a 3D model of a vector database [here](https://projector.
 
 ## The market
 
-### Ecosystem of Generative AI Applications (2025)
+### Gen AI Market Layers
 
-#### Layer 1: Application Layer
-
-##### Copywriting
-| Name             | Description                     |
-|------------------|---------------------------------|
-| Jasper           | Versatile AI assistant          |
-| copy.ai          | Content generation              |
-| Headline         | Headline creation               |
-| Co:here          | NLP platform                    |
-| HyperWrite       | Assisted writing                |
-| Writesonic       | Marketing content creation      |
-| Contenda         | Content automation              |
-| Unbounce         | Optimized landing pages        |
-| Copysmith        | Text generation                 |
-
-##### Coding
-| Name               | Description                                  |
-|--------------------|----------------------------------------------|
-| tabnine            | Code autocompletion                         |
-| MUTABLE AI        | Code generation                              |
-| Codiga             | Development tools                            |
-| co:here            | NLP for code                                |
-| GitHub Copilot   | Programming assistance                        |
-| CODEGEN            | AI code generation                           |
-
-##### Dev Tools
-| Name              | Description                                            |
-|-------------------|--------------------------------------------------------|
-| algolia          | AI-powered search engine                                |
-| warp             | AI terminal editor                                    |
-| Mintlify         | Smart documentation                                   |
-| cogram           | SQL query automation                                  |
-| Debuild          | API and backend generation                              |
-| replit           | Cloud-based coding platform                             |
-
-##### Chat / Communications
-| Name             | Description                                |
-|------------------|--------------------------------------------|
-| MessageBird      | AI messaging platform                     |
-| Replier.ai       | Automated responses                        |
-| Sapling          | Communication assistant                     |
-| FABLE            | Conversational chatbot                      |
-
-##### Business Operations
-| Name           | Description                             |
-|----------------|----------------------------------------|
-| viable         | Process automation                     |
-| Enterprnt     | AI business platform                     |
-| tabulate       | Spreadsheet automation                     |
-| Anecdote       | Storytelling generation                    |
-| OTHERSIDE AI | Diverse business AI tools                     |
-| casetext       | Legal research AI                            |
-| Dover          | Administrative automation                    |
-
-#### Layer 2: Infrastructure Layer
-
-##### Model Creation
-| Name            | Description                                  |
-|-----------------|----------------------------------------------|
-| AI21 Labs       | Advanced NLP models                         |
-| OpenAI          | GPT, DALL·E, etc.                            |
-| EleutherAI      | Open-source alternatives                     |
-| NVIDIA          | AI hardware solutions                         |
-| ADEPT           | AI research                                   |
-| Google AI       | Advanced models from Google                   |
-| ANTHROPIC      | Language & AI models                           |
-
-##### Hardware
-| Name            | Description                          |
-|-----------------|-------------------------------------|
-| habana          | Habana AI accelerators               |
-| SambaNova       | Data center AI chips                |
-| NVIDIA          | GPU and infrastructure                |
-| cerebras        | High-performance AI chips             |
-| Graphcore       | AI-specific processors               |
-
-##### Fine Tuning
-| Name            | Description                                      |
-|-----------------|-------------------------------------------------|
-| Google AI       | Model fine-tuning                                    |
-| AWS             | Cloud infrastructure for fine-tuning             |
-| OpenAI         | GPT model fine-tuning                                |
-| Hugging Face    | Model platform & fine-tuning                      |
-
-##### Inference
-| Name            | Description                                   |
-|-----------------|----------------------------------------------|
-| OpenAI        | API inference service                          |
-| Hugging Face  | Inference platform                                |
+<Mermaid :value="`
+graph TB
+    subgraph APP[Application Layer]
+        cpy[Copywriting
+Jasper, copy.ai...]
+        cod[Coding
+Copilot, Tabnine...]
+        dev[Dev Tools
+Warp, Replit...]
+        chat[Chat and Comms
+ChatGPT, Claude...]
+        biz[Business Ops
+Notion, Casetext...]
+        cpy --- cod --- dev --- chat --- biz
+    end
+    style cod fill:#fff0f0,stroke:#e63229,stroke-width:3px,color:#000
+    style dev fill:#fff0f0,stroke:#e63229,stroke-width:3px,color:#000
+    subgraph INFRA[Infrastructure Layer]
+        mc[Model Creation
+OpenAI, Anthropic...]
+        hw[Hardware
+NVIDIA, Cerebras...]
+        ft[Fine Tuning
+HuggingFace, AWS...]
+        inf[Inference
+OpenAI, Replicate...]
+        mc --- hw --- ft --- inf
+    end
+    APP --> INFRA
+`" />
 
 ### Top 50 Generative AI Web Products (January 2026)
 
@@ -272,6 +225,26 @@ You can have a look to a 3D model of a vector database [here](https://projector.
 | 50 | cutout.pro | [Link](https://www.cutout.pro/) |
 
 
+
+### The Evolution of AI Coding Tools
+
+AI assistance in software development has evolved through distinct stages — each giving the model more autonomy and capability:
+
+<Mermaid :value="`
+graph LR
+    A[Single LLM Features] --> B[Workflows]
+    B --> C[Agents]
+    C --> D[The Future]
+`" />
+
+| Stage | What it means | Concrete technologies |
+|-------|--------------|----------------------|
+| **Single-LLM Features** | Discrete tasks: summarization, classification, code completion | REST API, SDK, prompt templates |
+| **Workflows** | LLMs orchestrated by code — chains of steps defined by the developer | LangChain, LangGraph, custom scripts, CLAUDE.md |
+| **Agents** | LLMs deciding their own trajectories — planning, tool use, self-correction | MCP servers, tool/function calling, ReAct pattern |
+| **The Future** | Increasing agency, capability and flexibility — models as autonomous collaborators | Skills, Hooks, multi-agent orchestration |
+
+*Source: Anthropic — On the Frontier of Agentic Coding*
 
 ## 🧪 Exercises
 

@@ -31,6 +31,7 @@ export default defineUserConfig({
           "/2.prompt/",
           "/3.client/",
           "/4.assistant/",
+          "/agentic-cli",
         ],
       },
       {

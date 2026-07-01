@@ -121,7 +121,7 @@ graph TD
     NLAPI ~~~ GU
     GU ~~~ VAS
     VAS ~~~ TF
-`"/>
+`" />
 
 ## Large Consumer-Facing
 

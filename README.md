@@ -1,113 +1,71 @@
 # AI for Tech | Training material
 
-## Syllabus
+A training course for developers on generative and agentic AI — from LLM fundamentals and prompting to building intelligent services with LangChain, llama-index, and MCP.
 
-This course is designed for developers aiming to harness the capabilities of generative artificial intelligence
- in their software development processes and their application services. It provides a comprehensive overview
- of generative AI, covering its significance, foundational concepts, and practical applications.
+**Live site:** [worldline.github.io/learning-ai](https://worldline.github.io/learning-ai)
 
-The training will explore prompting frameworks to enhance the application lifecycle, engage with essential AI tools
-and plugins, and learn to utilize code assistants within integrated development environments (IDEs) for generating
-code and complete websites.
+# Summary
 
-It also addresses the management of API calls to large language models (LLMs), the use of context-aware frameworks,
- and the deployment of AI solutions using cloud provider tools such as Google Cloud's Vertex AI and Colab notebooks.
+## Module 1: Mastering LLMs throughout the SDLC
 
-By the end of the course, participants will be equipped with the knowledge and skills necessary to effectively integrate
-generative AI into their development workflows, fostering innovation and efficiency.
+### a. Introduction
+Key concepts and terminology — History — Market overview — Use cases in software development
 
-## Summary 
+### b. Prompting in the app lifecycle
+Prompting techniques — Ideation, architecture, refactoring and test generation with LLMs
 
-### Module 1: Mastering LLMs throughout the Software Development Lifecycle (SDLC) (0.5d) 
-This part equips developers with practical AI skills across the full software development application lifecycle. It covers foundational LLM concepts, prompting techniques for coding tasks, an LLMs clients overview, and AI-powered coding tools in IDEs and on the command line. At the end, developers have an immediately operational toolkit to accelerate their daily tasks.
+### c. Online/Offline LLM clients
+LibreChat, LM Studio — Presets, RAG, plugins, offline model configuration
 
-#### A - Introduction to Generative AI
+### d. Code Assistants in IDEs
+GitHub Copilot — Spec Driven Development (Bolt, V0, GitHub Spark)
 
-- Overview of Generative AI and its significance
-- Key concepts and terminology
-- Use cases in software development
+### e. Agentic CLIs
+Claude Code, GitHub Copilot CLI, Gemini CLI — AGENTS.md standard — Skills — MCP client
 
-#### B - Prompting usage in apps lifecycle
+## Module 2: Building Intelligent Applications
 
-- Understanding prompting techniques
-- Tips for ideation and architecture design
-- Refactoring and generating tests using AI
+### a. GenAI for services
+LLM REST API — LangChain (prompt templates, chaining, tool calling) — llama-index RAG — Embeddings — 7 Colab exercises (01–07)
 
-#### C - Online/Offline LLMs clients
+### b. Agentic AI for services
+LangChain agents — Multi-agent orchestration — MCP servers with FastMCP — 3 Colab exercises (08–10)
 
-- Overview of main plugins and their functionalities
-- Mixing plugins and using presets
-- Introduction to Retrieval-Augmented Generation (RAG)
+### c. Node-based tools
+N8N — Visual agentic orchestration — No-code AI workflows
 
-#### D - Code Assistants in IDEs
+### d. Cloud tools
+Vertex AI — Google Colab — Cloud AI APIs (Text-to-Speech, Translation, etc.)
 
-- Features of code assistants
-- Generating code snippets and tests
-- Creating a website from prompts
-
-### Module 2 : Building Intelligent Applications (0.5 to 1d)
-This part focuses on embedding generative and agentic AI directly into software products, services, and architectures. It covers LLM API consumption, context-aware frameworks, RAG pipelines, and the shift toward autonomous agent systems using framework (ex langchain) and protocols ( ex: MCP). It also introduces node-based tools for visually orchestrating complex multi-agent workflows without deep low-level implementation.
-
-#### A - GenAI for services
-
-- Managing LLM API calls in JSON mode and handling structured outputs
-- Use context-aware frameworks with techniques for prompt templating and chaining
-- Usage of vector databases for chain-of-thought creations
-- Retrieval-Augmented Generation (RAG) structured and unstructured.
-
-#### B - Agentic AI for services**
-- Understanding Agent with Langchain Agents
-- Model Context Protocol (MCP)
-- MCP clients and servers
-- Agentic architectures and their applications
-
-#### C - Agentic AI node-based tools
-- Node based genAI tools overview
-- N8N introduction
-- Agentic architecture with node based tools
-
-#### D - Agentic AI in the Cloud | Soon
-- Overview of Cloud tools (Vertex AI, Google Colab notebooks, etc.)*
-- Utilizing AI Cloud APIs (Text-to-Speech, Translation, etc.)
-- Best practices for deploying AI solutions in the cloud
-
-# About
-
-## Who we are ?
+## About
 
 ![avatar](docs/src/assets/images/logo_worldline.png)
 
 **We design payments technology that powers the growth of millions of businesses around the world. Engineering the next frontiers in payments technology**
 
-* European leader in payment and secured transactions.
-* Over 50bn transactions/year
-* A huge & diverse tech-stack
+- European leader in payment and secured transactions. Over 50bn transactions/year
+- 7000+ engineers in over 40 countries
 
-### Follow trainers of this codelab
+### Contributors
 
-Contributors
+Ibrahim Gharbi · Sylvain Pollet Villard · Yassine Benabbas · Raphaël Semeteys
 
-* Ibrahim Gharbi
-* Sylvain Pollet Villard
-* Yassine Benabbas
-* Raphaël Semeteys
+### Sponsors
 
-Sponsors
-
-* Yacine Kessaci
-* Liyun He Guelton
-* Fanilo Andrianasolo
-* Vijayanand Premnath
-* Vincent Caquelard
-* Mat Goodger
-* Effan Mutembo
-* Cyril Cauchois
-* Martin Boulanger
-* Julien Carme
+Yacine Kessaci · Liyun He Guelton · Fanilo Andrianasolo · Vijayanand Premnath · Vincent Caquelard · Mat Goodger · Effan Mutembo · Cyril Cauchois · Martin Boulanger · Julien Carme
 
 ### Follow our Tech team
 
-[🔗 blog.worldline.tech](http://blog.worldline.tech)
-[🔗 @WorldlineTech](https://twitter.com/worldlinetech)
+- [blog.worldline.tech](http://blog.worldline.tech)
+- [@WorldlineTech](https://twitter.com/worldlinetech)
 
-Worldline © 2026 | Tech at Worldline
+## Run locally
+
+```bash
+cd docs
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # static output → docs/src/.vuepress/dist
+```
+
+Deployed automatically to GitHub Pages on push to `main` via `.github/workflows/vuepress-deploy.yml`.
