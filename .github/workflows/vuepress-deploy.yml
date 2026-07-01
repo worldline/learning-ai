@@ -21,11 +21,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           # choose node.js version to use
-          node-version: 22
+          node-version: 24
 
       # run build script
       - name: Build VuePress site
-        run: cd docs && npm install && npm run build
+        run: cd docs && npm ci && npm run build
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
