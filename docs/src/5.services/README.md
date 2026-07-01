@@ -617,4 +617,13 @@ class D,G,I circle
   :::
 :::
 
+## Vector databases
+
+A vector database is a specialized database designed to store and retrieve high-dimensional vectors efficiently. It is particularly useful for applications involving similarity search, such as image recognition, recommendation systems, and natural language processing.
+
+### Usage of Chroma
+Chroma is a vector database that allows you to store and query vectors of data. LangChain provides a simple and efficient way to integrate [Chroma](https://www.trychroma.com/) into your applications, allowing you to store and query vectors of data using LLMs.
+
+Please refer to the [LangChain vector documentation](https://python.langchain.com/v0.1/docs/modules/data_connection/vectorstores/) for more information on how to use Chroma.
+
 ## 📖 Further readings
