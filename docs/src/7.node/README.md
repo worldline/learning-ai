@@ -1,4 +1,4 @@
-# Agentic AI node-based 
+# Agentic AI: Node-Based Tools
 
 Node based genAI tools allow users to create and manage AI workflows using a visual interface that represents different components as nodes. These nodes can be connected to define the flow of data and operations, making it easier for users to build complex AI applications without extensive coding knowledge.
 

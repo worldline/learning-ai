@@ -1,4 +1,4 @@
-# Prompting usages
+# Prompt Engineering
 
 ## Prompt engineering
 

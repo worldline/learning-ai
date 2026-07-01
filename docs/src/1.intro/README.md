@@ -81,7 +81,7 @@ Transformers are a type of neural network architecture that have revolutionized 
 You can have a look to a visual model of a transformer [here](https://jalammar.github.io/illustrated-transformer/).
 
 
-#### Learners 
+#### Foundation Models & Pre-training
 * **Language Models are Unsupervised Multitask Learners** by Radford et al. (2019): This paper introduced the GPT-2 architecture, which is the foundation of most 
 modern LLMs.  
 
@@ -103,17 +103,17 @@ Ex :  "Write a Python function to check if a string is a palindrome."
 
 #### **Token**
 
-The smallest unit of meaning processed by an LLM.  Tokens can be words, parts of words, punctuation marks, or special characters. LLMs process text by analyzing sequences of tokens, making it important to understand how they are broken down.
+The smallest unit of text processed by an LLM.  Tokens can be words, parts of words, punctuation marks, or special characters. LLMs process text by analyzing sequences of tokens, making it important to understand how they are broken down.
 Ex : The sentence "I love programming" would be split into the following tokens: "I", "love", "programming".
 
 #### **Temperature**
-A parameter in some LLMs that controls the randomness or creativity of the generated text. Adjust temperature based on the desired level of creativity or accuracy in the LLM's output.
+A parameter that controls the randomness or creativity of the generated text. Adjust temperature based on the desired level of creativity or accuracy in the LLM's output.
 
 * A higher temperature generates more randomness and unpredictability in the output.
 * A lower temperature generates more predictable and coherent output.
 
 #### **Embeddings**
-Embeddings are numerical representations of words, phrases, or entire documents in a continuous vector space. They capture semantic relationships between different pieces of text, allowing LLMs to understand context and meaning more effectively. An Embedding is the specialization of a Vector in the context of language models.
+Embeddings are numerical representations of words, phrases, or entire documents in a continuous vector space. They capture semantic relationships between different pieces of text, allowing LLMs to understand context and meaning more effectively. Embeddings are dense vector representations that encode semantic meaning, allowing similarity comparisons between pieces of text.
 
 #### **Vector Database**
 A vector database is a specialized database designed to store and retrieve high-dimensional vectors efficiently. It is particularly useful for applications involving similarity search, such as image recognition, recommendation systems, and natural language processing.

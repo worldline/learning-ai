@@ -1,4 +1,4 @@
-# Online/Offline LLMs clients 
+# Online/Offline LLM Clients
 
 This section is dedicated to the usage of Generative AI models through different clients. We will explore both online and offline clients that allow you to interact with LLMs for various use cases. A client is a Graphical User Interface (GUI) that allows users to interact with LLMs without the need for coding. Clients provide a user-friendly interface for users to input prompts, configure settings, and view responses from the models. It can also provide additional features such as prompt management, conversation history, and integration with other tools and services.
 
