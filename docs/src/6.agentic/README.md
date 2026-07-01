@@ -198,9 +198,7 @@ Contenu: The calculation 50 + 50 equals 100. I've posted this result to the Disc
 
 ## Model Context Protocol (MCP)
 
-The Model Context Protocol (MCP) is a framework for managing and deploying AI models. It standardizes like a swagger for AI models, providing a common interface for interacting with models across different platforms and environments. 
-
-Here is a diagram illustrating the interest of MCP
+The Model Context Protocol (MCP) is an open standard that defines how LLMs connect to external tools, data sources, and services. Think of it as what REST/OpenAPI is to web services — but for LLM integrations: a common interface that any LLM client can use to discover and call capabilities exposed by any MCP server.
 
 MCP helps you build agents and complex workflows on top of LLMs. LLMs frequently need to integrate with data and tools, and MCP provides:
 
@@ -208,12 +206,10 @@ MCP helps you build agents and complex workflows on top of LLMs. LLMs frequently
 * The flexibility to switch between LLM providers and vendors
 * Best practices for securing your data within your infrastructure
 
-MCP allows developers to define the context in which a model operates, including its inputs, outputs, and metadata. It also enable multiple AI to interact with each other, allowing for more complex and collaborative AI applications.
-
-in an MCP server, you can define:
-- **Models**: The AI models that the server can use.
-- **Tools**: The functions that the server can use to interact with the models.
-- **Actions**: The actions that the server can take based on the models and tools.
+In an MCP server, you can expose:
+- **Tools**: Callable functions the LLM can invoke (e.g. search, calculate, send message).
+- **Resources**: Data sources the LLM can read (e.g. files, database records, API responses).
+- **Prompts**: Reusable prompt templates the client can surface to the user.
 
 More information can be found on the [MCP website](https://modelcontextprotocol.io/introduction).
 MCP stores are available on the [MCP store](https://mcpstore.co/).
@@ -256,29 +252,26 @@ pip install fast-mcp
 ```
 2. Create a new MCP server using the Fast MCP framework:
 ```python
-from fast_mcp import FastMCP
-...
+from fastmcp import FastMCP
+
+mcp = FastMCP("my-server")
 
 @mcp.tool()
-def my_tool(param1: str) -> str:
+def greet(name: str) -> str:
     """A simple tool that returns a greeting message."""
-    return f"Hello, {param1}!"
-...
-@mcp.model()
-def my_model(input_text: str) -> str:
-    """A simple model that echoes the input text."""
-    return input_text
-...
-@mcp.action()
-def my_action(input_text: str) -> str:
-    """A simple action that uses the model and tool."""
-    model_output = my_model(input_text)
-    tool_output = my_tool(model_output)
-    return tool_output  
-...
-mcp = FastMCP()
-...
-mcp.run_async(transport="http", host="0.0.0.0", port=8001)
+    return f"Hello, {name}!"
+
+@mcp.resource("data://config")
+def get_config() -> str:
+    """Exposes static configuration data as a resource."""
+    return '{"version": "1.0", "env": "production"}'
+
+@mcp.prompt()
+def my_prompt(topic: str) -> str:
+    """A reusable prompt template."""
+    return f"Explain {topic} in simple terms."
+
+mcp.run(transport="http", host="0.0.0.0", port=8001)
 ```
 ::: tip Google Colab MCP server access with Ngrok
 To expose your MCP server running in Google Colab to the internet, you can use Ngrok. Ngrok creates a secure tunnel to your local server, allowing external access via a public URL.

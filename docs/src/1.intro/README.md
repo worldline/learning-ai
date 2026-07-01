@@ -1,7 +1,7 @@
 # Introduction
 
 ::: warning
- LLMs and MMLLMs are constantly evolving, and new applications for developer training are emerging all the time.
+ LLMs and Multimodal LLMs are constantly evolving, and new applications for developer training are emerging all the time.
 :::
 
 ::: tip Prerequisites
@@ -63,14 +63,14 @@ Natural Language Processing is a branch of Artificial Intelligence (AI) that foc
 
 #### Large Language Model (LLM)
 Large Language Models are a powerful type of AI model trained on massive datasets of text and code. LLMs can understand, generate, and manipulate language.
-Example : ChatGPT, Bard, Claude, Gemini, Llama 2, Mistral, etc.
+Example: ChatGPT, Claude, Gemini, Llama, Mistral, etc.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iR2O2GPbB0E" title="What are Large Language Models (LLMs)? by Google for developpers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 *What are Large Language Models (LLMs)? by Google for developpers*
 
 #### Multi-Modal LLM (MMLLM) , or Visual LLM (VLLM)
 Multi-Modal Large Language Model is an advanced LLM that can process and generate both text and other data formats like images, audio, or video.
-Ex:  DALL-E 2, Stable Diffusion (for image generation)
+Ex: GPT-4o, Gemini, Claude 3 (text + image understanding and generation)
 
 ## Key Concepts
 
@@ -82,7 +82,7 @@ You can have a look to a visual model of a transformer [here](https://jalammar.g
 
 
 #### Learners 
-* **Language Models are Unsupervised Multitask Learners** by Radford et al. (2019): This paper introduced the GPT-3 architecture, which is the foundation of most 
+* **Language Models are Unsupervised Multitask Learners** by Radford et al. (2019): This paper introduced the GPT-2 architecture, which is the foundation of most 
 modern LLMs.  
 
 Learners are the core component of LLMs. They are trained on large amounts of text data to learn patterns and relationships between words, phrases, and sentences. 

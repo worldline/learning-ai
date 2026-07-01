@@ -12,7 +12,7 @@ footer: Worldline © 2026 | Tech at Worldline
 ---
 
 ::: warning Disclaimer
-LLMs and MMLLMs are constantly evolving, with new developer-oriented tools and practices continually emerging.
+LLMs and Multimodal LLMs are constantly evolving, with new developer-oriented tools and practices continually emerging.
 :::
 
 

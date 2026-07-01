@@ -13,7 +13,7 @@ There are also other products integrated into IDEs such as:
 - [Gitlab Duo](https://about.gitlab.com/fr-fr/gitlab-duo/),
 - [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview?hl=fr),
 - [SuperMaven](https://supermaven.com/),
-- [AWS CodeWhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/what-is-cwspr.html), and more.
+- [Amazon Q Developer](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html), and more.
 :::
 
 ### Copilot Chat 
@@ -238,7 +238,7 @@ And it enables this through a combination of three tightly-integrated components
 - A PWA-enabled dashboard, which lets you manage and launch your sparks from anywhere
 
 
-More advanced spec driven tools can be integrated on IDEs such as Google Antigravity, Cursor AI, and more. 
+More advanced spec driven tools can be integrated on IDEs such as [Google Antigravity](https://antigravity.google/), Cursor AI, and more. 
 It's a new way of building applications that leverages the power of AI to accelerate the development process and to target autonomous code generation and build platforms such as [Blitzy.com](https://blitzy.com/), emergent.sh and more.
 
 ::: warning Vibe coding vs SDD

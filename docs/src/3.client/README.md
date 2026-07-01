@@ -73,7 +73,7 @@ Librechat Agent Builder allows users to create custom AI agents that can perform
 
 #### Default model 
 
-By default, LibreChat uses the OpenAI GPT- nano model to generate responses. This model is a smaller version of the GPT-3 model, which is designed to be more efficient and faster while still providing high-quality responses and also be cost effective.
+By default, LibreChat uses the OpenAI GPT-5 nano model to generate responses. This model is a smaller version of the GPT-5 model, designed to be more efficient and faster while still providing high-quality responses and being cost effective.
 
 #### Worldline Agent
 
@@ -81,7 +81,7 @@ The Worldline Agent is a custom AI agent built using LibreChat's Agent Builder. 
 
 #### Reasoning model for code/creativity
 
-For tasks that require reasoning, such as code generation or creative writing, it is recommended to use a more powerful model like Claude Haiku. These models are better suited for complex tasks that require a deeper understanding of context and logic.
+For tasks that require reasoning, such as code generation or creative writing, it is recommended to use a more powerful model like Claude Sonnet or Claude Opus. These models are better suited for complex tasks that require a deeper understanding of context and logic. Claude Haiku is the lightweight and fastest variant, ideal for simple, high-volume tasks where speed and cost matter more than depth.
 
 #### Long context model
 
