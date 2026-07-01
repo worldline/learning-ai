@@ -1,4 +1,4 @@
-# Prompting usages
+# Prompt Engineering
 
 ## Prompt engineering
 
@@ -27,7 +27,7 @@ By starting your prompt with *"Act as {desired persona}"* you are establishing a
 which can be combined into the following prompt:
 
 ```
-Act as a a Google Cloud program manager and draft an executive summary
+Act as a Google Cloud program manager and draft an executive summary
  email to a senior executive based on the following program details:
  [insert program details here]. 
  Use bullet points to highlight key information 
@@ -610,3 +610,9 @@ Ask LLM to help you understand complex regular expressions or generate ones that
 `Explain this regular expression in JavaScript: const regex = /^[A-Za-z0–9._%+-]+@[A-Za-z0–9.-]+\\.[A-Za-z]{2,}$/;`
 
 `Generate a Perl regular expression that matches US phone numbers in the format (123) 456-7890`
+
+## 📖 Further readings
+
+* [Prompting Guide](https://www.promptingguide.ai/)
+* [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+* [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)

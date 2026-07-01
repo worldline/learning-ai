@@ -1,10 +1,10 @@
 import { defineClientConfig } from 'vuepress/client'
-import VueMermaidString from 'vue-mermaid-string'
+import MermaidDiagram from './components/MermaidDiagram.vue'
 import RestLlmTester from '../5.services/RestLlmTester.vue'
 
 export default defineClientConfig({
-    enhance({ app, router, siteData }) {
-        app.component('Mermaid', VueMermaidString)
+    enhance({ app }) {
+        app.component('Mermaid', MermaidDiagram)
         app.component('RestLlmTester', RestLlmTester)
     },
     setup() { },

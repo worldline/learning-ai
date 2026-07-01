@@ -1,4 +1,4 @@
-# Online/Offline LLMs clients 
+# Online/Offline LLM Clients
 
 This section is dedicated to the usage of Generative AI models through different clients. We will explore both online and offline clients that allow you to interact with LLMs for various use cases. A client is a Graphical User Interface (GUI) that allows users to interact with LLMs without the need for coding. Clients provide a user-friendly interface for users to input prompts, configure settings, and view responses from the models. It can also provide additional features such as prompt management, conversation history, and integration with other tools and services.
 
@@ -47,7 +47,7 @@ Memories allow users to save important information or context from previous conv
 The prompts feature allows users to save and load predefined prompts to use it during their conversations.
 You can use a prompt with the /[`prompt command`]. A prompt can have parameters, which are replaced with values when the prompt is used.
 
-**Exemple**
+**Example**
 
 - On the right side menu, go to the `💬 Prompts` tab.
 - Click on the `+ add a new prompt`.
@@ -73,7 +73,7 @@ Librechat Agent Builder allows users to create custom AI agents that can perform
 
 #### Default model 
 
-By default, LibreChat uses the OpenAI GPT- nano model to generate responses. This model is a smaller version of the GPT-3 model, which is designed to be more efficient and faster while still providing high-quality responses and also be cost effective.
+By default, LibreChat uses the OpenAI GPT-5 nano model to generate responses. This model is a smaller version of the GPT-5 model, designed to be more efficient and faster while still providing high-quality responses and being cost effective.
 
 #### Worldline Agent
 
@@ -81,7 +81,7 @@ The Worldline Agent is a custom AI agent built using LibreChat's Agent Builder. 
 
 #### Reasoning model for code/creativity
 
-For tasks that require reasoning, such as code generation or creative writing, it is recommended to use a more powerful model like Claude Haiku. These models are better suited for complex tasks that require a deeper understanding of context and logic.
+For tasks that require reasoning, such as code generation or creative writing, it is recommended to use a more powerful model like Claude Sonnet or Claude Opus. These models are better suited for complex tasks that require a deeper understanding of context and logic. Claude Haiku is the lightweight and fastest variant, ideal for simple, high-volume tasks where speed and cost matter more than depth.
 
 #### Long context model
 
@@ -185,7 +185,7 @@ Choose your favorite topic ( cooking, travel, sports, etc.) and create an assist
 
 ## Offline (LM Studio)  
 
-::: warning Disclamer
+::: warning Disclaimer
 Be careful with offline prompting models downloaded from the internet. They can contain malicious code. And also the size of the model can be very large from few Gb to few Tb. 
 :::
 
@@ -248,8 +248,6 @@ You can use the endpoints to generate responses from the models. The endpoints a
 - `GET /v1/models`: This endpoint returns a list of the available models.
 - `POST /v1/chat/completions`: This endpoint generates responses from the models using the chat format.Chat format is used for tasks such as chatbots, conversational AI, and language learning.
 - `POST /v1/embeddings`: This endpoint generates embeddings from the models. Embeddings are used for tasks such as sentiment analysis, text classification, and language translation.
-
-### DEMO
 
 ### 🧪 Exercises
 

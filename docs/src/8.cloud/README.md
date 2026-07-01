@@ -1,8 +1,8 @@
-# (Agentic AI on the cloud)
+# Agentic AI in the Cloud
 
 Google Cloud is a suite of cloud computing services provided by Google. It includes a wide range of tools and services for building and consuming LLMs, such as Vertex AI, Google Colab, and ML Flow.
 
-Globally Vertex products are supported by the developper branch of Google, and Gemini is supported by ML teams of Google.
+Globally Vertex products are supported by the developer branch of Google, and Gemini is supported by ML teams of Google.
 
 <Mermaid :value="`
 graph TD
@@ -121,7 +121,7 @@ graph TD
     NLAPI ~~~ GU
     GU ~~~ VAS
     VAS ~~~ TF
-`"/>
+`" />
 
 ## Large Consumer-Facing
 
@@ -196,8 +196,15 @@ MLflow provides tools for managing experiments, tracking model versions, deployi
 
 * Use a pre-trained model of worldline fraud detection model
 
-#### Exercice 3 -Create a model registry in Google Cloud instance
+#### Exercise 3 - Create a model registry in Google Cloud instance
 
 1. Create a model registry in Google Cloud instance
 2. Create a model in the registry
 3. Deploy the model to Google Cloud instance
+
+## 📖 Further readings
+
+* [Vertex AI documentation](https://cloud.google.com/vertex-ai/docs)
+* [Google AI Studio](https://aistudio.google.com/)
+* [Hugging Face documentation](https://huggingface.co/docs)
+* [MLflow documentation](https://mlflow.org/docs/latest/index.html)

@@ -2,13 +2,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 import { pwaPlugin } from "@vuepress/plugin-pwa";
-import { seoPlugin } from "@vuepress/plugin-seo";
 import { searchPlugin } from "@vuepress/plugin-search";
-import { nprogressPlugin } from "@vuepress/plugin-nprogress";
-import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
-import { kotlinPlayground, mdEnhancePlugin } from "vuepress-plugin-md-enhance";
-
-
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 
 export default defineUserConfig({
 
@@ -22,30 +17,32 @@ export default defineUserConfig({
   ],
 
   theme: defaultTheme({
+    hostname: "https://worldline.github.io/learning-ai",
     logo: "logo_worldline.png",
     repo: "https://github.com/worldline/learning-ai/activity",
     repoLabel: "⭐ See changelogs & contribute",
-    
 
     sidebar: [
       { text: "Home", link: "/" },
-      {text: "Mastering LLMs throughout the SDLC",
-      children: [
-         "/1.intro/",
-      "/2.prompt/",
-      "/3.client/",
-      "/4.assistant/",
-      ],
-    },
-        {text: "Building Intelligent Applications ",
-      children: [
-       "/5.services/",
-      "/6.agentic/",
-      "/7.node/",
-      "/8.cloud/",
-      ],
-    },
-     
+      {
+        text: "Mastering LLMs throughout the SDLC",
+        children: [
+          "/1.intro/",
+          "/2.prompt/",
+          "/3.client/",
+          "/4.assistant/",
+          "/agentic-cli",
+        ],
+      },
+      {
+        text: "Building Intelligent Applications",
+        children: [
+          "/5.services/",
+          "/6.agentic/",
+          "/7.node/",
+          "/8.cloud/",
+        ],
+      },
     ],
   }),
 
@@ -53,39 +50,35 @@ export default defineUserConfig({
     viteOptions: {},
     vuePluginOptions: {},
   }),
-  plugins: [
-        seoPlugin({
-          hostname: "https://worldline.github.io/learning-ai",
-        }),
-        searchPlugin({
-          locales: {
-            "/": {
-              placeholder: "Search...",
-            },
-          },
-        }),
-        pwaPlugin({
-          update: "hint",
-          cacheHTML: true,
-          manifest: {
-            icons: [
-              {
-                src: "/learning-ai/logo.png",
-                sizes: "192x192",
-                type: "image/png",
-              },
-              {
-                src: "/learning-ai/logo.png",
-                sizes: "512x512",
-                type: "image/png",
-              },
-            ],
-          },
-        }),
-        mdEnhancePlugin({
-          kotlinPlayground : true,
-        }),
 
-]
-    
+  plugins: [
+    searchPlugin({
+      locales: {
+        "/": {
+          placeholder: "Search...",
+        },
+      },
+    }),
+    pwaPlugin({
+      update: "hint",
+      cacheHTML: true,
+      manifest: {
+        icons: [
+          {
+            src: "/learning-ai/logo.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/learning-ai/logo.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
+      },
+    }),
+    mdEnhancePlugin({
+      kotlinPlayground: true,
+    }),
+  ],
 });

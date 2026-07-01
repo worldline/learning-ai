@@ -3,22 +3,26 @@
 Assistant tools integrated into IDEs can help developers to write code faster and with better quality. These tools use large language models (LLMs) to provide code suggestions, complete code snippets, generate tests... and more.
 This section presents GitHub Copilot, one of the most popular code assistants available today.
 
+::: warning Worldline employees — request Copilot access
+GitHub Copilot is available at Worldline. If you don't have access yet, request it via the [Worldline Copilot access form](https://forms.office.com/Pages/ResponsePage.aspx?id=z96p_ZLorEOdnxpJP5-Y0K5xnl-BonNAq9hbLN29E4dUODlERzZKMlhYNEZKVFc0VU5HWEExWlQzTy4u).
+:::
+
 ## GitHub Copilot
 
 GitHub Copilot is a tool that uses the OpenAI language models to provide code suggestions and suggestions for improving code quality. Copilot can now use other LLMs than OpenAI, including Google, and Anthropic to provide code suggestions. You can choose the model you want to use in the settings of your IDE.
 
 ::: tip Alternative code assistance
-There is also other producs indegrated to IDEs such as :
+There are also other products integrated into IDEs such as:
 
 - [Gitlab Duo](https://about.gitlab.com/fr-fr/gitlab-duo/),
 - [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview?hl=fr),
 - [SuperMaven](https://supermaven.com/),
-- [AWS CodeWhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/what-is-cwspr.html), and more.
+- [Amazon Q Developer](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html), and more.
 :::
 
 ### Copilot Chat 
 
-Copilot Chat is a chat interface that allows you to ask questions and get suggestions for code improvements. It is a similar approach to chat GPT prompting optimised for the developper experience.
+Copilot Chat is a chat interface that allows you to ask questions and get suggestions for code improvements. It is a similar approach to ChatGPT prompting optimised for the developer experience.
 
 it's available on :
 - [JetBrains IDEs](https://plugins.jetbrains.com/plugin/17718-github-copilot)
@@ -73,7 +77,7 @@ Copilot chat is available as an extension for VSCode. You can install it from th
 
 ![copilot-test](../assets/images/copilot_testing.gif)
 
-::: tip Sortcut usage of Copilot chat
+::: tip Shortcut usage of Copilot chat
 
 You can also use the chat interface to ask questions with shortcuts :
 
@@ -137,17 +141,17 @@ graph TD;
 
 The agent mode of copilot allows you to create multi step workflows to automate complex tasks and interacts with the IDE and external tools such as terminal, browser, file system, etc. It is using reasoning capabilities of LLMs to decompose a task into smaller sub-tasks and execute them sequentially or in parallel.
 
-## 🧪 Exercise
+## 🧪 Exercises
 
-#### Exercice 1 : Install GitHub Copilot on VSCode
+#### Exercise 1 : Install GitHub Copilot on VSCode
 
 1. Install the [GitHub Copilot extension](https://marketplace.visualstudio.com/items?itemName=github.copilot) on your VSCode
 2. Sign in with your GitHub account, if not already done
 3. Create a new file and start typing a function or a class, to see the suggestions provided by Copilot
 
-#### Exercice 2 :Generating unit tests
+#### Exercise 2 :Generating unit tests
 
-We"re going to use GitHub Copilot to generate unit tests for a simple JavaScript project repository.
+We're going to use GitHub Copilot to generate unit tests for a simple JavaScript project repository.
 
 To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/download/) installed on your machine.
 
@@ -158,23 +162,23 @@ To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/
 5. Copilot may make several suggestions: choosing a testing framework, adding a `test` command to package.json, install new dependencies. Accept all its suggestions.
 6. Try to run the generated tests. In case of trouble, use Copilot Chat to ask for help.
 
-<details>
-<summary>Solution</summary>
+::: details Solution
 
-<p>Here we decided to go with supertest framework</p>
+Here we decided to go with supertest framework
 
-![setupTestsCommand](./images/setupTestsCommand.png =x400)
-<img src="./images/setupTests3.png" height="400" />
-<img src="./images/setupTests.png" height="400" />
-<img src="./images/setupTests2.png" height="400" />
+![setupTestsCommand](./images/setupTestsCommand.png)
+![setupTests3](./images/setupTests3.png)
+![setupTests](./images/setupTests.png)
+![setupTests2](./images/setupTests2.png)
 
-<p>Here is an example of how Copilot can help you fix a failing test:</p>
-<img src="./images/fixTest.png" height="300" />
-<img src="./images/fixTest2.png" height="300" />
+Here is an example of how Copilot can help you fix a failing test:
 
-</details>
+![fixTest](./images/fixTest.png)
+![fixTest2](./images/fixTest2.png)
 
-#### Exercice 3 :Refactoring
+:::
+
+#### Exercise 3 :Refactoring
 
 Now we are going to use Copilot to refactor a piece of code in the same project.
 
@@ -188,30 +192,36 @@ Now we are going to use Copilot to refactor a piece of code in the same project.
 8. Open `index.test.js`. In the `GET /movies` test block, add a new assertion block by typing `it('should return movies filtered by year',`. Wait for Copilot to suggest you the rest of the tests. Review code to make sure it uses the ?year query parameter and checks correctly a date from the example data.
 9. Run the tests to make sure everything is working as expected. Use Copilot to ask for help if needed.
 
-<details>
-<summary>Solution</summary>
+::: details Solution
 
-<p>Adding the new feature</p>
-<img src="./images/addFeature.png" />
+Adding the new feature
 
-<p>Complete the test</p>
-<img src="./images/completeTest.png" />
+![addFeature](./images/addFeature.png)
 
-<p>Refactor the code to extract logic</p>
-<img src="./images/refactor.png" />
+Complete the test
 
-<p>Get code suggestion from a function name</p>
-<img src="./images/codeSuggestion.png" />
+![completeTest](./images/completeTest.png)
 
-<p>Refactor with Copilot Chat the API logic</p>
-<img src="./images/refactor2.png" />
+Refactor the code to extract logic
 
-<p>Get code suggestion from test description</p>
-<img src="./images/testSuggestion.png" />
-</details>
+![refactor](./images/refactor.png)
+
+Get code suggestion from a function name
+
+![codeSuggestion](./images/codeSuggestion.png)
+
+Refactor with Copilot Chat the API logic
+
+![refactor2](./images/refactor2.png)
+
+Get code suggestion from test description
+
+![testSuggestion](./images/testSuggestion.png)
+
+:::
 
 
-#### Exercice 4 : Prompt Engineering with Agent mode
+#### Exercise 4 : Prompt Engineering with Agent mode
 
 Create an application that does the following:
 - Create a new React project using Vite
@@ -238,8 +248,8 @@ And it enables this through a combination of three tightly-integrated components
 - A PWA-enabled dashboard, which lets you manage and launch your sparks from anywhere
 
 
-More advanced spec driven tools can be integrated on IDEs such as Google Antigravity, Cursor AI, and more. 
-It's a new way of building applications that leverages the power of AI to accelerate the development process and to target autonomus code generation and build platforms such aas [Blitzy.com](https://blitzy.com/), emergent.sh and more.
+More advanced spec driven tools can be integrated on IDEs such as [Google Antigravity](https://antigravity.google/), Cursor AI, and more. 
+It's a new way of building applications that leverages the power of AI to accelerate the development process and to target autonomous code generation and build platforms such as [Blitzy.com](https://blitzy.com/), emergent.sh and more.
 
 ::: warning Vibe coding vs SDD
 Spec Driven Development is different from "vibe coding" where developers use AI tools to generate code snippets or complete functions based on prompts. In SDD, the focus is on defining the overall structure and behavior of the application before writing any code. Also mastering the technical stack is still required to review and validate the generated code.
@@ -251,7 +261,7 @@ Copilot is a paid service with different pricing plans based on the usage and th
 
 Tokens used by Copilot are billed based on the number of characters generated. You can monitor your usage and set limits in the settings of your GitHub account.
 
-## 🧪 Exercise
+## 🧪 Exercises
 
 #### Create a web app with V0/ Bolt / or GitHub Spark 
 

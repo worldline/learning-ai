@@ -1,4 +1,4 @@
-# Agentic AI node-based 
+# Agentic AI: Node-Based Tools
 
 Node based genAI tools allow users to create and manage AI workflows using a visual interface that represents different components as nodes. These nodes can be connected to define the flow of data and operations, making it easier for users to build complex AI applications without extensive coding knowledge.
 
@@ -22,7 +22,7 @@ npx n8n
 - **Open Source**: N8N is open-source software, which means you can contribute to its development, customize it, and use it without licensing fees.
 
 ::: tip Specialized node based genAI tools
-More specic node-based genAI tools like comfyUI do the same for image generation workflows.
+More specific node-based genAI tools like comfyUI do the same for image generation workflows.
 :::
 
 ## Agentic architecture 
@@ -31,14 +31,14 @@ Agentic architectures involve the use of multiple specialized agents that work t
 
 With node-based tools, you can create workflows that involve multiple agents, each responsible for a specific aspect of the task. For example, in a content generation workflow, you might have one agent for text generation, another for image creation, and a third for data analysis. These agents can be represented as nodes in the workflow, allowing you to visualize and manage their interactions.
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 Create a simple workflow using N8N that involves multiple agents working together to achieve a specific task. 
-We want to search on the web the soccer results of the last weekend, summarize it with a long reasonning LLM, and send to discord channel the markdown formatted summary with a specialized LLM.
+We want to search on the web the soccer results of the last weekend, summarize it with a long reasoning LLM, and send to discord channel the markdown formatted summary with a specialized LLM.
 
 Multiple nodes will be needed and there is multiple ways to achieve this.
 Remember that each node will require configuration, including API keys for the services you will use.
-You can use Gemini Pro as reasonning LLM and Mistral AI for specialized agents.
+You can use Gemini Pro as reasoning LLM and Mistral AI for specialized agents.
 
 ![N8N soccer workflow](./images/n8n2.png)
 
