@@ -139,7 +139,7 @@ print(result)
 {'name': 'John', 'age': 28, 'city': 'Paris'}
 ``` 
 
-## 🧪 Exercise
+## 🧪 Exercises
 
 #### Request an LLM with with basic REST request
 
@@ -271,7 +271,7 @@ response = llm("Generate a JSON object with name and age")
 parsed_output = output_parser.parse(response)
 ```
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 ####  Request an LLM with langchain
 
@@ -355,7 +355,7 @@ f 'tool_calls' in response.additional_kwargs:
                 return tool_response
 ```
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 ####  Tool/Function calling : Request an LLM with Tool/Function calling
 
@@ -417,7 +417,7 @@ query_engine = index.as_query_engine(response_mode="tree_summarize", llm=llm)
 response = query_engine.query("<your_query_here>")
 ```
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 #### Querying on Unstructured Documents
 
@@ -475,7 +475,7 @@ query_engine = NLSQLTableQueryEngine(
 query_engine.query("Who wrote 'To Kill a Mockingbird'?")
 ```
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 ##### RAG : Querying SQL Databases with Natural Language
 
@@ -616,14 +616,5 @@ class D,G,I circle
     [Google Colab notebook](https://colab.research.google.com/drive/1vcAbbjEuADzLKo9xxwXu6QY8f1-Vnz4L?usp=sharing)
   :::
 :::
-
-## Vector databases (Soon)
-
-A vector database is a specialized database designed to store and retrieve high-dimensional vectors efficiently. It is particularly useful for applications involving similarity search, such as image recognition, recommendation systems, and natural language processing.
-
-### Usage of Chroma
-Chroma is a vector database that allows you to store and query vectors of data. Lanchain provides a simple and efficient way to integrate [Chroma](https://www.trychroma.com/) into your applications, allowing you to store and query vectors of data using LLMs.
-
-Please refer to the [Langchain vector  documentation](https://python.langchain.com/v0.1/docs/modules/data_connection/vectorstores/) for more information on how to use Chroma.
 
 ## 📖 Further readings

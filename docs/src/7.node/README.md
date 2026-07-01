@@ -31,7 +31,7 @@ Agentic architectures involve the use of multiple specialized agents that work t
 
 With node-based tools, you can create workflows that involve multiple agents, each responsible for a specific aspect of the task. For example, in a content generation workflow, you might have one agent for text generation, another for image creation, and a third for data analysis. These agents can be represented as nodes in the workflow, allowing you to visualize and manage their interactions.
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 Create a simple workflow using N8N that involves multiple agents working together to achieve a specific task. 
 We want to search on the web the soccer results of the last weekend, summarize it with a long reasoning LLM, and send to discord channel the markdown formatted summary with a specialized LLM.

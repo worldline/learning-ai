@@ -137,7 +137,7 @@ graph TD;
 
 The agent mode of copilot allows you to create multi step workflows to automate complex tasks and interacts with the IDE and external tools such as terminal, browser, file system, etc. It is using reasoning capabilities of LLMs to decompose a task into smaller sub-tasks and execute them sequentially or in parallel.
 
-## 🧪 Exercise
+## 🧪 Exercises
 
 #### Exercise 1 : Install GitHub Copilot on VSCode
 
@@ -158,21 +158,21 @@ To run the project and unit tests, you will need [NodeJs](https://nodejs.org/en/
 5. Copilot may make several suggestions: choosing a testing framework, adding a `test` command to package.json, install new dependencies. Accept all its suggestions.
 6. Try to run the generated tests. In case of trouble, use Copilot Chat to ask for help.
 
-<details>
-<summary>Solution</summary>
+::: details Solution
 
-<p>Here we decided to go with supertest framework</p>
+Here we decided to go with supertest framework
 
-![setupTestsCommand](./images/setupTestsCommand.png =x400)
-<img src="./images/setupTests3.png" height="400" />
-<img src="./images/setupTests.png" height="400" />
-<img src="./images/setupTests2.png" height="400" />
+![setupTestsCommand](./images/setupTestsCommand.png)
+![setupTests3](./images/setupTests3.png)
+![setupTests](./images/setupTests.png)
+![setupTests2](./images/setupTests2.png)
 
-<p>Here is an example of how Copilot can help you fix a failing test:</p>
-<img src="./images/fixTest.png" height="300" />
-<img src="./images/fixTest2.png" height="300" />
+Here is an example of how Copilot can help you fix a failing test:
 
-</details>
+![fixTest](./images/fixTest.png)
+![fixTest2](./images/fixTest2.png)
+
+:::
 
 #### Exercise 3 :Refactoring
 
@@ -188,27 +188,33 @@ Now we are going to use Copilot to refactor a piece of code in the same project.
 8. Open `index.test.js`. In the `GET /movies` test block, add a new assertion block by typing `it('should return movies filtered by year',`. Wait for Copilot to suggest you the rest of the tests. Review code to make sure it uses the ?year query parameter and checks correctly a date from the example data.
 9. Run the tests to make sure everything is working as expected. Use Copilot to ask for help if needed.
 
-<details>
-<summary>Solution</summary>
+::: details Solution
 
-<p>Adding the new feature</p>
-<img src="./images/addFeature.png" />
+Adding the new feature
 
-<p>Complete the test</p>
-<img src="./images/completeTest.png" />
+![addFeature](./images/addFeature.png)
 
-<p>Refactor the code to extract logic</p>
-<img src="./images/refactor.png" />
+Complete the test
 
-<p>Get code suggestion from a function name</p>
-<img src="./images/codeSuggestion.png" />
+![completeTest](./images/completeTest.png)
 
-<p>Refactor with Copilot Chat the API logic</p>
-<img src="./images/refactor2.png" />
+Refactor the code to extract logic
 
-<p>Get code suggestion from test description</p>
-<img src="./images/testSuggestion.png" />
-</details>
+![refactor](./images/refactor.png)
+
+Get code suggestion from a function name
+
+![codeSuggestion](./images/codeSuggestion.png)
+
+Refactor with Copilot Chat the API logic
+
+![refactor2](./images/refactor2.png)
+
+Get code suggestion from test description
+
+![testSuggestion](./images/testSuggestion.png)
+
+:::
 
 
 #### Exercise 4 : Prompt Engineering with Agent mode
@@ -251,7 +257,7 @@ Copilot is a paid service with different pricing plans based on the usage and th
 
 Tokens used by Copilot are billed based on the number of characters generated. You can monitor your usage and set limits in the settings of your GitHub account.
 
-## 🧪 Exercise
+## 🧪 Exercises
 
 #### Create a web app with V0/ Bolt / or GitHub Spark 
 

@@ -39,7 +39,7 @@ result = agent.invoke(
 )
 ```
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 #### Building a Single Agent with Multiple Tools using LangChain Agentic Features
 
@@ -122,7 +122,7 @@ LangChain provides pattern resources to build multi-agent systems, including too
 Also find architecture concrete usecase examples in the galileo mastering agents handbook : [here](https://galileo.ai/mastering-agents-ebook).
 
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 #### Building a Multi-Agent System with Agent Orchestration using LangChain
 
@@ -284,7 +284,7 @@ public_url = ngrok.connect(8001)
 
 
 
-### 🧪 Exercise
+### 🧪 Exercises
 
 #### Building an MCP Server with FastMCP for Quiz Data Exposure
 
@@ -363,7 +363,7 @@ The path to connect to an MCP server in Claude desktop is as follows:
 }
 ```
 
-### 🧪 Exercise
+### 🧪 Exercises
 #### Using MCP Server Tools in Claude Desktop
 Connect Claude desktop to the MCP server you created in the previous exercise and use the quiz tool to fetch quiz questions. This exercise demonstrates how to integrate MCP server tools into Claude desktop, allowing you to leverage external data sources in your conversations.
 

@@ -122,8 +122,6 @@ You can have a look to a 3D model of a vector database [here](https://projector.
 
 ## The market
 
- #### Gen AI app landscape
-
 ### Ecosystem of Generative AI Applications (2025)
 
 #### Layer 1: Application Layer
@@ -216,60 +214,62 @@ You can have a look to a 3D model of a vector database [here](https://projector.
 | OpenAI        | API inference service                          |
 | Hugging Face  | Inference platform                                |
 
-### Top 50 Generative AI applications
+### Top 50 Generative AI Web Products (January 2026)
 
-| Rank | Application | Platform | Link |
-|-------|--------------|--------------|-------|
-| 1 | ChatGPT | Web, Mobile | [Link](https://chat.openai.com/) |
-| 2 | ChatGPT API | API | [Link](https://platform.openai.com/api-keys) |
-| 3 | Jasper | Web, Mac, Windows | [Link](https://www.jasper.ai/) |
-| 4 | Bard (Google) | Web, Mobile | [Link](https://bard.google.com/) |
-| 5 | Claude (Anthropic) | Web | [Link](https://claude.ai/) |
-| 6 | Bing Chat | Web | [Link](https://www.bing.com/new) |
-| 7 | Midjourney | Web | [Link](https://www.midjourney.com/) |
-| 8 | Stable Diffusion | Web, Local | [Link](https://stablediffusionweb.com/) |
-| 9 | Lensa AI | Mobile (iOS/Android) | [Link](https://apps.apple.com/us/app/lensa-ai-photo-editor/id868133423) |
-| 10 | Canva Image Generator | Web, Mobile | [Link](https://www.canva.com/) |
-| 11 | Adobe Firefly | Web | [Link](https://helpx.adobe.com/firefly.html) |
-| 12 | Runway ML | Web, Mac, Windows | [Link](https://runwayml.com/) |
-| 13 | DALL·E 2 | Web | [Link](https://openai.com/dall-e-2/) |
-| 14 | Copy.ai | Web | [Link](https://www.copy.ai/) |
-| 15 | Writesonic | Web | [Link](https://writesonic.com/) |
-| 16 | Tome | Web | [Link](https://tome.app/) |
-| 17 | Podcast.ai | Mobile, Web | [Link](https://podcast.ai/) |
-| 18 | Beeble AI | Mobile | [Link](https://apps.apple.com/us/app/beeble-ai/id1603442934) |
-| 19 | Jasper Art | Web | [Link](https://www.jasper.ai/art) |
-| 20 | Wonder Studio | Web | [Link](https://wonderstudio.com/) |
-| 21 | Deep Nostalgia | Web, Mobile | [Link](https://myheritage.com/deep-nostalgia) |
-| 22 | CopySmith | Web | [Link](https://copysmith.ai/) |
-| 23 | Nebula Cloud | Web | [Link](https://nebulacloud.ai/) |
-| 24 | Synthesia | Web, Mobile | [Link](https://www.synthesia.io/) |
-| 25 | Rosebud AI | Web | [Link](https://rosebud.ai/) |
-| 26 | DeepBrain | Web | [Link](https://www.deepbrain.io/) |
-| 27 | Prisma Labs | Android, iOS | [Link](https://prisma-ai.com/) |
-| 28 | Jasper Chat | Web | [Link](https://www.jasper.ai/chat) |
-| 29 | Maverick | Web | [Link](https://www.maverick.ai/) |
-| 30 | Syntha | Web | [Link](https://syntha.ai/) |
-| 31 | Ditto | Web | [Link](https://ditto.com/) |
-| 32 | System1 | Web | [Link](https://system1.com/) |
-| 33 | Waifu Diffusion | Web | [Link](https://waifulabs.com/) |
-| 34 | Artbreeder | Web | [Link](https://www.artbreeder.com/) |
-| 35 | Pixray | Web | [Link](https://pxray.readthedocs.io/en/latest/) |
-| 36 | Dream by Wombo | iOS, Android | [Link](https://www.wombo.art/) |
-| 37 | NightCafe | Web, iOS, Android | [Link](https://creator.nightcafe.studio/) |
-| 38 | Artbreeder | Web | [Link](https://www.artbreeder.com/) |
-| 39 | Deep Dream Generator | Web | [Link](https://deepdreamgenerator.com/) |
-| 40 | StarryAI | iOS, Android | [Link](https://starryai.com/) |
-| 41 | Artify | Web | [Link](https://artify.com/) |
-| 42 | Wombo Dream | Web, iOS, Android | [Link](https://www.wombo.art/) |
-| 43 | DeepAI | Web | [Link](https://deepai.org/) |
-| 44 | ArtSmart | Web | [Link](https://artsmart.ai/) |
-| 45 | Pixilart | Web, Mobile | [Link](https://www.pixilart.com/) |
-| 46 | Runway Gen-2 | Web | [Link](https://runwayml.com/) |
-| 47 | PaintsChainer | Web | [Link](https://paintschainer.preferred.tech/index_en.html) |
-| 48 | Dreamstudio | Web | [Link](https://beta.dreamstudio.ai/) |
-| 49 | Artify | Web | [Link](https://artify.com/) |
-| 50 | Deep Dream Generator | Web | [Link](https://deepdreamgenerator.com/) |
+*Source: [a16z — Top 100 Gen AI Apps](https://a16z.com/100-gen-ai-apps-6/), Similarweb data, January 2026 — ranked by unique monthly visits.*
+
+| Rank | Application | Link |
+|------|-------------|------|
+| 1 | ChatGPT | [Link](https://chat.openai.com/) |
+| 2 | Gemini | [Link](https://gemini.google.com/) |
+| 3 | Canva | [Link](https://www.canva.com/) |
+| 4 | DeepSeek | [Link](https://www.deepseek.com/) |
+| 5 | Grok | [Link](https://grok.x.ai/) |
+| 6 | Claude | [Link](https://claude.ai/) |
+| 7 | Character.ai | [Link](https://character.ai/) |
+| 8 | Perplexity | [Link](https://www.perplexity.ai/) |
+| 9 | Notion | [Link](https://www.notion.so/) |
+| 10 | Google AI Studio | [Link](https://aistudio.google.com/) |
+| 11 | Freepik | [Link](https://www.freepik.com/) |
+| 12 | Doubao | [Link](https://www.doubao.com/) |
+| 13 | JanitorAI | [Link](https://www.janitorai.com/) |
+| 14 | Quark | [Link](https://quark.sm.cn/) |
+| 15 | Suno | [Link](https://suno.com/) |
+| 16 | Remove.bg | [Link](https://www.remove.bg/) |
+| 17 | CapCut | [Link](https://www.capcut.com/) |
+| 18 | Grammarly | [Link](https://www.grammarly.com/) |
+| 19 | SpicyChat.AI | [Link](https://spicychat.ai/) |
+| 20 | QuillBot | [Link](https://quillbot.com/) |
+| 21 | Lovable | [Link](https://lovable.dev/) |
+| 22 | PolyBuzz | [Link](https://www.polybuzz.ai/) |
+| 23 | ourdream.ai | [Link](https://ourdream.ai/) |
+| 24 | Kimi | [Link](https://kimi.ai/) |
+| 25 | Google Labs | [Link](https://labs.google/) |
+| 26 | Qwen | [Link](https://qwenlm.github.io/) |
+| 27 | TurboScribe | [Link](https://turboscribe.ai/) |
+| 28 | Gamma | [Link](https://gamma.app/) |
+| 29 | ElevenLabs | [Link](https://elevenlabs.io/) |
+| 30 | NotebookLM | [Link](https://notebooklm.google.com/) |
+| 31 | Arena | [Link](https://lmarena.ai/) |
+| 32 | SeaArt.AI | [Link](https://www.seaart.ai/) |
+| 33 | Hugging Face | [Link](https://huggingface.co/) |
+| 34 | Crushon AI | [Link](https://crushon.ai/) |
+| 35 | Meta AI | [Link](https://ai.meta.com/) |
+| 36 | candy.ai | [Link](https://candy.ai/) |
+| 37 | Photoroom | [Link](https://www.photoroom.com/) |
+| 38 | Pixelcut | [Link](https://www.pixelcut.ai/) |
+| 39 | Adot | [Link](https://www.adot.ai/) |
+| 40 | Higgsfield | [Link](https://higgsfield.ai/) |
+| 41 | Cursor | [Link](https://www.cursor.com/) |
+| 42 | CivitAI | [Link](https://civitai.com/) |
+| 43 | Midjourney | [Link](https://www.midjourney.com/) |
+| 44 | Manus | [Link](https://manus.im/) |
+| 45 | KlingAI | [Link](https://klingai.com/) |
+| 46 | VEED | [Link](https://www.veed.io/) |
+| 47 | Genspark | [Link](https://www.genspark.ai/) |
+| 48 | GigaChat | [Link](https://gigachat.ru/) |
+| 49 | Poe | [Link](https://poe.com/) |
+| 50 | cutout.pro | [Link](https://www.cutout.pro/) |
 
 
 
@@ -282,4 +282,4 @@ You can have a look to a 3D model of a vector database [here](https://projector.
 
 * [Generative AI Taskforce mailing-list](mailto:GenAITaskforce@worldline.com)
 * [GRS mailing-list](mailto:dl-wl-cto-grs-ai@worldline.com)
-* [Top 100 GenAI](https://a16z.com/100-gen-ai-apps/)
+* [Top 100 GenAI](https://a16z.com/100-gen-ai-apps-6/)
