@@ -5,8 +5,8 @@ This section is dedicated to the usage of Generative AI models for services appl
 ::: tip Modalities for this training
 
 1. We will use **[Mistral AI](https://mistral.ai/)** as the main LLM provider. Mistral AI provides free access to their models through REST APIs with a free tier making onboarding easy and fast. 
-- You can sign up here : [Mistral AI sign up](https://mistral.ai/signup) 
-- and get your API key from api keys section in your account settings here : [Mistral AI API keys](https://console.mistral.ai/api-keys/).
+- Sign up or log in here : [Mistral AI login](https://v2.auth.mistral.ai/login)
+- and get your API key here : [Mistral AI API keys](https://console.mistral.ai/home?profile_dialog=api-keys).
 
 2. Also we choose **Python** as the main programming language for this training due to its popularity in the AI/ML community and the availability of up-to-date libraries and frameworks, documentations and easy onboarding.
 

@@ -43,6 +43,7 @@ export default defineUserConfig({
           "/8.cloud/",
         ],
       },
+      { text: "Instructor Led Sessions", link: "/instructor/" },
     ],
   }),
 
