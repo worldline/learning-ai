@@ -94,8 +94,8 @@ claude-opus-4-8]
     A --> C[Calculator Tool]
     A --> D[Specialist Agent
 Short Reasoning LLM]
-    D --> E[Post to Discord]
-    D --> F[Read from Discord]
+    D --> E[Post to ntfy.sh]
+    D --> F[Read from ntfy.sh]
     style A fill:#e8f4fd,stroke:#1a73e8,stroke-width:3px,color:#000
 `" />
 
