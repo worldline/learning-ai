@@ -19,6 +19,13 @@ Agentic CLI tools bring AI autonomy directly into the developer's terminal. Unli
 
 All these CLIs rely on the same principle: reading a context file at the root of the repository to understand the project without being re-briefed each time.
 
+::: warning Worldline employees — Claude Code access
+Claude Code at Worldline connects to a shared Vertex AI GCP project. To get access:
+
+1. **Request the IDM role** `GCP-GRS_AI_CC-PRODUCTION-AI-USER` in [IDM](https://idm.worldline-solutions.com) — your manager or team lead can approve it
+2. **Install Claude Code** once the role is approved, using the [Worldline installer](https://claude-code-installer-13699a.gitlab-pages.kazan.myworldline.com/)
+:::
+
 ## 💬 Join the Community on Slack
 
 ::: tip Worldline Slack channels
