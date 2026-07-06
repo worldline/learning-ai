@@ -6,7 +6,7 @@ A training course for developers on generative and agentic AI — from LLM funda
 
 # Summary
 
-## Module 1: Mastering LLMs throughout the SDLC
+## Module 1: Mastering LLMs in the SDLC
 
 ### a. Introduction
 Key concepts and terminology — History — Market overview — Use cases in software development
@@ -23,7 +23,7 @@ GitHub Copilot — Spec Driven Development (Bolt, V0, GitHub Spark)
 ### e. Agentic CLIs
 Claude Code, GitHub Copilot CLI, Gemini CLI — AGENTS.md standard — Skills — MCP client
 
-## Module 2: Building Intelligent Applications
+## Module 2: Building Intelligent Apps
 
 ### a. GenAI for services
 LLM REST API — LangChain (prompt templates, chaining, tool calling) — llama-index RAG — Embeddings — 7 Colab exercises (01–07)

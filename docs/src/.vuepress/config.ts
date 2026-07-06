@@ -20,12 +20,13 @@ export default defineUserConfig({
     hostname: "https://worldline.github.io/learning-ai",
     logo: "logo_worldline.png",
     repo: "https://github.com/worldline/learning-ai/activity",
-    repoLabel: "⭐ See changelogs & contribute",
+    repoLabel: "View on GitHub",
 
     sidebar: [
       { text: "Home", link: "/" },
       {
-        text: "Mastering LLMs throughout the SDLC",
+        text: "Mastering LLMs in the SDLC",
+        collapsible: true,
         children: [
           "/1.intro/",
           "/2.prompt/",
@@ -35,7 +36,8 @@ export default defineUserConfig({
         ],
       },
       {
-        text: "Building Intelligent Applications",
+        text: "Building Intelligent Apps",
+        collapsible: true,
         children: [
           "/5.services/",
           "/6.agentic/",
