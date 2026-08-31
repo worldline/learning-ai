@@ -8,7 +8,6 @@
 - **Shell Command Line Skills:** The AI should include support for providing guidance on using shell commands, navigating file systems, and executing command-line operations across different operating systems.
 - **Understanding of HTTP and API:** Proficiency in HTTP protocol, RESTful API concepts, and web service integration is crucial for the AI to provide support on API design, consumption, and troubleshooting common API-related issues.
 - **Basic Cloud Knowledge:** Understanding of cloud computing principles, including basic concepts of cloud infrastructure, services, and deployment models, will enable the AI to offer guidance on cloud-based development, deployment, and best practices.
- - **If you have not, request Worldline librechat access:** send a mail at  [Generative AI Taskforce email](mailto:GenAITaskforce@worldline.com). There is a dedicated sharepoint for basic general assistant quick start at Worldline : [LibreChat Worldline guides](https://worldline365.sharepoint.com/:u:/r/sites/GenerativeAIQA/SitePages/LibreChat-guides.aspx?csf=1&web=1&e=evKJpU)
 :::
 
 
@@ -253,6 +252,4 @@ graph LR
 
 ## 📖 Further readings
 
-* [Generative AI Taskforce mailing-list](mailto:GenAITaskforce@worldline.com)
-* [GRS mailing-list](mailto:dl-wl-cto-grs-ai@worldline.com)
 * [Top 100 GenAI](https://a16z.com/100-gen-ai-apps-6/)
