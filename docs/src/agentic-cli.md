@@ -19,19 +19,14 @@ Agentic CLI tools bring AI autonomy directly into the developer's terminal. Unli
 
 All these CLIs rely on the same principle: reading a context file at the root of the repository to understand the project without being re-briefed each time.
 
-::: warning Worldline employees — Claude Code access
-Claude Code at Worldline connects to a shared Vertex AI GCP project. To get access:
-
-1. **Request the IDM role** `GCP-GRS_AI_CC-PRODUCTION-AI-USER` in [IDM](https://idm.worldline-solutions.com) — your manager or team lead can approve it
-2. **Install Claude Code** once the role is approved, using the [Worldline installer](https://claude-code-installer-13699a.gitlab-pages.kazan.myworldline.com/)
+::: tip Worldline employees
+See the [Instructor-led session page](/instructor/) for internal Claude Code access instructions and resources.
 :::
 
 ## 💬 Join the Community on Slack
 
-::: tip Worldline Slack channels
-- 🧠 **Share learnings and experiences:** [#ai-knowledge-sharing-hub](https://slack.com/archives/C0AL6QEDYLB)
-- 🤖 **Claude Code dedicated channel:** [#ee-svc-claude-code](https://bambora.slack.com/archives/C0AH60KDJFP)
-- 🐙 **GitHub Copilot dedicated channel:** [#ee-svc-github-copilot](https://bambora.slack.com/archives/C0B7G2GT865)
+::: tip Worldline employees
+See the [Instructor-led session page](/instructor/) for internal Slack channel links.
 :::
 
 ## [AGENTS.md](https://agents.md/)
@@ -222,11 +217,11 @@ claude mcp add --scope user my-api -- npx mcp-remote https://my-api.company.com/
 ```
 
 ::: warning GitHub Copilot — MCP servers require validation
-For GitHub Copilot CLI, connecting MCP servers (both local and remote) is moderated. You must submit your MCP server for approval through the dedicated [Worldline MCP Registry portal](https://kip.kazan.ai.worldline-solutions.com/mcp-registry) before it can be used.
+For GitHub Copilot CLI, connecting MCP servers (both local and remote) is moderated. Check with your organization for its approval process.
 :::
 
-::: tip Worldline AI Marketplace
-Worldline's Engineering Excellence team maintains an internal [AI Marketplace](https://engineering-excellence.gitlab-pages.kazan.myworldline.com/ai-marketplace/) listing ready-to-use MCP servers and AI tools available within the company.
+::: tip Worldline employees
+See the [Instructor-led session page](/instructor/) for the internal MCP server approval process and the internal AI Marketplace.
 :::
 
 ## 🧪 Exercises
@@ -272,18 +267,6 @@ GITHUB_PERSONAL_ACCESS_TOKEN=your_token claude mcp add --scope user github -- np
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 - [Agentic AI Foundation (AAIF)](https://agenticai.foundation/)
 
-::: tip Worldline resources
-- [Generative AI for Tech](https://worldline365.sharepoint.com/sites/GenerativeAIQA/SitePages/Generative%20AI%20for%20Tech.aspx) — internal hub for AI tools, best practices, and community videos
-- [GitHub Copilot internal documentation](https://confluence.worldline-solutions.com/spaces/GRSGENAIPL/pages/2851829249/GitHub+Copilot)
-- [Claude Code internal documentation](https://confluence.worldline-solutions.com/spaces/GRSGENAIPL/pages/2836702890/Claude+Code)
-:::
-
-::: tip GitHub Copilot training recordings
-- 🎬 [GitHub Copilot 101 — June 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/GitHub%20Copilot/GitHub%20Copilot%20101%20-%20June%202026.mp4?csf=1&web=1&e=pBIXO2) *(by Microsoft)*
-:::
-
-::: tip Claude Code training recordings
-- 🎬 [Claude Code 101 — February 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/Claude%20Code/Claude%20Code%20101%20-%20February%202026.mp4?csf=1&web=1&e=jXWkt1) *(by Anthropic)*
-- 🎬 [Claude Code 201 — April 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/Claude%20Code/Claude%20Code%20201%20-%20April%202026.mp4?csf=1&web=1&e=zjsGjO) *(by Anthropic)*
-- 🎬 [Claude Code 101 — May 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/Claude%20Code/Claude%20Code%20101%20-%20May%202026.mp4?csf=1&web=1&e=gt0cVg) *(by Provectus)*
+::: tip Worldline employees
+See the [Instructor-led session page](/instructor/) for internal documentation links and training recordings.
 :::

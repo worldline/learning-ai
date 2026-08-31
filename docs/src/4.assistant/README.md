@@ -3,8 +3,8 @@
 Assistant tools integrated into IDEs can help developers to write code faster and with better quality. These tools use large language models (LLMs) to provide code suggestions, complete code snippets, generate tests... and more.
 This section presents GitHub Copilot, one of the most popular code assistants available today.
 
-::: warning Worldline employees — request Copilot access
-GitHub Copilot is available at Worldline. If you don't have access yet, request it via the [Worldline Copilot access form](https://forms.office.com/Pages/ResponsePage.aspx?id=z96p_ZLorEOdnxpJP5-Y0K5xnl-BonNAq9hbLN29E4dUODlERzZKMlhYNEZKVFc0VU5HWEExWlQzTy4u).
+::: tip Worldline employees
+See the [Instructor-led session page](/instructor/) for internal Copilot access instructions and resources.
 :::
 
 ## GitHub Copilot
@@ -272,7 +272,5 @@ Tokens used by Copilot are billed based on the number of characters generated. Y
 
 ## 📖 Further readings
 
-- [Worldline AI coding assistant](https://confluence.worldline-solutions.com/display/AICA/AI+Coding+Assistants+Home)
-- [Worldline Data platform](https://confluence.worldline-solutions.com/display/DPTECHNO/Data+Platform)
 - [Copilot trust Center](https://resources.github.com/copilot-trust-center/)
 - [Chat with your IDE](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide)

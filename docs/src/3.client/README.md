@@ -257,8 +257,6 @@ You can use the endpoints to generate responses from the models. The endpoints a
 
 ## 📖 Further readings
 
-- [LibreChat Worldline guides](https://worldline365.sharepoint.com/:u:/r/sites/GenerativeAIQA/SitePages/LibreChat-guides.aspx?csf=1&web=1&e=evKJpU)
-- [LibreChat worldline instance](https://librechat.worldline-solutions.com/)
 - [LibreChat official website](https://www.librechat.ai/)
 - [LibreChat GitHub repository](https://github.com/danny-avila/LibreChat)
 - [Gemini Prompting guide](https://workspace.google.com/resources/ai/writing-effective-prompts/)

@@ -1,3 +1,5 @@
+<PasswordGate>
+
 # Instructor Led Sessions
 
 ## Information
@@ -90,13 +92,45 @@ Exercises 01–09 call the Mistral API.
 | `API_KEY` | your Mistral API key |
 
 ### 3. LibreChat access
-Access to the Worldline internal LibreChat instance — request access via your team lead if needed.
+Access to the Worldline internal LibreChat instance — request access via your team lead if needed, or send a mail to the [Generative AI Taskforce](mailto:GenAITaskforce@worldline.com). See the [LibreChat Worldline guides](https://worldline365.sharepoint.com/:u:/r/sites/GenerativeAIQA/SitePages/LibreChat-guides.aspx?csf=1&web=1&e=evKJpU) for a quick start, and connect at [librechat.worldline-solutions.com](https://librechat.worldline-solutions.com/).
 
 ### 4. GitHub Copilot *(optional — live demos will be shown)*
-If you want to follow along hands-on, request access via the [Worldline Copilot access form](https://forms.office.com/Pages/ResponsePage.aspx?id=z96p_ZLorEOdnxpJP5-Y0K5xnl-BonNAq9hbLN29E4dUODlERzZKMlhYNEZKVFc0VU5HWEExWlQzTy4u) — credentials will be provided, no GitHub account creation needed. Then install the **GitHub Copilot** extension in VS Code or JetBrains and log in with the provided credentials.
+If you want to follow along hands-on, see the official documentation on [Confluence](https://confluence.worldline-solutions.com/spaces/GRSGENAIPL/pages/2851829249/GitHub+Copilot) and enable your license via [KIP](https://kip.kazan.ai.worldline-solutions.com/copilot). Then install the **GitHub Copilot** extension in VS Code or JetBrains and log in with your Worldline credentials.
 
 ### 5. Claude Code *(optional — live demos will be shown)*
 If you want to follow along hands-on:
 
 1. **Request IDM access** — submit a request in IDM for the role `GCP-GRS_AI_CC-PRODUCTION-AI-USER`. This grants access to Worldline's Vertex AI GCP project that Claude Code connects to.
 2. **Install Claude Code** — once access is approved, install via the Worldline installer: [claude-code-installer](https://claude-code-installer-13699a.gitlab-pages.kazan.myworldline.com/)
+
+---
+
+## Worldline Resources
+
+### Mailing lists
+- [Generative AI Taskforce](mailto:GenAITaskforce@worldline.com)
+- [GRS mailing-list](mailto:dl-wl-cto-grs-ai@worldline.com)
+
+### Slack channels
+- 🧠 **Share learnings and experiences:** [#ai-knowledge-sharing-hub](https://slack.com/archives/C0AL6QEDYLB)
+- 🤖 **Claude Code dedicated channel:** [#ee-svc-claude-code](https://bambora.slack.com/archives/C0AH60KDJFP)
+- 🐙 **GitHub Copilot dedicated channel:** [#ee-svc-github-copilot](https://bambora.slack.com/archives/C0B7G2GT865)
+
+### Internal hubs & documentation
+- [Generative AI for Tech](https://worldline365.sharepoint.com/sites/GenerativeAIQA/SitePages/Generative%20AI%20for%20Tech.aspx) — internal hub for AI tools, best practices, and community videos
+- [GitHub Copilot internal documentation](https://confluence.worldline-solutions.com/spaces/GRSGENAIPL/pages/2851829249/GitHub+Copilot)
+- [Claude Code internal documentation](https://confluence.worldline-solutions.com/spaces/GRSGENAIPL/pages/2836702890/Claude+Code)
+- [Worldline AI coding assistant](https://confluence.worldline-solutions.com/display/AICA/AI+Coding+Assistants+Home)
+- [Worldline Data platform](https://confluence.worldline-solutions.com/display/DPTECHNO/Data+Platform)
+
+### MCP & AI tooling
+- GitHub Copilot CLI moderates MCP server connections (local and remote) — submit yours for approval through the [Worldline MCP Registry portal](https://kip.kazan.ai.worldline-solutions.com/mcp-registry) before use.
+- Worldline's Engineering Excellence team maintains an internal [AI Marketplace](https://engineering-excellence.gitlab-pages.kazan.myworldline.com/ai-marketplace/) listing ready-to-use MCP servers and AI tools available within the company.
+
+### Training recordings
+- 🎬 [GitHub Copilot 101 — June 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/GitHub%20Copilot/GitHub%20Copilot%20101%20-%20June%202026.mp4?csf=1&web=1&e=pBIXO2) *(by Microsoft)*
+- 🎬 [Claude Code 101 — February 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/Claude%20Code/Claude%20Code%20101%20-%20February%202026.mp4?csf=1&web=1&e=jXWkt1) *(by Anthropic)*
+- 🎬 [Claude Code 201 — April 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/Claude%20Code/Claude%20Code%20201%20-%20April%202026.mp4?csf=1&web=1&e=zjsGjO) *(by Anthropic)*
+- 🎬 [Claude Code 101 — May 2026](https://worldline365.sharepoint.com/:v:/r/sites/GenerativeAIQA/Documents%20partages/Training%20Recording/Claude%20Code/Claude%20Code%20101%20-%20May%202026.mp4?csf=1&web=1&e=gt0cVg) *(by Provectus)*
+
+</PasswordGate>
