@@ -12,10 +12,14 @@
 
 ## Delivered Sessions
 
-| Date | Attendees |
-|------|-----------|
-| February 13, 2026 | 7 |
-| July 2, 2026 | 14 |
+| Date | Session | Participants recorded |
+|------|---------|-----------------------|
+| February 13, 2026 | Generative to Agentic AI for Developers (restricted session) | <details><summary>8 participants</summary>POLLET VILLARD, SYLVAIN<br>Gharbi, Ibrahim<br>MOUSSAOUI, Yasmina<br>NERI, Alexis<br>LONGUET, JEAN-CHARLES<br>HAMDANI, RIDAE<br>ROUX, JEAN BAPTISTE<br>HADJI, ZAKARIA</details> |
+| July 2, 2026 | AI for Tech: Use LLMs to Help You Code and Create Intelligent Applications | <details><summary>14 participants</summary>Gharbi, Ibrahim<br>MOREAU, Benjamin<br>AUBRY, JEAN-LUC<br>PADRE, BERTRAND<br>GILLIOT, SEBASTIEN<br>BELTRAN, JORGE ANDRES<br>ALLAIN, Guillaume<br>MONTEIL, JULIEN<br>LALLOUE, MAYA<br>ACEVEDO URREGO, ALEJANDRA<br>ELAIHAR, Aya<br>NOWAK, JEREMIE<br>AYADI, AHMED<br>ABIH, Youssra</details> |
+| September 10, 2026 | AI for Tech: Use LLMs to Help You Code and Create Intelligent Applications | <details><summary>13 participants</summary>Gharbi, Ibrahim<br>BAPTISTE, Damien<br>THOMAS, ALAIN<br>BENSOUNA, YACINE<br>SELETLI, Delal<br>CORNUAU, FREDERIC<br>DELRUE, JOSEPH<br>HENNION, BRUNO<br>DIDIERJEAN, Fabrice<br>HULLIN, MAXENCE<br>HUNTER, CLAIRE<br>ELOMARI, MOHAMMED<br>MICHEL, MAXIME</details> |
+| November 19, 2026 | AI for Tech: Use LLMs to Help You Code and Create Intelligent Applications | <details><summary>12 participants</summary>Gharbi, Ibrahim<br>PETIT, Gwenael<br>DEGRYCK, VINCENT<br>CARPENTIER, QUENTIN<br>HALLART, SIMON<br>VIREY, PIERRE LOUIS<br>BRILHAULT, AMELIE<br>MARIETTE, HUGOLIN<br>MOLINARD, FLORENT<br>FIMINSKI, Teo<br>DUBOIS, LUDIVINE<br>LUCAS, MAXIME</details> |
+
+Participant names and counts are taken from the Teams attendance reports in `Instructor led/`; names are shown as recorded.
 
 ---
 
