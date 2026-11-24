@@ -20,6 +20,8 @@
 | November 19, 2026 | AI for Tech: Use LLMs to Help You Code and Create Intelligent Applications | <details><summary>11 participants</summary>PETIT, Gwenael<br>DEGRYCK, VINCENT<br>CARPENTIER, QUENTIN<br>HALLART, SIMON<br>VIREY, PIERRE LOUIS<br>BRILHAULT, AMELIE<br>MARIETTE, HUGOLIN<br>MOLINARD, FLORENT<br>FIMINSKI, Teo<br>DUBOIS, LUDIVINE<br>LUCAS, MAXIME</details> |
 
 
+**Total: 43 participants across 4 sessions (43 distinct people).**
+
 ---
 
 ## Syllabus
