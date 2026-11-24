@@ -19,7 +19,6 @@
 | September 10, 2026 | AI for Tech: Use LLMs to Help You Code and Create Intelligent Applications | <details><summary>12 participants</summary>BAPTISTE, Damien<br>THOMAS, ALAIN<br>BENSOUNA, YACINE<br>SELETLI, Delal<br>CORNUAU, FREDERIC<br>DELRUE, JOSEPH<br>HENNION, BRUNO<br>DIDIERJEAN, Fabrice<br>HULLIN, MAXENCE<br>HUNTER, CLAIRE<br>ELOMARI, MOHAMMED<br>MICHEL, MAXIME</details> |
 | November 19, 2026 | AI for Tech: Use LLMs to Help You Code and Create Intelligent Applications | <details><summary>11 participants</summary>PETIT, Gwenael<br>DEGRYCK, VINCENT<br>CARPENTIER, QUENTIN<br>HALLART, SIMON<br>VIREY, PIERRE LOUIS<br>BRILHAULT, AMELIE<br>MARIETTE, HUGOLIN<br>MOLINARD, FLORENT<br>FIMINSKI, Teo<br>DUBOIS, LUDIVINE<br>LUCAS, MAXIME</details> |
 
-Participant names are taken from the Teams attendance reports in `Instructor led/`; instructor Ibrahim Gharbi is excluded from the lists and counts.
 
 ---
 
